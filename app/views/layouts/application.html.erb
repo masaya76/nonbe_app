@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nonbe</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1maxmum-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/japanmap.css">
+　　
+　　<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'jquery.japan-map.min.js' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <div class="transition">
+      <% if menber_signed_in? %>
+        <tr>
+          <th>TOP</th>
+          <th>マイページ</th>
+          <th>投稿</th>
+          <th>検索</th>
+          <th>ログアウト</th>
+        </tr>
+      <% else %>
+        <tr>
+          <th>TOP</th>
+          <th>新規登録</th>
+          <th>ログイン</th>
+          <th>投稿</th>
+          <th>検索</th>
+        </tr>
+      <% end %>
+    </div>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
