@@ -68,7 +68,7 @@
     			fontColor : "areaColor", //地図に表示する文字の色。"areaColor"でエリアの色に合わせる
     			fontShadowColor : "black", //地図に表示する文字の影の色
     			onSelect : function(data){  //onSelectでfunction()の中ものにアクションを起こす
-            window.location.href = window.location.origin + "/home/city?prefecture_code=" + data.code
+            window.location.href = window.location.origin + "/home/city?prefecture_name=" + data.name
             //window.location.href=現在のいてるページ　　window.location.origin=-window.location.hrefを遷移先に引き継ぐ
             // https://5a4739b2be804e819cb77a83ffa1a5e6.vfs.cloud9.us-east-1.amazonaws.com/home/about?prefecture_name=aichiken
             // 1. window.location.origin => https://5a4739b2be804e819cb77a83ffa1a5e6.vfs.cloud9.us-east-1.amazonaws.com

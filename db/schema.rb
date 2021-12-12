@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2021_12_08_120323) do
 
+  create_table "cities", force: :cascade do |t|
+    t.integer "prefecture_id"
+    t.string "name"
+    t.string "kana"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "menbers", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -25,16 +33,10 @@ ActiveRecord::Schema.define(version: 2021_12_08_120323) do
     t.index ["reset_password_token"], name: "index_menbers_on_reset_password_token", unique: true
   end
 
-  create_table "municipalities", force: :cascade do |t|
-    t.integer "prefectures_id"
-    t.string "name"
-    t.string "kana"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "prefectures", force: :cascade do |t|
     t.string "name"
+    t.string "kana"
+    t.string "hira"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
