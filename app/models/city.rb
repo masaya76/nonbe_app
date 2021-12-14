@@ -1,5 +1,5 @@
-class Municipality < ApplicationRecord
-  
+class City < ApplicationRecord
+
   belongs_to :prefecture
-  
+
 end

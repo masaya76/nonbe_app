@@ -1,7 +1,7 @@
 <div>
   <% params[:prefecture_name] %>
   <%#= Prefecture.find_by(name: params[:prefecture_name]) %>
-  <% @prefecture.municipalities.each do |muni| %>
-    <%= muni.name %>
+  <% @prefecture.cities.each do |city| %>
+    <%= city.name %>
   <% end %>
 </div>
