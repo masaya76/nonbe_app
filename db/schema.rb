@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_120323) do
     t.integer "prefecture_id"
     t.string "name"
     t.string "kana"
+    t.string "hira"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
