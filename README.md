@@ -1,24 +1,36 @@
-# README
+# のんべえ君
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+　旅行時に酒蔵さんをめぐりたいと考えていた時に、「各都道府県、市町村にどんな酒蔵さんがあり、どんな種類があるかを手間なく探せたらな」と思いました。
+　また、利用者の評価やコメントを書き込み出来るようにすることで、
+「この種類飲んでみたい」、「今度、旅行時に行ってみよう」と思っていただき日本酒をより広く知ってもらいたいと思い作成しました。
+　日本酒をことがあまりわからない利用者が見ても、簡単に調べれるようにしました。
 
-Things you may want to cover:
+### サイトテーマ
+各地方の酒蔵さんを調べるのを楽に、さらに日本酒を広める
 
-* Ruby version
+### テーマを選んだ理由
+日本酒ののみ比べが好きでこのテーマにしました。
+また、最近はコロナウイルスの影響で外に出れないことが多く飲みに行く機会が大変減りました。今は、インターネットでも買うことができるのでこのテーマを選びました。
 
-* System dependencies
+### ターゲットユーザ
+色々な日本酒を飲みたいと思っている方やあまり日本酒を知らない方
 
-* Configuration
+### 主な利用シーン
+地図を使って各都道府県、市町村別で酒蔵さんを調べることができます。
+投稿機能を使うことで、情報の発信、共有やお気に入りの登録をすることができます。
 
-* Database creation
+## 設計書
+<...>
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1E4Quehglf9PxM1XTE-ft2X5-hJ5dmoJhsI-UJlgzVmY/edit#gid=0
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
