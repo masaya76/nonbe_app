@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_120323) do
+ActiveRecord::Schema.define(version: 2021_12_14_212632) do
 
   create_table "cities", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 2021_12_08_120323) do
     t.string "name"
     t.string "kana"
     t.string "hira"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sakaguras", force: :cascade do |t|
+    t.integer "city_id"
+    t.string "name"
+    t.string "kana"
+    t.string "hira"
+    t.text "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
