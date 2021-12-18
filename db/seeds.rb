@@ -113,6 +113,7 @@ City.create(:prefecture_id => 4, :name => '柴田郡', :kana => 'シバタグン
 City.create(:prefecture_id => 4, :name => '遠田郡', :kana => 'トオダグン', :hira => 'とおだぐん')
 # 秋田県
 City.create(:prefecture_id => 5, :name => '秋田市', :kana => 'アキタシ', :hira => 'あきたし')
+City.create(:prefecture_id => 5, :name => '大館市', :kana => 'オオダテシ', :hira => 'おおだてし')
 City.create(:prefecture_id => 5, :name => '潟上市', :kana => 'カタガミシ', :hira => 'かたがみし')
 City.create(:prefecture_id => 5, :name => '鹿角市', :kana => 'カヅノシ', :hira => 'かづのし')
 City.create(:prefecture_id => 5, :name => '大仙市', :kana => 'ダイセンシ', :hira => 'だいせんし')
@@ -121,7 +122,6 @@ City.create(:prefecture_id => 5, :name => '能代市', :kana => 'ノシロシ', 
 City.create(:prefecture_id => 5, :name => '湯沢市', :kana => 'ユザワシ', :hira => 'ゆざわし')
 City.create(:prefecture_id => 5, :name => '由利本荘市', :kana => 'ユリホンジョウシ', :hira => 'ゆりほんじょうし')
 City.create(:prefecture_id => 5, :name => '横手市', :kana => 'ヨコテシ', :hira => 'よこてし')
-City.create(:prefecture_id => 5, :name => '大館市', :kana => 'オオダテシ', :hira => 'おおだてし')
 City.create(:prefecture_id => 5, :name => '仙北郡', :kana => 'センボクグン', :hira => 'せんぼくぐん')
 City.create(:prefecture_id => 5, :name => '南秋田郡', :kana => 'ミナミアキタグン', :hira => 'みなみあきたぐん')
 City.create(:prefecture_id => 5, :name => '山本郡', :kana => 'ヤマモトグン', :hira => 'やまもとぐん')
@@ -147,6 +147,7 @@ City.create(:prefecture_id => 7, :name => '会津若松市', :kana => 'アイヅ
 City.create(:prefecture_id => 7, :name => 'いわき市', :kana => 'イワキシ', :hira => 'いわきし')
 City.create(:prefecture_id => 7, :name => '大沼郡', :kana => 'オオヌマシ', :hira => 'おおぬまし')
 City.create(:prefecture_id => 7, :name => '喜多方市', :kana => 'キタカタシ', :hira => 'きたかたし')
+City.create(:prefecture_id => 7, :name => '郡山市', :kana => 'コオリヤマシ', :hira => 'こおりやまし')
 City.create(:prefecture_id => 7, :name => '白河市', :kana => 'シラカワシ', :hira => 'しらかわし')
 City.create(:prefecture_id => 7, :name => '田村市', :kana => 'タムラシ', :hira => 'たむらし')
 City.create(:prefecture_id => 7, :name => '西白河郡', :kana => 'ニシシラカワグン', :hira => 'なししらかわぐん')
@@ -155,7 +156,6 @@ City.create(:prefecture_id => 7, :name => '福島市', :kana => 'フクシマシ
 City.create(:prefecture_id => 7, :name => '石川郡', :kana => 'イシカワグン', :hira => 'いしかわぐん')
 City.create(:prefecture_id => 7, :name => '岩瀬郡', :kana => 'イワセグン', :hira => 'いわせぐん')
 City.create(:prefecture_id => 7, :name => '河沼郡', :kana => 'カワヌマグン', :hira => 'かわぬまぐん')
-City.create(:prefecture_id => 7, :name => '郡山市', :kana => 'コオリヤマシ', :hira => 'こおりやまし')
 City.create(:prefecture_id => 7, :name => '東白川郡', :kana => 'ヒガシシラカワグン', :hira => 'ひがししらかわぐん')
 City.create(:prefecture_id => 7, :name => '耶麻郡', :kana => 'マヤグン', :hira => 'まやぐん')
 City.create(:prefecture_id => 7, :name => '南会津郡', :kana => 'ミナミアイヅグン', :hira => 'みなみあいづぐん')
@@ -197,9 +197,8 @@ City.create(:prefecture_id => 9, :name => '須賀郡', :kana => 'スガグン', 
 City.create(:prefecture_id => 9, :name => '下都群', :kana => 'シモツカグン', :hira => 'しもつかぐん')
 City.create(:prefecture_id => 9, :name => '芳賀郡', :kana => 'ハガグン', :hira => 'はがぐん')
 #群馬県
-City.create(:prefecture_id => 10, :name => '吾妻郡', :kana => 'アガツマグン', :hira => 'あがつまぐん')
+
 City.create(:prefecture_id => 10, :name => '太田市', :kana => 'オオタシ', :hira => 'おおたし')
-City.create(:prefecture_id => 10, :name => '佐波郡', :kana => 'サワグン', :hira => 'さわぐん')
 City.create(:prefecture_id => 10, :name => '渋川市', :kana => 'シブカワシ', :hira => 'しぶかわし')
 City.create(:prefecture_id => 10, :name => '高崎市', :kana => 'タカサキシ', :hira => 'たかさきし')
 City.create(:prefecture_id => 10, :name => '館林市', :kana => 'タテバヤシシ', :hira => 'たてばやしし')
@@ -207,9 +206,11 @@ City.create(:prefecture_id => 10, :name => '藤岡市', :kana => 'フジオカ�
 City.create(:prefecture_id => 10, :name => '前橋市', :kana => 'マエバシシ', :hira => 'まえばしし')
 City.create(:prefecture_id => 10, :name => 'みどり市', :kana => 'ミドリシ', :hira => 'みどりし')
 City.create(:prefecture_id => 10, :name => '沼田市', :kana => 'ヌマタシ', :hira => 'ぬまたし')
+City.create(:prefecture_id => 10, :name => '吾妻郡', :kana => 'アガツマグン', :hira => 'あがつまぐん')
 City.create(:prefecture_id => 10, :name => '邑楽郡', :kana => 'オウラグン', :hira => 'おうらぐん')
 City.create(:prefecture_id => 10, :name => '甘楽郡', :kana => 'カンラグン', :hira => 'かんらぐん')
 City.create(:prefecture_id => 10, :name => '北群馬郡', :kana => 'キタグンマグン', :hira => 'きたぐんまぐん')
+City.create(:prefecture_id => 10, :name => '佐波郡', :kana => 'サワグン', :hira => 'さわぐん')
 City.create(:prefecture_id => 10, :name => '利根郡', :kana => 'トネグン', :hira => 'とねぐん')
 City.create(:prefecture_id => 10, :name => '勢多郡', :kana => 'セタグン', :hira => 'せたぐん')
 #埼玉県
@@ -251,9 +252,9 @@ City.create(:prefecture_id => 12, :name => '松戸市', :kana => 'マツドシ',
 # 東京都　　
 City.create(:prefecture_id => 13, :name => 'あきる野市', :kana => 'アキルノシ', :hira => 'あきるのし')
 City.create(:prefecture_id => 13, :name => '青梅市', :kana => 'オウメシ', :hira => 'おうめし')
-City.create(:prefecture_id => 13, :name => '福生市', :kana => 'フッサシ', :hira => 'ふっさし')
 City.create(:prefecture_id => 13, :name => '八王子市', :kana => 'ハチオウジシ', :hira => 'はちおうじし')
 City.create(:prefecture_id => 13, :name => '東村山市', :kana => 'ヒガシムラヤマシ', :hira => 'ひがしむらやまし')
+City.create(:prefecture_id => 13, :name => '福生市', :kana => 'フッサシ', :hira => 'ふっさし')
 City.create(:prefecture_id => 13, :name => '府中市', :kana => 'フチュウシ', :hira => 'ふちゅうし')
 City.create(:prefecture_id => 13, :name => '北区', :kana => 'キタク', :hira => 'きたく')
 City.create(:prefecture_id => 13, :name => '港区', :kana => 'ミナトク', :hira => 'みなとく')
@@ -415,1368 +416,1120 @@ City.create(:prefecture_id => 23, :name => '知多郡', :kana => 'チタグン',
 
 　　# 酒蔵
 　# 北海道
-#亀田郡
-Sakagura.create(:city_id => 1, :name => '箱館醸蔵', :kana => 'ハコダテジョウゾウ', :hira => 'はこだてじょうぞう', :url => 'http://gohhou.jp/')
-# 虻田郡
-Sakagura.create(:city_id => 2, :name => '二世古酒造', :kana => 'ニセコシュゾウ', :hira => 'にせこしゅぞう', :url => 'http://nisekoshuzo.com/')
+#旭川市
+Sakagura.create(:city_id => 1, :name => '男山', :kana => 'オトコヤマ', :hira => 'おとこやま', :url => 'https://www.otokoyama.com/')
+Sakagura.create(:city_id => 1, :name => '合同酒清', :kana => 'ゴウドウシュセイ', :hira => 'ごうどうしゅせい', :url => 'https://www.oenon.jp/product/sake/godo/')
+Sakagura.create(:city_id => 1, :name => '髙砂酒造', :kana => 'タカサゴシュゾウ', :hira => 'たかさごしゅぞう', :url => 'https://www.takasagoshuzo.com/')
 # 小樽市
-Sakagura.create(:city_id => 3, :name => '田中酒造', :kana => 'タナカシュゾウ', :hira => 'たなかしゅぞう', :url => 'https://tanakashuzo.com/')
+Sakagura.create(:city_id => 2, :name => '田中酒造', :kana => 'タナカシュゾウ', :hira => 'たなかしゅぞう', :url => 'https://tanakashuzo.com/')
+# 釧路市
+Sakagura.create(:city_id => 3, :name => '福司酒造', :kana => 'フクツカサシュゾウ', :hira => 'ふくつかさしゅぞう', :url => 'https://www.fukutsukasa.jp/')
 # 札幌市
 Sakagura.create(:city_id => 4, :name => '日本清酒', :kana => 'ニッポンセイシュ', :hira => 'にっぽんせいしゅ', :url => 'https://www.nipponseishu.co.jp/')
-# 増毛町
-Sakagura.create(:city_id => 5, :name => '國稀酒造', :kana => '', :hira => 'くにまれしゅぞう', :url => 'https://www.kunimare.co.jp/')
-# 夕張郡
-Sakagura.create(:city_id => 6, :name => ' 小林酒造', :kana => 'コバヤシシュゾウ', :hira => 'こばやししゅぞう', :url => 'http://www.kitanonishiki.com/')
-# 新十津川町
-Sakagura.create(:city_id => 7, :name => '金滴酒造', :kana => 'キンテキシュゾウ', :hira => 'きんてきしゅぞう', :url => 'http://www.kinteki.co.jp/')
-# 旭川市
-Sakagura.create(:city_id => 8, :name => '髙砂酒造', :kana => 'タカサゴシュゾウ', :hira => 'たかさごしゅぞう', :url => 'https://www.takasagoshuzo.com/')
-Sakagura.create(:city_id => 8, :name => '合同酒清', :kana => 'ゴウドウシュセイ', :hira => 'ごうどうしゅせい', :url => 'https://www.oenon.jp/product/sake/godo/')
-Sakagura.create(:city_id => 8, :name => '男山', :kana => 'オトコヤマ', :hira => 'おとこやま', :url => 'https://www.otokoyama.com/')
-# 川上郡
-Sakagura.create(:city_id => 9, :name => '', :kana => '', :hira => '', :url => '')
-# 釧路市
-Sakagura.create(:city_id => 10, :name => '', :kana => '', :hira => '', :url => '')
 # 根室市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 5, :name => '碓氷勝三郎商店', :kana => 'ウスイカツサブロウショウテン', :hira => 'うすいかつさぶろうしょうてん', :url => 'http://www.marimo.or.jp/~honda/cybermkt/mall/usui/')
+# 新十津川町
+Sakagura.create(:city_id => 6, :name => '金滴酒造', :kana => 'キンテキシュゾウ', :hira => 'きんてきしゅぞう', :url => 'http://www.kinteki.co.jp/')
+# 増毛町
+Sakagura.create(:city_id => 7, :name => '國稀酒造', :kana => '', :hira => 'くにまれしゅぞう', :url => 'https://www.kunimare.co.jp/')
+# 虻田郡
+Sakagura.create(:city_id => 8, :name => '二世古酒造', :kana => 'ニセコシュゾウ', :hira => 'にせこしゅぞう', :url => '')
+# 亀田郡
+Sakagura.create(:city_id => 9, :name => '箱館醸蔵', :kana => 'ハコダテジョウゾウ', :hira => 'はこだてじょうぞう', :url => 'http://gohhou.jp/')
+# 川上郡
+Sakagura.create(:city_id => 10, :name => '上川大雪酒造', :kana => 'カワカミタイセツシュゾウ', :hira => 'かわかみたいせつしゅぞう', :url => 'https://kamikawa-taisetsu.co.jp/')
+Sakagura.create(:city_id => 10, :name => '三千櫻酒造', :kana => 'ミチザクラシュゾウ', :hira => 'みちざくらしゅぞう', :url => 'https://michizakura.jp/')
+# 夕張郡
+Sakagura.create(:city_id => 11, :name => '三千櫻酒造', :kana => 'コバヤシシュゾウ', :hira => 'こばやししゅぞう', :url => 'http://www.kitanonishiki.com/')
+　
 　# 青森
-# 西津軽郡
-Sakagura.create(:city_id => 12, :name => '', :kana => '', :hira => '', :url => '')
-# 弘前市
-Sakagura.create(:city_id => 13, :name => '', :kana => '', :hira => '', :url => '')
-# 三戸郡
-Sakagura.create(:city_id => 14, :name => '', :kana => '', :hira => '', :url => '')
-# むつ市
-Sakagura.create(:city_id => 15, :name => '', :kana => '', :hira => '', :url => '')
-# つがる市
-Sakagura.create(:city_id => 16, :name => '', :kana => '', :hira => '', :url => '')
-# 黒石市
-Sakagura.create(:city_id => 17, :name => '', :kana => '', :hira => '', :url => '')
-# 八戸市
-Sakagura.create(:city_id => 18, :name => '', :kana => '', :hira => '', :url => '')
 # 青森市
-Sakagura.create(:city_id => 19, :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 12, :name => '西田酒造店', :kana => 'ニシダシュゾウ', :hira => 'にしだしゅぞう', :url => 'http://www.densyu.co.jp/')
+# 黒石市
+Sakagura.create(:city_id => 13, :name => '中村亀吉', :kana => '', :hira => 'なかむらたけきち', :url => 'http://www.hatada-sake.com/corner107158/nakamurakamekichi.html')
 # 十和田市
-Sakagura.create(:city_id => 20, :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 14, :name => '鳩正宗', :kana => '', :hira => 'はとまさむね', :url => 'http://www.hatomasa.jp/')
+# つがる市
+Sakagura.create(:city_id => 15, :name => '竹浪酒造店', :kana => 'タケナミシュゾウ', :hira => 'たけなみじゅぞう', :url => 'http://www.takenami-shuzoten.com/')
+# 八戸市
+Sakagura.create(:city_id => 16, :name => '八戸酒造', :kana => 'ハチノヘシュゾウ', :hira => 'はちのへしゅぞう', :url => 'https://mutsu8000.com/')
+Sakagura.create(:city_id => 16, :name => '八戸酒類 五戸工場', :kana => 'ハチノヘシュルイ　ゴノヘマチ', :hira => 'はちのへしゅるい　ごのへまち', :url => 'https://hachinohe-syurui.com/')
+Sakagura.create(:city_id => 16, :name => '八戸酒類 八鶴工場', :kana => 'ハチノヘシュルイ　ハチツル', :hira => 'はちのへしゅるい はちつる', :url => '')
+# 弘前市
+Sakagura.create(:city_id => 17, :name => 'カネタ玉田酒造', :kana => 'カネタタマダシュゾウ', :hira => 'かねたたまだしゅぞう', :url => 'https://www.google.com/search?q=%E3%82%AB%E3%83%8D%E3%82%BF%E7%8E%89%E7%94%B0%E9%85%92%E9%80%A0&oq=%E3%82%AB%E3%83%8D%E3%82%BF%E7%8E%89%E7%94%B0%E9%85%92%E9%80%A0&aqs=chrome..69i57j0i512l3j0i30l2.479j0j4&sourceid=chrome&ie=UTF-8')
+Sakagura.create(:city_id => 17, :name => '白神酒造', :kana => 'シラカミシュゾウ', :hira => 'しらかみしゅぞう', :url => 'http://www.sirakami-sake.com/')
+Sakagura.create(:city_id => 17, :name => '松緑酒造', :kana => 'マツミドリシュゾウ', :hira => 'まつみどりしゅぞうう', :url => 'https://matsu-midori.com/')
+Sakagura.create(:city_id => 17, :name => '丸竹酒造店', :kana => '', :hira => 'まるたけしゅぞう', :url => 'https://furusatobin.jp/sirakami-roman/')
+Sakagura.create(:city_id => 17, :name => '三浦酒造', :kana => 'ミウラジュゾウ', :hira => 'みうらしゅぞう', :url => 'https://houhai.co.jp/')
+Sakagura.create(:city_id => 17, :name => '吉井酒造', :kana => 'ヨシイジュゾウ', :hira => 'よしいじゅぞう', :url => 'https://www.google.com/search?q=%E5%90%89%E4%BA%95%E9%85%92%E9%80%A0+%E5%BC%98%E5%89%8D&biw=767&bih=332&sxsrf=AOaemvLf7CmtFxNvpaW25QWDWLK8oL3zJQ%3A1639606592690&ei=QGm6YbnJKYHUmAXUr6JQ&oq=%E5%90%89%E4%BA%95%E9%85%92%E9%80%A0%E3%80%80&gs_lcp=Cgdnd3Mtd2l6EAEYATIJCAAQgAQQBBAlMgkIABCABBAEECUyCQgAEIAEEAQQJTIECAAQHjIECAAQHjIECAAQHjIECAAQHjIECAAQHjoHCCMQsAMQJzoHCAAQRxCwA0oECEEYAEoECEYYAFCfBVifBWCtEWgBcAJ4AIABWogBWpIBATGYAQCgAQHIAQTAAQE&sclient=gws-wiz')
+Sakagura.create(:city_id => 17, :name => '六花酒造', :kana => 'ロッカシュゾウ', :hira => 'ろっかしゅぞう', :url => 'http://www.joppari.com/')
+# むつ市
+Sakagura.create(:city_id => 18, :name => '関乃井酒造', :kana => 'セキノイシュゾウ', :hira => 'せきのいしゅぞう', :url => 'http://www.sekinoi.co.jp/')
 # 上北郡
-Sakagura.create(:city_id => 21, :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 19, :name => '桃川', :kana => 'モモカワ', :hira => 'ももかわ', :url => 'https://www.momokawa.co.jp/')
+Sakagura.create(:city_id => 19, :name => '盛田庄兵衛', :kana => 'モリタショウベエ', :hira => 'もりたしょうべえ', :url => 'http://www.morishou.co.jp/')
+# 三戸郡
+Sakagura.create(:city_id => 20, :name => '菊駒酒造', :kana => 'キクコマシュゾウ', :hira => 'きくこましゅぞう', :url => 'http://www.kikukoma.com/')
+# 西津軽郡
+Sakagura.create(:city_id => 21, :name => '尾崎酒造', :kana => 'オザキシュゾウ', :hira => 'おざきしゅぞう', :url => 'http://www.ozakishuzo.com/')
+
 　# 岩手県
-# 盛岡市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 紫波郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　# 一関市
+Sakagura.create(:city_id => 22, :name => '磐乃井酒造', :kana => 'イワノイシュゾウ', :hira => 'いわのいしゅぞう', :url => 'http://www.iwanoi.co.jp/')
+Sakagura.create(:city_id => 22, :name => '世嬉の一酒造', :kana => 'セキノイチシュゾウ', :hira => 'せきのいちしゅぞう', :url => 'http://www.sekinoichi.co.jp/')
+Sakagura.create(:city_id => 22, :name => '両磐酒造', :kana => '', :hira => 'りょうばんしゅぞう', :url => 'http://www.seisyu-kanzan.com/')
 # 奥州市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 一関市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 遠野市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 花巻市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 北上市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 陸前高田市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 下閉伊郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 二戸市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 23, :name => '岩手銘醸', :kana => 'イワテメイジョウ', :hira => 'いわてめいじょう', :url => 'http://www.iwate-meijo.com/index.html')
 # 釜石市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 宮古市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 24, :name => '浜千鳥', :kana => 'ハマチドリ', :hira => 'はまちどり', :url => 'http://www.hamachidori.net/')
 # 久慈市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 25, :name => '福来', :kana => 'フクライ', :hira => 'ふくらい', :url => 'http://www.maroon.dti.ne.jp/fukurai/')
+# 北上市
+Sakagura.create(:city_id => 26, :name => '喜久盛酒造', :kana => 'キクザカリ', :hira => 'きくざかり', :url => 'http://kikuzakari.jp/')
+# 遠野市
+Sakagura.create(:city_id => 27, :name => '上閉伊酒造株', :kana => 'カミヘイシュゾウ', :hira => 'かみへいしゅぞう', :url => 'http://kamihei-shuzo.jp/')
+# 二戸市
+Sakagura.create(:city_id => 28, :name => '南部美人', :kana => 'ナンベビジン', :hira => 'なんべびじん', :url => 'http://www.nanbubijin.co.jp/')
 # 八幡平市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 29, :name => 'わしの尾', :kana => 'ワシノオ', :hira => 'わしのお', :url => 'http://www.washinoo.co.jp/')
+# 花巻市
+Sakagura.create(:city_id => 30, :name => '川村酒造店', :kana => 'ワムラシュゾウテン', :hira => 'わむらしゅぞうてん', :url => 'https://www.google.com/search?q=%E5%90%88%E8%B3%87%E4%BC%9A%E7%A4%BE%E5%B7%9D%E6%9D%91%E9%85%92%E9%80%A0%E5%BA%97&sxsrf=AOaemvKd1cSGLRki3NLIhUxHu0pffvz8Sw%3A1639608117758&ei=NW-6YbzaLd6Vr7wPjIO6uAk&ved=0ahUKEwj8yLeb8Ob0AhXeyosBHYyBDpcQ4dUDCA4&uact=5&oq=%E5%90%88%E8%B3%87%E4%BC%9A%E7%A4%BE%E5%B7%9D%E6%9D%91%E9%85%92%E9%80%A0%E5%BA%97&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6BwgjEOoCECdKBAhBGABKBAhGGABQqQZYqQZgjAhoAXAAeACAAVyIAVySAQExmAEAoAEBoAECsAEKwAEB&sclient=gws-wiz')
+# 宮古市
+Sakagura.create(:city_id => 31, :name => '菱屋酒造店', :kana => 'ヒシヤシュゾウテン', :hira => 'ひしやしゅぞうてん', :url => 'https://hishiya.iwate.jp/')
+# 盛岡市
+Sakagura.create(:city_id => 32, :name => '赤武酒造', :kana => 'アカブシュゾウ', :hira => 'あかぶしゅぞう', :url => 'http://www.akabu1.com/')
+Sakagura.create(:city_id => 32, :name => 'あさ開', :kana => 'アサビラキ', :hira => 'あさびらき', :url => 'http://www.asabiraki-net.jp/')
+Sakagura.create(:city_id => 32, :name => '菊の司酒造', :kana => 'キクノツカサシュゾウ', :hira => '', :url => 'http://www.kikunotsukasa.jp/')
+Sakagura.create(:city_id => 32, :name => '桜顔酒造', :kana => 'サクラガオシュゾウ', :hira => 'さくらがおしゅぞう', :url => 'http://sakuragao.com/')
+# 陸前高田市
+Sakagura.create(:city_id => 33, :name => '酔仙酒造', :kana => 'スイセンシュゾウ', :hira => 'すいせんしゅぞう', :url => 'http://suisenshuzo.jp/')
+# 下閉伊郡
+Sakagura.create(:city_id => 34, :name => '泉金酒造株', :kana => 'センキンシュゾウ', :hira => 'せんきんしゅぞう', :url => 'http://www.ginga.or.jp/~senkin/')
+# 紫波郡
+Sakagura.create(:city_id => 35, :name => '吾妻嶺酒造', :kana => 'アズマミネシュゾウ', :hira => '', :url => 'http://www.azumamine.com/')
+Sakagura.create(:city_id => 35, :name => '高橋酒造', :kana => 'タカハシシュゾウ', :hira => 'たかはししゅぞう', :url => 'https://www.google.com/search?q=%E9%AB%98%E6%A9%8B%E9%85%92%E9%80%A0&oq=%E9%AB%98%E6%A9%8B%E9%85%92%E9%80%A0&aqs=chrome..69i57j69i59l2j0i512l3j0i67j0i512l3.206j0j7&sourceid=chrome&ie=UTF-8')
+Sakagura.create(:city_id => 35, :name => '月の輪酒造', :kana => 'ツキノワシュゾウ', :hira => '', :url => 'http://www.tsukinowa-iwate.com/')
+Sakagura.create(:city_id => 35, :name => '廣田酒造', :kana => 'ヒロタシュゾウ', :hira => 'ひろたしゅぞう', :url => 'http://hiroki.xm.shopserve.jp/')
+　
+　#宮城県
+# 石巻市　
+Sakagura.create(:city_id => 36, :name => '墨廼江酒造', :kana => 'スミノエシュゾウ', :hira => 'すみのえしゅぞう', :url => 'http://www.nakamurasaketen.com/%E5%AE%AE%E5%9F%8E-%E5%A2%A8%E5%BB%BC%E6%B1%9F%E9%85%92%E9%80%A0%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE')
+Sakagura.create(:city_id => 36, :name => '平孝酒造', :kana => 'ヒラコウシュゾウ', :hira => 'ひらこうしゅぞう', :url => 'https://www.1887.co.jp/ic/hirakou')
 # 岩沼市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 塩竈市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 登米市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 37, :name => '相傳商店', :kana => 'アイデンショウテン', :hira => 'あいでんしょうてん', :url => 'https://www.nipponselect.com/shop/c/c28/')
 # 大崎市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 富谷市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 柴田郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 38, :name => '一ノ蔵', :kana => 'イチノクラ', :hira => 'いちのくら', :url => 'http://www.ichinokura.co.jp/index.html')
+Sakagura.create(:city_id => 38, :name => '寒梅酒造', :kana => 'カンバイシュゾウ', :hira => 'かんばいしゅぞう', :url => 'http://miyakanbai.com/')
+Sakagura.create(:city_id => 38, :name => '新澤醸造店', :kana => 'ニイザワジョウゾウテン', :hira => 'にいざわじょうぞうてん', :url => 'http://niizawa-brewery.co.jp/')
+Sakagura.create(:city_id => 38, :name => '橋平酒造店', :kana => '', :hira => 'はしへいしゅぞうてん', :url => 'https://www.kamuro.info/zen-3')
+Sakagura.create(:city_id => 38, :name => '宮城ふるさと酒造', :kana => '', :hira => 'みやぎふるさとしゅぞう', :url => 'https://www.google.com/search?q=%E5%AE%AE%E5%9F%8E%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%85%92%E9%80%A0&sxsrf=AOaemvIG695RhtDwsN8FHhXNMojFgqkEHQ%3A1639611352689&ei=2Hu6YcbBKdfn-QaWmrWQDw&ved=0ahUKEwjGjfyh_Ob0AhXXc94KHRZNDfIQ4dUDCA4&uact=5&oq=%E5%AE%AE%E5%9F%8E%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%85%92%E9%80%A0&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyCQgAEIAEEAQQJTIJCAAQgAQQBBAlMgQIABAeMgQIABAeMgQIABAeOgcIIxDqAhAnSgQIQRgASgQIRhgAUABYiQJg4gNoAXAAeACAAWCIAWCSAQExmAEAoAEBoAECsAEKwAEB&sclient=gws-wiz')
+Sakagura.create(:city_id => 38, :name => '森民酒造店', :kana => '', :hira => 'もりたみしゅぞう', :url => 'http://moritamishuzouten.com/')
 # 気仙沼市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 仙台市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 39, :name => '男山本店', :kana => 'オトコヤマホンテン', :hira => 'おとこやまほんてん', :url => 'http://www.kesennuma.co.jp/')
+Sakagura.create(:city_id => 39, :name => '角星', :kana => 'カクボシ', :hira => 'かくぼし', :url => 'http://kakuboshi.co.jp/')
 # 栗原市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 遠田市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 40, :name => '金の井酒造', :kana => 'カネノイシュゾウ', :hira => 'かねのいしゅぞう', :url => 'https://www.kanenoi.co.jp/')
+Sakagura.create(:city_id => 40, :name => '千田酒造株式会社', :kana => 'センダシュゾウ', :hira => 'せんだしゅぞう', :url => 'http://www.kurikoma.miyagi-fsci.or.jp/kigyo/seizokako/chidashuzo.htm')
+Sakagura.create(:city_id => 40, :name => '萩野酒造', :kana => 'ハギノシュゾウ', :hira => 'はぎのしゅぞう', :url => 'http://www.hagino-shuzou.co.jp/')
+Sakagura.create(:city_id => 40, :name => '迫屋酒造店', :kana => 'ハサマヤシュゾウテン', :hira => 'はさまやしゅぞうてん', :url => 'https://hasamaya.stores.jp/')
+# 塩竈市
+Sakagura.create(:city_id => 41, :name => '阿部勘酒', :kana => 'アベカンシュゾウ', :hira => 'あべかんしゅぞう', :url => 'http://www.abekan.com/index.html')
+Sakagura.create(:city_id => 41, :name => '佐浦', :kana => 'サウラ', :hira => 'さうら', :url => 'http://www.urakasumi.com/')
 # 白石市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 42, :name => '蔵王酒造', :kana => 'ザオウシュゾウ', :hira => 'ざおうしゅぞう', :url => 'http://www.zaoshuzo.com/index.html')
+# 仙台市
+Sakagura.create(:city_id => 43, :name => '勝山酒造', :kana => 'カツヤマシュゾウ', :hira => 'かつやましゅぞう', :url => 'http://www.katsu-yama.com/')
+Sakagura.create(:city_id => 43, :name => '森民酒造本家', :kana => 'モリタミシュゾウホンケ', :hira => 'もりたみしゅぞうほんけ', :url => 'https://moritami.jp/')
+# 登米市
+Sakagura.create(:city_id => 43, :name => '石越醸造', :kana => 'イシコシジョウゾウ', :hira => 'いしこしじょうぞう', :url => 'http://sawanoizumi.jp')
+# 富谷市
+Sakagura.create(:city_id => 44, :name => '内ヶ崎酒造店', :kana => 'ウチガサキシュゾウテン', :hira => 'うちがさきしゅぞうてん', :url => 'http://uchigasaki.com/index.html')
 # 名取市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 石巻市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 黒川郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 加美郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 46, :name => '佐々木酒造店', :kana => 'ササキシュゾウテン', :hira => 'ささきしゅぞうてん', :url => 'http://naminooto.saleshop.jp/')
 # 青葉区
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 湯沢市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 47, :name => '千松島', :kana => 'チマツシマ', :hira => 'ちまつしま', :url => 'http://www.chimatsushima.com')
+#加美郡
+Sakagura.create(:city_id => 48, :name => '田中酒造店', :kana => 'タナカシュゾウテン', :hira => 'たなかしゅぞうてん', :url => 'http://www.manatsuru.co.jp/')
+Sakagura.create(:city_id => 48, :name => '中勇酒造店', :kana => 'ナカユウシュゾウテン', :hira => 'なかゆうしゅぞうてん', :url => 'http://www.tenjo-mugen.co.jp')
+Sakagura.create(:city_id => 48, :name => '山和酒造店', :kana => 'ヤマワシュゾウテン', :hira => 'やまわしゅぞうてん', :url => 'https://www.google.com/search?q=%E5%B1%B1%E5%92%8C%E9%85%92%E9%80%A0%E5%BA%97%E3%80%80&sxsrf=AOaemvIy5HLscUvP8pRg9xZSouVgUn2wMw%3A1639611564343&ei=rHy6Yf-kFIiIhwPPpYPQBg&ved=0ahUKEwj_qvKG_eb0AhUIxGEKHc_SAGoQ4dUDCA4&uact=5&oq=%E5%B1%B1%E5%92%8C%E9%85%92%E9%80%A0%E5%BA%97%E3%80%80&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyCQgAEIAEEAQQJTIJCAAQgAQQBBAlMgkIABCABBAEECUyBAgAEB4yBAgAEB4yBAgAEB4yBggAEAUQHjoICAAQsAMQzQJKBAhBGAFKBAhGGABQxAVY8wZg9gloAXAAeACAAWKIAbwBkgEBMpgBAKABAcgBA8ABAQ&sclient=gws-wiz')
+# 黒川郡
+Sakagura.create(:city_id => 49, :name => '大和蔵酒造', :kana => 'タイワグラシュゾウ', :hira => 'たいわぐらしゅぞう', :url => 'https://taiwagura.co.jp/')
+# 柴田郡
+Sakagura.create(:city_id => 50, :name => '大沼酒造店', :kana => '', :hira => 'おおぬましゅぞうてん', :url => 'https://kenkonichi.com/')
+# 遠田郡
+Sakagura.create(:city_id => 51, :name => '川敬商店', :kana => '', :hira => 'かわけいしょうてん', :url => 'https://www.google.com/search?q=%E5%90%88%E5%90%8D%E4%BC%9A%E7%A4%BE%E5%B7%9D%E6%95%AC%E5%95%86%E5%BA%97&sxsrf=AOaemvIesHgtyfMkbcj0QpuSPPVSd3rjQA%3A1639610129328&ei=EXe6YbS9E42ioATvy7jYBA&ved=0ahUKEwj0idDa9-b0AhUNEYgKHe8lDksQ4dUDCA4&uact=5&oq=%E5%90%88%E5%90%8D%E4%BC%9A%E7%A4%BE%E5%B7%9D%E6%95%AC%E5%95%86%E5%BA%97&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBggAEAUQHjoHCCMQ6gIQJ0oECEEYAEoECEYYAFAAWJoCYNoDaAFwAHgAgAFhiAFhkgEBMZgBAKABAaABArABCsABAQ&sclient=gws-wiz')
+
+  #秋田県
 # 秋田市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 大仙市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 由利本荘市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 横手市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 能代市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 仙北郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 潟上市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 鹿角市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# にかほ市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 南秋田郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 52, :name => '秋田酒造', :kana => 'アキタシュゾウ', :hira => 'あきたしゅぞう', :url => 'http://www.akitabare.jp/')
+Sakagura.create(:city_id => 52, :name => '秋田酒類製造', :kana => '', :hira => 'あきたしゅるいせいぞう', :url => 'http://www.takashimizu.co.jp/index.html')
+Sakagura.create(:city_id => 52, :name => '秋田醸造', :kana => 'アキタジョウゾウ', :hira => 'あきたじょうぞう', :url => 'http://www.osake.or.jp/kuramoto/02akitajozo.html')
+Sakagura.create(:city_id => 52, :name => '新政酒造株式会社', :kana => 'アラマサシュゾウ', :hira => 'あらまさしゅぞう', :url => 'http://www.aramasa.jp/')
+Sakagura.create(:city_id => 52, :name => '那波商店', :kana => 'ナバショウテン', :hira => 'なばしょうてん', :url => '')
 # 大館市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 53, :name => '北鹿', :kana => 'ホクシカ', :hira => 'ほくしか', :url => 'http://www.hokushika.jp/')
+# 潟上市
+Sakagura.create(:city_id => 54, :name => '小玉醸造', :kana => 'コダマシュゾウ', :hira => 'こだましゅぞう', :url => 'http://www.kodamajozo.co.jp/')
+# 鹿角市
+Sakagura.create(:city_id => 55, :name => '千歳盛酒造', :kana => 'チトセザカリシュゾウ', :hira => 'ちとせざかりしゅぞう', :url => '')
+# 大仙市
+Sakagura.create(:city_id => 56, :name => '秋田清酒株式会社', :kana => 'アキタセイシュ', :hira => 'あきたせいしゅ', :url => 'http://www.igeta.jp')
+Sakagura.create(:city_id => 56, :name => '奥田酒造店', :kana => 'オクダシュゾウテン', :hira => 'おくだしゅぞうてん', :url => 'http://www.chiyomidori.com/index.html')
+Sakagura.create(:city_id => 56, :name => '刈穂酒造', :kana => 'カリホジョウゾウ', :hira => 'かりほじょうぞう', :url => 'http://www.igeta.jp/about-kariho/')
+Sakagura.create(:city_id => 56, :name => '金紋秋田酒造', :kana => 'キンモンアキタシュゾウ', :hira => 'きんもんあきたしゅぞう', :url => 'http://www.kinmon-kosyu.com')
+Sakagura.create(:city_id => 56, :name => '出羽鶴酒造', :kana => 'デワツルシュゾウ', :hira => 'でわつるしゅぞう', :url => '')
+Sakagura.create(:city_id => 56, :name => '福乃友酒造', :kana => 'フクロクジュシュゾウ', :hira => 'ふくろくじゅしゅぞう', :url => 'http://www.fukurokuju.jp/index.html')
+Sakagura.create(:city_id => 56, :name => '八重寿銘醸', :kana => 'ヤエスシュゾウ', :hira => '', :url => '')
+# にかほ市
+Sakagura.create(:city_id => 57, :name => '飛良泉本舗', :kana => 'ヒライズミホンテン', :hira => 'ひらいずみほんてん', :url => 'http://www.hiraizumi.co.jp/')
+# 熊代市
+Sakagura.create(:city_id => 58, :name => '喜久水酒造', :kana => 'キクスイシュゾウ', :hira => 'きくすいしゅぞう', :url => 'http://kikusuisyuzo.com/')
+# 湯沢市
+Sakagura.create(:city_id => 59, :name => '秋田県醗酵工業', :kana => '', :hira => 'あきたけんはっこうこうぎょう', :url => 'https://www.oenon.jp/company/group/akita.html')
+Sakagura.create(:city_id => 59, :name => '秋田銘醸', :kana => 'アキタメイジョウ', :hira => 'あきためいじょう', :url => '')
+Sakagura.create(:city_id => 59, :name => '高久酒造', :kana => 'カクシュゾウ', :hira => 'かくしゅぞう', :url => '')
+Sakagura.create(:city_id => 59, :name => '両関酒造', :kana => 'リョウゼキシュゾウ', :hira => 'りょうぜきしゅぞう', :url => 'http://www.ryozeki.co.jp/index.html')
+# 由利本荘市
+Sakagura.create(:city_id => 60, :name => '秋田誉酒造', :kana => 'アキタホマレ', :hira => 'あきたほまれ', :url => '')
+Sakagura.create(:city_id => 60, :name => '奥山儀助商店', :kana => 'オクヤマギスケショウテン', :hira => 'おくやまぎすけしょうてん', :url => '')
+Sakagura.create(:city_id => 60, :name => '木村酒造', :kana => 'キムラシュゾウ', :hira => 'きむらしゅぞう', :url => '')
+Sakagura.create(:city_id => 60, :name => '齋彌酒造店', :kana => 'サイヤシュゾウテン', :hira => 'さいやしゅぞうてん', :url => 'http://www.yukinobousha.jp/')
+Sakagura.create(:city_id => 60, :name => '天寿酒造', :kana => '', :hira => 'てんじゅしゅぞう', :url => 'https://tenju.co.jp/')
+# 横手市
+Sakagura.create(:city_id => 61, :name => '阿櫻酒造', :kana => 'アザクラシュゾウ', :hira => 'あざくらしゅぞう', :url => 'http://www.azakura.co.jp/')
+Sakagura.create(:city_id => 61, :name => '浅舞酒造', :kana => 'アサマイシュゾウ', :hira => 'あさまいしゅぞう', :url => '')
+Sakagura.create(:city_id => 61, :name => '佐藤酒造店', :kana => 'サトウシュゾウテン', :hira => 'さとうしゅぞうてん', :url => '')
+Sakagura.create(:city_id => 61, :name => '鈴木酒造店', :kana => 'スズキシュゾウテン', :hira => 'すずきしゅぞうてん', :url => '')
+Sakagura.create(:city_id => 61, :name => '大納川', :kana => 'ダイナガワ', :hira => 'だいながわ', :url => 'https://dainagawa.co.jp/')
+Sakagura.create(:city_id => 61, :name => '日の丸醸造', :kana => 'ヒノマルジョウゾウ', :hira => 'ひのまるじょうぞう', :url => 'http://hinomaru-sake.com/')
+Sakagura.create(:city_id => 61, :name => '舞鶴酒造', :kana => 'マイヅルシュゾウ', :hira => 'まいづるしゅぞう', :url => '')
+# 仙北郡
+Sakagura.create(:city_id => 62, :name => '栗林酒造店', :kana => 'クリバヤシシュゾウテン', :hira => 'くりばやししゅぞうてん', :url => '')
+Sakagura.create(:city_id => 62, :name => '高橋酒造店', :kana => 'タカハシシュゾウ', :hira => 'たかはししゅぞう', :url => '')
+Sakagura.create(:city_id => 62, :name => '八千代酒造', :kana => 'ヤチヨシュゾウ', :hira => 'やちよじゅぞう', :url => '')
+# 南秋田郡
+Sakagura.create(:city_id => 63, :name => '福禄寿酒造', :kana => 'フクロクジュシュゾウ', :hira => 'ふっくろくじゅしゅぞう', :url => 'http://www.fukurokuju.jp/index.html')
 # 山本郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 西村山郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 南陽市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 東置賜郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 酒田市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 鶴岡市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 山形市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 64, :name => '山本', :kana => 'ヤマモト', :hira => 'やまもと', :url => '')
+
+
+　# 山形県
 # 寒河江市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 東田川郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 米沢市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 最上郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 飽海郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 長井市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 村山市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 天童市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 東根市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 西置賜郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 南会津郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 耶麻郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 河沼郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 白川郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 65, :name => '月山酒造', :kana => 'ガッサンシュゾウ', :hira => 'がっさんしゅぞう', :url => 'https://www.gassan-sake.co.jp/')
+# 酒田市
+Sakagura.create(:city_id => 66, :name => '奥羽自慢', :kana => 'オウジマン', :hira => 'おうじまん', :url => 'http://oujiman.jp/')
+# 鶴岡市
+Sakagura.create(:city_id => 67, :name => '菊勇', :kana => 'キクイサミ', :hira => 'きくいさみ', :url => 'http://www.kikuisami.co.jp/')
+# 南陽市
+Sakagura.create(:city_id => 70, :name => '東の麓酒造', :kana => 'ヒガシノフモトシュゾウ', :hira => 'ひがしのふもとしゅぞう', :url => '')
+
+
+　# 福島県
 # 会津若松市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 西白河郡
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-# 二本松市
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+Sakagura.create(:city_id => 81, :name => '末廣酒造', :kana => 'スエヒロシュゾウ', :hira => 'すえひろしゅぞう', :url => 'http://www.sake-suehiro.jp/')
+# 郡山市
+Sakagura.create(:city_id => 85, :name => '笹の川酒造', :kana => 'ササノカワシュゾウ', :hira => 'ささのかわしゅぞう', :url => 'http://www.sasanokawa.co.jp/')
+# 福島市
+Sakagura.create(:city_id => 90, :name => '金水晶酒造店', :kana => 'キンスイショウシュゾウテン', :hira => 'きんすいしょうしゅぞうてん', :url => 'http://www.kinsuisho.com/pc/index.html')
+
+　# 茨城県
+# 石岡市
+Sakagura.create(:city_id => 97, :name => '石岡酒造', :kana => 'イシオカシュゾウ', :hira => 'いしおかしゅぞう', :url => 'http://www.ishiokashuzo.co.jp/')
+# 常陸大宮市
+Sakagura.create(:city_id => 110, :name => '根本酒造', :kana => 'ネモトシュゾウ', :hira => 'ねもとしゅぞう', :url => 'http://kujinoyama.com/')
+# 水戸市
+Sakagura.create(:city_id => 111, :name => '吉久保酒造', :kana => 'ヨシクボシュゾウ', :hira => 'よしくぼしゅぞう', :url => 'http://www.ippin.co.jp/')
+
+　#栃木県
+# 宇都宮市
+Sakagura.create(:city_id => 117, :name => '井上清吉商店', :kana => 'イノウエセイキチショウテン', :hira => 'いのうえせいきちしょうてん', :url => 'http://sawahime.co.jp/')
+Sakagura.create(:city_id => 117, :name => '虎屋本店', :kana => 'トラヤホンテン', :hira => 'とらやほんてん', :url => 'http://www.toratora.co.jp/')
+# 日光市
+Sakagura.create(:city_id => 125, :name => '渡邊佐平商店', :kana => 'ワタナベサヘイショウテン', :hira => 'わたなべさへいしょうてん', :url => 'http://www.watanabesahei.co.jp/')
+
+　#群馬県
+# 高崎市
+Sakagura.create(:city_id => 135, :name => '野田酒造店', :kana => 'ノダシュゾウテン', :hira => 'のだしゅぞうてん', :url => 'http://www.noda-shuzou.co.jp/')
+Sakagura.create(:city_id => 135, :name => '町田酒造店', :kana => 'マチダシュゾウテン', :hira => 'まちだしゅぞうてん', :url => 'http://www.seiryo-sake.co.jp/index.html')
+# 前橋市
+Sakagura.create(:city_id => 138, :name => '七ッ星醸造', :kana => 'ナナツボシジョウゾウ', :hira => 'ななつぼしじょうぞう', :url => 'http://www.kiminomatsu.co.jp/')
+
+　# 埼玉県
+# さいたま市
+Sakagura.create(:city_id => 153, :name => '内木酒造', :kana => 'ウチキシュゾウテン', :hira => 'うちきしゅぞうてん', :url => 'http://uchiki-s.wixsite.com/uchikisake')
+# 羽生市
+Sakagura.create(:city_id => 156, :name => '東亜酒造', :kana => 'トウアシュゾウ', :hira => 'とうあしゅぞう', :url => 'http://www.toashuzo.com/')
+# 比企郡
+Sakagura.create(:city_id => 164, :name => '晴雲酒造株', :kana => 'セイウンシュゾウ', :hira => 'せいうんしゅぞう', :url => 'http://www.kumagaya.or.jp/~seiun/')
+
+
+　#千葉県 
+# 君津市
+Sakagura.create(:city_id => 169, :name => '須藤本家', :kana => 'スドウホンケ', :hira => 'すどうほんけ', :url => 'http://www.sudohonke.co.jp/')
+# 銚子市
+Sakagura.create(:city_id => 170, :name => '飯田酒造場', :kana => '', :hira => 'いいだしゅぞう', :url => 'https://www.iidahonke.com/company.html')
+# 冨津市
+Sakagura.create(:city_id => 173, :name => '石上酒造', :kana => '', :hira => 'いしがみしゅぞう', :url => 'http://www.isbc.co.jp/')
+
+　#東京都 
+# あきる野市
+Sakagura.create(:city_id => 181, :name => '中村酒造', :kana => 'ナカムラシュゾウ', :hira => 'なかむらしゅぞう', :url => 'http://www.chiyotsuru.com/')
+# 福生市
+Sakagura.create(:city_id => 185, :name => '石川酒造', :kana => 'イシカワシュゾウ', :hira => 'いしかわしゅぞう', :url => 'http://www.tamajiman.co.jp/')
+# 北区
+Sakagura.create(:city_id => 187, :name => '小山酒造', :kana => 'コヤマシュゾウ', :hira => 'こやましゅぞう', :url => 'http://www.koyamashuzo.co.jp/')
+
+
+ #神奈川県 
+# 伊勢原市
+Sakagura.create(:city_id => 192, :name => '吉川醸造', :kana => 'キッカワジョウゾウ', :hira => 'きっかわじょうぞう', :url => 'https://kikkawa-jozo.com/')
+# 海老名市
+Sakagura.create(:city_id => 193, :name => '泉橋酒造', :kana => 'イズミバシシュゾウ', :hira => 'いずみばししゅぞう', :url => 'http://izumibashi.com/')
+# 相模原市
+Sakagura.create(:city_id => 194, :name => '久保田酒造', :kana => 'クボタシュゾウ', :hira => 'くぼたしゅぞう', :url => 'http://www.tsukui.ne.jp/kubota/')
+
+
+　#新潟県 
+# 糸魚川市
+Sakagura.create(:city_id => 198, :name => '渡辺酒造店', :kana => 'ワタナベシュゾウテン', :hira => 'わたなべしゅぞうてん', :url => 'http://www.nechiotokoyama.jp/')
+# 上越市
+Sakagura.create(:city_id => 207, :name => '新潟第一酒造', :kana => 'ニイガタダイイチシュゾウ', :hira => 'にいがただいいちしゅぞう', :url => 'https://www.hakucho-sake.com/')
+# 妙高市
+Sakagura.create(:city_id => 212, :name => '千代の光酒造', :kana => 'チヨノヒカリシュゾウ', :hira => 'ちよのひかりしゅぞう', :url => 'http://chiyonohikari.com/')
+
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　#富山県 
+# 高山市
+Sakagura.create(:city_id => 222, :name => '福鶴酒造', :kana => '', :hira => 'ふくつるしゅぞう', :url => 'https://www.kazenobon.co.jp/')
+# 氷見市
+Sakagura.create(:city_id => 225, :name => '高澤酒造場', :kana => '', :hira => '', :url => 'https://ariiso-akebono.jp/')
+# 下新川郡
+Sakagura.create(:city_id => 226, :name => '林酒造', :kana => 'ハヤシシュゾウ', :hira => 'はやししゅぞう', :url => 'http://www.hayashisyuzo.com/')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　#石川県 
+# 珠洲市
+Sakagura.create(:city_id => 230, :name => '櫻田酒造', :kana => 'サクラダシュゾウ', :hira => 'さくらだしゅぞう', :url => 'http://www.sakurada.biz/')
+Sakagura.create(:city_id => 230, :name => '宗玄酒造', :kana => 'ソウゲンシュゾウ', :hira => 'そうげんしゅぞう', :url => 'http://www.sougen-shuzou.com/index.htm')
+# 輪島市
+Sakagura.create(:city_id => 235, :name => '清水酒造店', :kana => 'シミズシュゾウテン', :hira => '', :url => 'http://www.notohomare.com/')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　#福井県 
+# 越前市
+Sakagura.create(:city_id => 239, :name => '片山酒造', :kana => 'カタヤマシュゾウ', :hira => 'かたやましゅぞう', :url => 'http://sake-kansai.com/')
+# 勝山市
+Sakagura.create(:city_id => 241, :name => '一本義久保本店', :kana => 'イッポンギクホンテン', :hira => 'いっぽんぎくほんてん', :url => 'http://www.ippongi.co.jp/')
+# 福井市
+Sakagura.create(:city_id => 246, :name => '伊藤酒造', :kana => 'イトウシュゾウ', :hira => 'いとうしゅぞう', :url => 'http://koshinotaka.jp/')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　# 山梨県
+# 大月市
+Sakagura.create(:city_id => 252, :name => '笹一酒造', :kana => 'ササイチシュゾウ', :hira => 'ささいちしゅぞう', :url => 'http://www.sasaichi.co.jp/')
+# 笛吹市
+Sakagura.create(:city_id => 254, :name => '腕相撲酒造', :kana => 'ウデズモウシュゾウ', :hira => 'うでずもうしゅぞう', :url => 'http://www.udezumou.co.jp/')
+# 南アルプス市
+Sakagura.create(:city_id => 257, :name => '太冠酒造', :kana => 'タイカンシュゾウ', :hira => 'たいかんしゅぞう', :url => 'http://www.taikan-y.co.jp/')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　# 長野県
+# 伊那市
+Sakagura.create(:city_id => 262, :name => '大國酒造', :kana => 'オオクニシュゾウ', :hira => 'おおくにしゅぞう', :url => 'http://www.ookuni.com/')
+# 上田市
+Sakagura.create(:city_id => 263, :name => '信州銘醸', :kana => 'シンシュウメイジョウ', :hira => 'しんしゅうめいじょう', :url => 'http://www.shinmei-net.com/')
+# 中野市
+Sakagura.create(:city_id => 274, :name => '井賀屋酒造場', :kana => 'イカガヤシュゾウジョウ', :hira => 'いかがやしゅぞうじょう', :url => 'http://igayasyuzou.com/')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　# 岐阜県
+# 各務原市
+Sakagura.create(:city_id => 284, :name => '菊川', :kana => 'キクカワ', :hira => 'きくかわ', :url => 'http://www.sake-kikukawa.co.jp/')
+# 下呂市
+Sakagura.create(:city_id => 289, :name => '奥飛騨酒造', :kana => 'オクヒダシュゾウ', :hira => 'おくひだしゅぞう', :url => 'http://www.okuhida.co.jp/')
+Sakagura.create(:city_id => 289, :name => '天領酒造', :kana => 'テンリョウシュゾウ', :hira => '', :url => 'http://www.tenryou.com/index.html')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　# 静岡県
+# 伊豆市
+Sakagura.create(:city_id => 303, :name => '万大醸造', :kana => 'マンダイジョウゾウ', :hira => 'まんだいじょうぞう', :url => 'https://izu-bandai.com/')
+# 沼津市
+Sakagura.create(:city_id => 309, :name => '高嶋酒造', :kana => 'タカシマシュゾウ', :hira => 'たかしましゅぞう', :url => 'http://www.hakuinmasamune.com/')
+# 焼津市
+Sakagura.create(:city_id => 314, :name => '磯自慢酒造', :kana => 'イソジマンシュゾウ', :hira => 'いそじまんしゅぞう', :url => 'http://www.isojiman-sake.jp/')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+　# 愛知県
+# 犬山市
+Sakagura.create(:city_id => 318, :name => '小弓鶴酒造', :kana => 'コユミツルシュゾウ', :hira => 'こゆみつるしゅぞう', :url => 'http://www.koyumitsuru.jp/')
+# 岡崎市
+Sakagura.create(:city_id => 319, :name => '丸石醸造', :kana => 'マルイシジョウゾウ', :hira => 'まるいしじょうぞう', :url => 'https://www.014.co.jp/')
+# 豊橋市
+Sakagura.create(:city_id => 326, :name => '福井酒造', :kana => 'フクイシュゾウ', :hira => 'ふくいしゅぞう', :url => 'http://www.fukui-syuzo.co.jp/')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
-
-Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
+# Sakagura.create(:city_id => , :name => '', :kana => '', :hira => '', :url => '')
 
 
 
