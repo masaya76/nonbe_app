@@ -17,10 +17,10 @@
       <% if menber_signed_in? %>
         <tr>
           <th><%= link_to 'TOP', root_path %></th>
-          <th>マイページ</th>
+          <th><%= link_to 'マイページ', edit_menber_registration_path %></th>
           <th>投稿</th>
           <th>検索</th>
-          <th>ログアウト</th>
+          <th><%= link_to 'ログアウト', destroy_menber_session_path, method: :delete %></th>
         </tr>
       <% else %>
         <tr>
