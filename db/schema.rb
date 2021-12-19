@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_18_155027) do
+ActiveRecord::Schema.define(version: 2021_12_19_221852) do
 
   create_table "cities", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -36,6 +36,19 @@ ActiveRecord::Schema.define(version: 2021_12_18_155027) do
     t.text "profile_image_id"
     t.index ["email"], name: "index_menbers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_menbers_on_reset_password_token", unique: true
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "menber_id"
+    t.string "name"
+    t.string "kaori"
+    t.string "nomigotae"
+    t.string "karasa"
+    t.string "rarity"
+    t.string "beginner"
+    t.text "thoughts"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "prefectures", force: :cascade do |t|

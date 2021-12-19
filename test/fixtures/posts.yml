@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  kaori: MyString
+  nomigotae: MyString
+  karasa: MyString
+  rarity: MyString
+  beginner: MyString
+  thoughts: MyString
+
+two:
+  name: MyString
+  kaori: MyString
+  nomigotae: MyString
+  karasa: MyString
+  rarity: MyString
+  beginner: MyString
+  thoughts: MyString

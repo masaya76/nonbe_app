@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12">
       </div>
-      <% params[:prefecture_name] %>
+      <%= params[:prefecture_name] %>
         <% @prefecture.cities.each do |city| %>
           <%= link_to  home_sakagura_path(city_id: city.id) do%>
             <%= city.name %>

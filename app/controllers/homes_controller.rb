@@ -11,6 +11,7 @@ class HomesController < ApplicationController
   end
 
   def sakagura
+    @prefecture = Prefecture.find_by(name: params[:prefecture_name])
     @sakagura = Sakagura.where(city_id: params[:city_id])
   end
 
