@@ -1,6 +1,24 @@
-<link rel="stylesheet" href="css/japanmap.css">
+
 <div class="contaner">
   <div class="row">
+
+    <div>
+      <div id="map-container"></div>
+    </div>
+    <div>
+      <div id="jmap"></div>
+    </div>
+    <div class="col-lg-5" >
+      <p>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
     <script>
     $(function(){
       var areas = [
@@ -55,19 +73,19 @@
 
     	$("#map-container").japanMap(
     		{
-    			areas  : areas, //上で設定したエリアの情報
-    			selection : 'prefecture', //選ぶことができる範囲(県→prefecture、エリア→area)
+    			areas: areas, //上で設定したエリアの情報
+    			//selection : 'prefecture', //選ぶことができる範囲(県→prefecture、エリア→area)
     			borderLineWidth: 0.25, //線の幅
-    			drawsBoxLine : false, //canvasを線で囲む場合はtrue
-    			movesIslands : true, //南西諸島を左上に移動させるときはtrue、移動させないときはfalse
-    			showsAreaName : true, //エリア名を表示しない場合はfalse
-    			width: 800, //canvasのwidth。別途heightも指定可。
+    			drawsBoxLine: false, //canvasを線で囲む場合はtrue
+    			movesIslands: true, //南西諸島を左上に移動させるときはtrue、移動させないときはfalse
+    		  showsAreaName: true, //エリア名を表示しない場合はfalse
+    			width: 1000, //canvasのwidth。別途heightも指定可。
     			backgroundColor: "#ffffff", //canvasの背景色
-    			font : "MS Mincho", //地図に表示する文字のフォント
-    			fontSize : 12, //地図に表示する文字のサイズ
-    			fontColor : "areaColor", //地図に表示する文字の色。"areaColor"でエリアの色に合わせる
-    			fontShadowColor : "black", //地図に表示する文字の影の色
-    			onSelect : function(data){  //onSelectでfunction()の中ものにアクションを起こす
+    			font: "MS Mincho", //地図に表示する文字のフォント
+    			fontSize: 12, //地図に表示する文字のサイズ
+    			fontColor: "areaColor", //地図に表示する文字の色。"areaColor"でエリアの色に合わせる
+    			fontShadowColor: "black", //地図に表示する文字の影の色
+    			onSelect: function(data){  //onSelectでfunction()の中ものにアクションを起こす
             window.location.href = window.location.origin + "/home/city?prefecture_name=" + data.name
             //window.location.href=現在のいてるページ　　window.location.origin=-window.location.hrefを遷移先に引き継ぐ
             // https://5a4739b2be804e819cb77a83ffa1a5e6.vfs.cloud9.us-east-1.amazonaws.com/home/about?prefecture_name=aichiken
@@ -77,7 +95,7 @@
           }
     		}
     	);
-    });
+
 
     //   $("#map-container").japanMap({
     //       width:600,
@@ -86,13 +104,25 @@
     //       }
     //     });
     // });
+
+        $(function(){
+            $("#jmap").japanMap({
+              	width: 1000,
+              	areas: areas,
+              	showsAreaName: true,
+              	borderLineWidth: 0.25, //線の幅
+    		      	drawsBoxLine: false, //canvasを線で囲む場合はtrue
+    		      	movesIslands: true, //南西諸島を左上に移動させるときはtrue、移動させないときはfalse
+    		      		backgroundColor: "#ffffff", //canvasの背景色
+    			font: "MS Mincho", //地図に表示する文字のフォント
+    			fontSize: 12, //地図に表示する文字のサイズ
+    			fontColor: "areaColor", //地図に表示する文字の色。"areaColor"でエリアの色に合わせる
+    			fontShadowColor: "black", //地図に表示する文字の影の色
+                	onSelect: function(data){  //onSelectでfunction()の中ものにアクションを起こす
+            window.location.href = window.location.origin + "/home/city?prefecture_name=" + data.name}
+            });
+        });
+
+
+    });
     </script>
-    <div class="col-lg-7">
-      <div id="map-container"></div>
-    </div>
-    <div class="col-lg-5" >
-      <p>
-      </p>
-    </div>
-  </div>
-</div>

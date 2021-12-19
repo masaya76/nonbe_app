@@ -159,7 +159,7 @@ City.create(:prefecture_id => 7, :name => '河沼郡', :kana => 'カワヌマグ
 City.create(:prefecture_id => 7, :name => '東白川郡', :kana => 'ヒガシシラカワグン', :hira => 'ひがししらかわぐん')
 City.create(:prefecture_id => 7, :name => '耶麻郡', :kana => 'マヤグン', :hira => 'まやぐん')
 City.create(:prefecture_id => 7, :name => '南会津郡', :kana => 'ミナミアイヅグン', :hira => 'みなみあいづぐん')
-#茨城県　　　　
+#茨城県        
 City.create(:prefecture_id => 8, :name => '石岡市', :kana => 'イシオカシ', :hira => 'いしおかし')
 City.create(:prefecture_id => 8, :name => '潮来市', :kana => 'イタコシ', :hira => 'いたこし')
 City.create(:prefecture_id => 8, :name => '笠間市', :kana => 'カサマシ', :hira => 'かさまし')
@@ -249,7 +249,7 @@ City.create(:prefecture_id => 12, :name => '山武郡', :kana => 'サンブグ�
 City.create(:prefecture_id => 12, :name => '匝瑳郡', :kana => 'ソウサグン', :hira => 'そうさぐん')
 City.create(:prefecture_id => 12, :name => '長生郡', :kana => 'チョウセイグン', :hira => 'ちょうせいぐん')
 City.create(:prefecture_id => 12, :name => '松戸市', :kana => 'マツドシ', :hira => 'まつどし')
-# 東京都　　
+# 東京都    
 City.create(:prefecture_id => 13, :name => 'あきる野市', :kana => 'アキルノシ', :hira => 'あきるのし')
 City.create(:prefecture_id => 13, :name => '青梅市', :kana => 'オウメシ', :hira => 'おうめし')
 City.create(:prefecture_id => 13, :name => '八王子市', :kana => 'ハチオウジシ', :hira => 'はちおうじし')
@@ -258,7 +258,7 @@ City.create(:prefecture_id => 13, :name => '福生市', :kana => 'フッサシ',
 City.create(:prefecture_id => 13, :name => '府中市', :kana => 'フチュウシ', :hira => 'ふちゅうし')
 City.create(:prefecture_id => 13, :name => '北区', :kana => 'キタク', :hira => 'きたく')
 City.create(:prefecture_id => 13, :name => '港区', :kana => 'ミナトク', :hira => 'みなとく')
-# 神奈川県　　
+# 神奈川県    
 City.create(:prefecture_id => 14, :name => '愛甲郡', :kana => 'アイコウグン', :hira => 'あいこうぐん')
 City.create(:prefecture_id => 14, :name => '足柄上郡', :kana => 'アシガラカミグン', :hira => 'あしがらかみぐん')
 City.create(:prefecture_id => 14, :name => '厚木市', :kana => 'アツギシ', :hira => 'あつぎし')
@@ -267,7 +267,7 @@ City.create(:prefecture_id => 14, :name => '海老名市', :kana => 'エビナ�
 City.create(:prefecture_id => 14, :name => '相模原市', :kana => 'サガミハラシ', :hira => 'さがみはらし')
 City.create(:prefecture_id => 14, :name => '茅ヶ崎市', :kana => 'チガサキシ', :hira => 'ちがさきし')
 City.create(:prefecture_id => 14, :name => '秦野市', :kana => 'ハダノシ', :hira => 'ハダノシ')
-# 新潟県　　
+# 新潟県    
 City.create(:prefecture_id => 15, :name => '阿賀野市', :kana => 'アガノシ', :hira => 'あがのし')
 City.create(:prefecture_id => 15, :name => '糸魚川市', :kana => 'イトイガワシ', :hira => 'いといがわし')
 City.create(:prefecture_id => 15, :name => '魚沼市', :kana => 'ウオヌマシ', :hira => 'うおぬまし')
@@ -288,7 +288,7 @@ City.create(:prefecture_id => 15, :name => '村上市', :kana => 'ムラカミ�
 City.create(:prefecture_id => 15, :name => '中魚沼郡', :kana => 'ナカウオヌマグン', :hira => 'なかうおぬまぐん')
 City.create(:prefecture_id => 15, :name => '西蒲原郡', :kana => 'ニシカンバラグン', :hira => 'にしかんばらぐん')
 City.create(:prefecture_id => 15, :name => '東蒲原郡', :kana => 'ヒガシカンバラグン', :hira => 'ひがしかんばらぐん')
-# 富山県　　
+# 富山県    
 City.create(:prefecture_id => 16, :name => '小矢部市', :kana => 'オヤベシ', :hira => 'おやべし')
 City.create(:prefecture_id => 16, :name => '魚津市', :kana => 'ウオヅシ', :hira => 'うおづし')
 City.create(:prefecture_id => 16, :name => '黒部市', :kana => 'クロベシ', :hira => 'くろべし')
@@ -299,7 +299,7 @@ City.create(:prefecture_id => 16, :name => '滑川市', :kana => 'ナメリカ�
 City.create(:prefecture_id => 16, :name => '南砺市', :kana => 'ナントシ', :hira => 'なんとし')
 City.create(:prefecture_id => 16, :name => '氷見市', :kana => 'ヒミシ', :hira => 'ひみし')
 City.create(:prefecture_id => 16, :name => '下新川郡', :kana => 'シモニイカワグン', :hira => 'しもにいかわぐん')
-# 石川県　　
+# 石川県    
 City.create(:prefecture_id => 17, :name => '加賀市', :kana => 'カガシ', :hira => 'かがし')
 City.create(:prefecture_id => 17, :name => '金沢市', :kana => 'カナザワシ', :hira => 'かなざわし')
 City.create(:prefecture_id => 17, :name => '小松市', :kana => 'コマツシ', :hira => 'こまつし')
@@ -312,7 +312,7 @@ City.create(:prefecture_id => 17, :name => '輪島市', :kana => 'ワジマシ',
 City.create(:prefecture_id => 17, :name => '鹿島郡', :kana => 'カシマグン', :hira => 'かしまぐん')
 City.create(:prefecture_id => 17, :name => '河北郡', :kana => 'カホクグン', :hira => 'かほくぐん')
 City.create(:prefecture_id => 17, :name => '鳳珠郡', :kana => 'ホウスグン', :hira => 'ほうすぐん')
-# 福井県　　
+# 福井県    
 City.create(:prefecture_id => 18, :name => '越前市', :kana => 'エチゼンシ', :hira => 'えちぜんし')
 City.create(:prefecture_id => 18, :name => '大野市', :kana => 'オオノシ', :hira => 'おおのし')
 City.create(:prefecture_id => 18, :name => '勝山市', :kana => 'カツヤマシ', :hira => 'かつやまし')
@@ -325,7 +325,7 @@ City.create(:prefecture_id => 18, :name => '南条郡', :kana => 'ナンジョ�
 City.create(:prefecture_id => 18, :name => '三方郡', :kana => 'ミカタグン', :hira => 'みかたぐん')
 City.create(:prefecture_id => 18, :name => '三方上中郡', :kana => 'ミカタカミナカグン', :hira => 'みかたかみなかぐん')
 City.create(:prefecture_id => 18, :name => '吉田郡', :kana => 'ヨシダグン', :hira => 'よしだぐん')
-# 山梨県　　
+# 山梨県    
 City.create(:prefecture_id => 19, :name => '南都留郡', :kana => 'ミナミツルグン', :hira => 'みなみつるぐん')
 City.create(:prefecture_id => 19, :name => '大月市', :kana => 'オオツキシ', :hira => 'おおつきし')
 City.create(:prefecture_id => 19, :name => '韮崎市', :kana => 'ニラサキシ', :hira => 'にらさきし')
@@ -334,7 +334,7 @@ City.create(:prefecture_id => 19, :name => '北杜市', :kana => 'ホクトシ',
 City.create(:prefecture_id => 19, :name => '山梨市', :kana => 'ヤマナシシ', :hira => 'やまなしし')
 City.create(:prefecture_id => 19, :name => '南アルプス市', :kana => 'ミナミアルプスシ', :hira => 'みなみあるぷすし')
 City.create(:prefecture_id => 19, :name => '南巨摩郡', :kana => 'ミナミコマグン', :hira => 'みなみこまぐん')
-# 長野県　
+# 長野県  
 City.create(:prefecture_id => 20, :name => '安曇野市', :kana => 'アヅミノシ', :hira => 'あづみのし')
 City.create(:prefecture_id => 20, :name => '飯田市', :kana => 'イイダシ', :hira => 'いいだし')
 City.create(:prefecture_id => 20, :name => '飯山市', :kana => 'イイヤマシ', :hira => 'いいやまし')
@@ -360,7 +360,7 @@ City.create(:prefecture_id => 20, :name => '木曽郡', :kana => 'キソグン',
 City.create(:prefecture_id => 20, :name => '北安曇郡', :kana => 'キタアヅミグン', :hira => 'きたあづみぐん')
 City.create(:prefecture_id => 20, :name => '東筑摩郡', :kana => 'ヒガシチクマグン', :hira => 'ひがしちくまぐん')
 City.create(:prefecture_id => 20, :name => '南佐久郡', :kana => 'ミナミサクグン', :hira => 'みなみさくぐん')
-# 岐阜県　　19
+# 岐阜県    19
 City.create(:prefecture_id => 21, :name => '各務原市', :kana => 'カガミハラシ', :hira => 'かがみはらし')
 City.create(:prefecture_id => 21, :name => '大垣市', :kana => 'オオガキシ', :hira => 'おおがきし')
 City.create(:prefecture_id => 21, :name => '可児市', :kana => 'カニシ', :hira => 'かにし')
@@ -414,8 +414,8 @@ City.create(:prefecture_id => 23, :name => '海部郡', :kana => 'アマグン',
 City.create(:prefecture_id => 23, :name => '北設楽郡', :kana => 'キタシタラグン', :hira => 'きたしたらぐん')
 City.create(:prefecture_id => 23, :name => '知多郡', :kana => 'チタグン', :hira => 'ちたぐん')
 
-　　# 酒蔵
-　# 北海道
+    # 酒蔵
+  # 北海道
 #旭川市
 Sakagura.create(:city_id => 1, :name => '男山', :kana => 'オトコヤマ', :hira => 'おとこやま', :url => 'https://www.otokoyama.com/')
 Sakagura.create(:city_id => 1, :name => '合同酒清', :kana => 'ゴウドウシュセイ', :hira => 'ごうどうしゅせい', :url => 'https://www.oenon.jp/product/sake/godo/')
@@ -441,8 +441,8 @@ Sakagura.create(:city_id => 10, :name => '上川大雪酒造', :kana => 'カワ�
 Sakagura.create(:city_id => 10, :name => '三千櫻酒造', :kana => 'ミチザクラシュゾウ', :hira => 'みちざくらしゅぞう', :url => 'https://michizakura.jp/')
 # 夕張郡
 Sakagura.create(:city_id => 11, :name => '三千櫻酒造', :kana => 'コバヤシシュゾウ', :hira => 'こばやししゅぞう', :url => 'http://www.kitanonishiki.com/')
-　
-　# 青森
+  
+  # 青森
 # 青森市
 Sakagura.create(:city_id => 12, :name => '西田酒造店', :kana => 'ニシダシュゾウ', :hira => 'にしだしゅぞう', :url => 'http://www.densyu.co.jp/')
 # 黒石市
@@ -453,8 +453,8 @@ Sakagura.create(:city_id => 14, :name => '鳩正宗', :kana => '', :hira => 'は
 Sakagura.create(:city_id => 15, :name => '竹浪酒造店', :kana => 'タケナミシュゾウ', :hira => 'たけなみじゅぞう', :url => 'http://www.takenami-shuzoten.com/')
 # 八戸市
 Sakagura.create(:city_id => 16, :name => '八戸酒造', :kana => 'ハチノヘシュゾウ', :hira => 'はちのへしゅぞう', :url => 'https://mutsu8000.com/')
-Sakagura.create(:city_id => 16, :name => '八戸酒類 五戸工場', :kana => 'ハチノヘシュルイ　ゴノヘマチ', :hira => 'はちのへしゅるい　ごのへまち', :url => 'https://hachinohe-syurui.com/')
-Sakagura.create(:city_id => 16, :name => '八戸酒類 八鶴工場', :kana => 'ハチノヘシュルイ　ハチツル', :hira => 'はちのへしゅるい はちつる', :url => '')
+Sakagura.create(:city_id => 16, :name => '八戸酒類 五戸工場', :kana => 'ハチノヘシュルイ  ゴノヘマチ', :hira => 'はちのへしゅるい  ごのへまち', :url => 'https://hachinohe-syurui.com/')
+Sakagura.create(:city_id => 16, :name => '八戸酒類 八鶴工場', :kana => 'ハチノヘシュルイ  ハチツル', :hira => 'はちのへしゅるい はちつる', :url => '')
 # 弘前市
 Sakagura.create(:city_id => 17, :name => 'カネタ玉田酒造', :kana => 'カネタタマダシュゾウ', :hira => 'かねたたまだしゅぞう', :url => 'https://www.google.com/search?q=%E3%82%AB%E3%83%8D%E3%82%BF%E7%8E%89%E7%94%B0%E9%85%92%E9%80%A0&oq=%E3%82%AB%E3%83%8D%E3%82%BF%E7%8E%89%E7%94%B0%E9%85%92%E9%80%A0&aqs=chrome..69i57j0i512l3j0i30l2.479j0j4&sourceid=chrome&ie=UTF-8')
 Sakagura.create(:city_id => 17, :name => '白神酒造', :kana => 'シラカミシュゾウ', :hira => 'しらかみしゅぞう', :url => 'http://www.sirakami-sake.com/')
@@ -473,8 +473,8 @@ Sakagura.create(:city_id => 20, :name => '菊駒酒造', :kana => 'キクコマ�
 # 西津軽郡
 Sakagura.create(:city_id => 21, :name => '尾崎酒造', :kana => 'オザキシュゾウ', :hira => 'おざきしゅぞう', :url => 'http://www.ozakishuzo.com/')
 
-　# 岩手県
-　# 一関市
+  # 岩手県
+  # 一関市
 Sakagura.create(:city_id => 22, :name => '磐乃井酒造', :kana => 'イワノイシュゾウ', :hira => 'いわのいしゅぞう', :url => 'http://www.iwanoi.co.jp/')
 Sakagura.create(:city_id => 22, :name => '世嬉の一酒造', :kana => 'セキノイチシュゾウ', :hira => 'せきのいちしゅぞう', :url => 'http://www.sekinoichi.co.jp/')
 Sakagura.create(:city_id => 22, :name => '両磐酒造', :kana => '', :hira => 'りょうばんしゅぞう', :url => 'http://www.seisyu-kanzan.com/')
@@ -510,9 +510,9 @@ Sakagura.create(:city_id => 35, :name => '吾妻嶺酒造', :kana => 'アズマ�
 Sakagura.create(:city_id => 35, :name => '高橋酒造', :kana => 'タカハシシュゾウ', :hira => 'たかはししゅぞう', :url => 'https://www.google.com/search?q=%E9%AB%98%E6%A9%8B%E9%85%92%E9%80%A0&oq=%E9%AB%98%E6%A9%8B%E9%85%92%E9%80%A0&aqs=chrome..69i57j69i59l2j0i512l3j0i67j0i512l3.206j0j7&sourceid=chrome&ie=UTF-8')
 Sakagura.create(:city_id => 35, :name => '月の輪酒造', :kana => 'ツキノワシュゾウ', :hira => '', :url => 'http://www.tsukinowa-iwate.com/')
 Sakagura.create(:city_id => 35, :name => '廣田酒造', :kana => 'ヒロタシュゾウ', :hira => 'ひろたしゅぞう', :url => 'http://hiroki.xm.shopserve.jp/')
-　
-　#宮城県
-# 石巻市　
+  
+  #宮城県
+# 石巻市  
 Sakagura.create(:city_id => 36, :name => '墨廼江酒造', :kana => 'スミノエシュゾウ', :hira => 'すみのえしゅぞう', :url => 'http://www.nakamurasaketen.com/%E5%AE%AE%E5%9F%8E-%E5%A2%A8%E5%BB%BC%E6%B1%9F%E9%85%92%E9%80%A0%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE')
 Sakagura.create(:city_id => 36, :name => '平孝酒造', :kana => 'ヒラコウシュゾウ', :hira => 'ひらこうしゅぞう', :url => 'https://www.1887.co.jp/ic/hirakou')
 # 岩沼市
@@ -613,7 +613,7 @@ Sakagura.create(:city_id => 63, :name => '福禄寿酒造', :kana => 'フクロ�
 Sakagura.create(:city_id => 64, :name => '山本', :kana => 'ヤマモト', :hira => 'やまもと', :url => '')
 
 
-　# 山形県
+  # 山形県
 # 寒河江市
 Sakagura.create(:city_id => 65, :name => '月山酒造', :kana => 'ガッサンシュゾウ', :hira => 'がっさんしゅぞう', :url => 'https://www.gassan-sake.co.jp/')
 # 酒田市
@@ -624,7 +624,7 @@ Sakagura.create(:city_id => 67, :name => '菊勇', :kana => 'キクイサミ', :
 Sakagura.create(:city_id => 70, :name => '東の麓酒造', :kana => 'ヒガシノフモトシュゾウ', :hira => 'ひがしのふもとしゅぞう', :url => '')
 
 
-　# 福島県
+  # 福島県
 # 会津若松市
 Sakagura.create(:city_id => 81, :name => '末廣酒造', :kana => 'スエヒロシュゾウ', :hira => 'すえひろしゅぞう', :url => 'http://www.sake-suehiro.jp/')
 # 郡山市
@@ -632,7 +632,7 @@ Sakagura.create(:city_id => 85, :name => '笹の川酒造', :kana => 'ササノ�
 # 福島市
 Sakagura.create(:city_id => 90, :name => '金水晶酒造店', :kana => 'キンスイショウシュゾウテン', :hira => 'きんすいしょうしゅぞうてん', :url => 'http://www.kinsuisho.com/pc/index.html')
 
-　# 茨城県
+  # 茨城県
 # 石岡市
 Sakagura.create(:city_id => 97, :name => '石岡酒造', :kana => 'イシオカシュゾウ', :hira => 'いしおかしゅぞう', :url => 'http://www.ishiokashuzo.co.jp/')
 # 常陸大宮市
@@ -640,21 +640,21 @@ Sakagura.create(:city_id => 110, :name => '根本酒造', :kana => 'ネモトシ
 # 水戸市
 Sakagura.create(:city_id => 111, :name => '吉久保酒造', :kana => 'ヨシクボシュゾウ', :hira => 'よしくぼしゅぞう', :url => 'http://www.ippin.co.jp/')
 
-　#栃木県
+  #栃木県
 # 宇都宮市
 Sakagura.create(:city_id => 117, :name => '井上清吉商店', :kana => 'イノウエセイキチショウテン', :hira => 'いのうえせいきちしょうてん', :url => 'http://sawahime.co.jp/')
 Sakagura.create(:city_id => 117, :name => '虎屋本店', :kana => 'トラヤホンテン', :hira => 'とらやほんてん', :url => 'http://www.toratora.co.jp/')
 # 日光市
 Sakagura.create(:city_id => 125, :name => '渡邊佐平商店', :kana => 'ワタナベサヘイショウテン', :hira => 'わたなべさへいしょうてん', :url => 'http://www.watanabesahei.co.jp/')
 
-　#群馬県
+  #群馬県
 # 高崎市
 Sakagura.create(:city_id => 135, :name => '野田酒造店', :kana => 'ノダシュゾウテン', :hira => 'のだしゅぞうてん', :url => 'http://www.noda-shuzou.co.jp/')
 Sakagura.create(:city_id => 135, :name => '町田酒造店', :kana => 'マチダシュゾウテン', :hira => 'まちだしゅぞうてん', :url => 'http://www.seiryo-sake.co.jp/index.html')
 # 前橋市
 Sakagura.create(:city_id => 138, :name => '七ッ星醸造', :kana => 'ナナツボシジョウゾウ', :hira => 'ななつぼしじょうぞう', :url => 'http://www.kiminomatsu.co.jp/')
 
-　# 埼玉県
+  # 埼玉県
 # さいたま市
 Sakagura.create(:city_id => 153, :name => '内木酒造', :kana => 'ウチキシュゾウテン', :hira => 'うちきしゅぞうてん', :url => 'http://uchiki-s.wixsite.com/uchikisake')
 # 羽生市
@@ -663,7 +663,7 @@ Sakagura.create(:city_id => 156, :name => '東亜酒造', :kana => 'トウアシ
 Sakagura.create(:city_id => 164, :name => '晴雲酒造株', :kana => 'セイウンシュゾウ', :hira => 'せいうんしゅぞう', :url => 'http://www.kumagaya.or.jp/~seiun/')
 
 
-　#千葉県 
+  #千葉県 
 # 君津市
 Sakagura.create(:city_id => 169, :name => '須藤本家', :kana => 'スドウホンケ', :hira => 'すどうほんけ', :url => 'http://www.sudohonke.co.jp/')
 # 銚子市
@@ -671,7 +671,7 @@ Sakagura.create(:city_id => 170, :name => '飯田酒造場', :kana => '', :hira 
 # 冨津市
 Sakagura.create(:city_id => 173, :name => '石上酒造', :kana => '', :hira => 'いしがみしゅぞう', :url => 'http://www.isbc.co.jp/')
 
-　#東京都 
+  #東京都 
 # あきる野市
 Sakagura.create(:city_id => 181, :name => '中村酒造', :kana => 'ナカムラシュゾウ', :hira => 'なかむらしゅぞう', :url => 'http://www.chiyotsuru.com/')
 # 福生市
@@ -689,7 +689,7 @@ Sakagura.create(:city_id => 193, :name => '泉橋酒造', :kana => 'イズミバ
 Sakagura.create(:city_id => 194, :name => '久保田酒造', :kana => 'クボタシュゾウ', :hira => 'くぼたしゅぞう', :url => 'http://www.tsukui.ne.jp/kubota/')
 
 
-　#新潟県 
+  #新潟県 
 # 糸魚川市
 Sakagura.create(:city_id => 198, :name => '渡辺酒造店', :kana => 'ワタナベシュゾウテン', :hira => 'わたなべしゅぞうてん', :url => 'http://www.nechiotokoyama.jp/')
 # 上越市
@@ -698,7 +698,7 @@ Sakagura.create(:city_id => 207, :name => '新潟第一酒造', :kana => 'ニイ
 Sakagura.create(:city_id => 212, :name => '千代の光酒造', :kana => 'チヨノヒカリシュゾウ', :hira => 'ちよのひかりしゅぞう', :url => 'http://chiyonohikari.com/')
 
 
-　#富山県 
+  #富山県 
 # 高山市
 Sakagura.create(:city_id => 222, :name => '福鶴酒造', :kana => '', :hira => 'ふくつるしゅぞう', :url => 'https://www.kazenobon.co.jp/')
 # 氷見市
@@ -707,7 +707,7 @@ Sakagura.create(:city_id => 225, :name => '高澤酒造場', :kana => '', :hira 
 Sakagura.create(:city_id => 226, :name => '林酒造', :kana => 'ハヤシシュゾウ', :hira => 'はやししゅぞう', :url => 'http://www.hayashisyuzo.com/')
 
 
-　#石川県 
+  #石川県 
 # 珠洲市
 Sakagura.create(:city_id => 230, :name => '櫻田酒造', :kana => 'サクラダシュゾウ', :hira => 'さくらだしゅぞう', :url => 'http://www.sakurada.biz/')
 Sakagura.create(:city_id => 230, :name => '宗玄酒造', :kana => 'ソウゲンシュゾウ', :hira => 'そうげんしゅぞう', :url => 'http://www.sougen-shuzou.com/index.htm')
@@ -715,7 +715,7 @@ Sakagura.create(:city_id => 230, :name => '宗玄酒造', :kana => 'ソウゲン
 Sakagura.create(:city_id => 235, :name => '清水酒造店', :kana => 'シミズシュゾウテン', :hira => '', :url => 'http://www.notohomare.com/')
 
 
-　#福井県 
+  #福井県 
 # 越前市
 Sakagura.create(:city_id => 239, :name => '片山酒造', :kana => 'カタヤマシュゾウ', :hira => 'かたやましゅぞう', :url => 'http://sake-kansai.com/')
 # 勝山市
@@ -724,7 +724,7 @@ Sakagura.create(:city_id => 241, :name => '一本義久保本店', :kana => 'イ
 Sakagura.create(:city_id => 246, :name => '伊藤酒造', :kana => 'イトウシュゾウ', :hira => 'いとうしゅぞう', :url => 'http://koshinotaka.jp/')
 
 
-　# 山梨県
+  # 山梨県
 # 大月市
 Sakagura.create(:city_id => 252, :name => '笹一酒造', :kana => 'ササイチシュゾウ', :hira => 'ささいちしゅぞう', :url => 'http://www.sasaichi.co.jp/')
 # 笛吹市
@@ -733,7 +733,7 @@ Sakagura.create(:city_id => 254, :name => '腕相撲酒造', :kana => 'ウデズ
 Sakagura.create(:city_id => 257, :name => '太冠酒造', :kana => 'タイカンシュゾウ', :hira => 'たいかんしゅぞう', :url => 'http://www.taikan-y.co.jp/')
 
 
-　# 長野県
+  # 長野県
 # 伊那市
 Sakagura.create(:city_id => 262, :name => '大國酒造', :kana => 'オオクニシュゾウ', :hira => 'おおくにしゅぞう', :url => 'http://www.ookuni.com/')
 # 上田市
@@ -742,7 +742,7 @@ Sakagura.create(:city_id => 263, :name => '信州銘醸', :kana => 'シンシュ
 Sakagura.create(:city_id => 274, :name => '井賀屋酒造場', :kana => 'イカガヤシュゾウジョウ', :hira => 'いかがやしゅぞうじょう', :url => 'http://igayasyuzou.com/')
 
 
-　# 岐阜県
+  # 岐阜県
 # 各務原市
 Sakagura.create(:city_id => 284, :name => '菊川', :kana => 'キクカワ', :hira => 'きくかわ', :url => 'http://www.sake-kikukawa.co.jp/')
 # 下呂市
@@ -750,7 +750,7 @@ Sakagura.create(:city_id => 289, :name => '奥飛騨酒造', :kana => 'オクヒ
 Sakagura.create(:city_id => 289, :name => '天領酒造', :kana => 'テンリョウシュゾウ', :hira => '', :url => 'http://www.tenryou.com/index.html')
 
 
-　# 静岡県
+  # 静岡県
 # 伊豆市
 Sakagura.create(:city_id => 303, :name => '万大醸造', :kana => 'マンダイジョウゾウ', :hira => 'まんだいじょうぞう', :url => 'https://izu-bandai.com/')
 # 沼津市
@@ -759,7 +759,7 @@ Sakagura.create(:city_id => 309, :name => '高嶋酒造', :kana => 'タカシマ
 Sakagura.create(:city_id => 314, :name => '磯自慢酒造', :kana => 'イソジマンシュゾウ', :hira => 'いそじまんしゅぞう', :url => 'http://www.isojiman-sake.jp/')
 
 
-　# 愛知県
+  # 愛知県
 # 犬山市
 Sakagura.create(:city_id => 318, :name => '小弓鶴酒造', :kana => 'コユミツルシュゾウ', :hira => 'こゆみつるしゅぞう', :url => 'http://www.koyumitsuru.jp/')
 # 岡崎市
