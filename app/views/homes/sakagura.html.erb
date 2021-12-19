@@ -2,10 +2,9 @@
   <div class="row">
     <div class="col-lg-12">
       <% @sakagura.each do |sakagura| %>
-        <%# link_to sakagura.url do %>  <%#@sakaguraのなかにurlのカラムがはいっていて link_toでgoogleにせんいできるようにしたい%>
+        <%= link_to sakagura.url do %>  <%#@sakaguraのなかにurlのカラムがはいっていて link_toでgoogleにせんいできるようにしたい%>
           <%= sakagura.name %>
-          <%= sakagura.url %>
-        <%# end %>
+        <% end %>
       <% end %>
     </div>
   </div>

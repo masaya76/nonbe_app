@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
 
   devise_for :menbers, controllers: {
-    sessions:      'customers/sessions',
-    passwords:     'customers/passwords',
-    registrations: 'customers/registrations'
+    sessions:      'menbers/sessions',
+    passwords:     'menbers/passwords',
+    registrations: 'menbers/registrations'
   }
 
 

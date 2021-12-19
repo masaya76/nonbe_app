@@ -16,7 +16,7 @@
     <div class="transition">
       <% if menber_signed_in? %>
         <tr>
-          <th>TOP</th>
+          <th><%= link_to 'TOP', root_path %></th>
           <th>マイページ</th>
           <th>投稿</th>
           <th>検索</th>
@@ -24,9 +24,9 @@
         </tr>
       <% else %>
         <tr>
-          <th>TOP</th>
-          <th>新規登録</th>
-          <th>ログイン</th>
+          <th><%= link_to 'TOP', root_path %></th>
+          <th><%= link_to '新規登録', new_menber_registration_path %></th>
+          <th><%= link_to 'ログイン', new_menber_session_path %></th>
           <th>投稿</th>
           <th>検索</th>
         </tr>
