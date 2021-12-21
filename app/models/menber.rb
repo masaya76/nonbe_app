@@ -5,6 +5,8 @@ class Menber < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   attachment :profile_image
+  
+  has_many :posts
 
   validates :name, presence: true   #nanmeカラムの空欄禁止
 

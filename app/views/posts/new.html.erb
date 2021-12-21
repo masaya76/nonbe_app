@@ -1,2 +1,39 @@
-
-ntro
+<div class="container">
+  <%= form_with model:@post, url:posts_path, method: :post, local:true do |f| %>
+    <div class="row">
+      <div class="col-lg-6">
+        <canvas id="myChart"></canvas>
+        <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: ["Kaori", "Karasa", "Nodogoshi", "Nomiyasusa"],
+            datasets: [{
+              label: 'Beer',
+              backgroundColor: "rgba(0,0,80,0.4)",
+              borderColor: "rgba(0,0,80,1)",
+              data: @data
+            }]
+          },
+          options: {
+              scale: {
+                  ticks: {
+                      scaleBeginAtZero: true,
+                      min: 0,
+                      max: 5,
+                      stepSize: 1
+                  }
+              }
+          }
+        });
+        </script>
+      </div>
+      <div class="col-lg-6">
+        <%= f.fields_for :PostImages do |i| %>
+          <%#= i.attachment_field :image %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -82,3 +82,5 @@ gem "enum_help"
 gem 'pry-rails'
 
 gem 'carrierwave'  #ファイルのアップロード機能簡単に追加することができるgem  保存先はImagprofileImageUploader
+
+gem 'chart-js-rails', '~> 0.1.4'
