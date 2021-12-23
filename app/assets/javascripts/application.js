@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require Chart.min    
 //= require activestorage
 //= require turbolinks
 //= require jcanvas

@@ -1,39 +1,79 @@
-<div class="container">
-  <%= form_with model:@post, url:posts_path, method: :post, local:true do |f| %>
+<%= form_for @post, local: true,  html: {class: "form_area"} do |f| %>
+  <div class="container">
     <div class="row">
       <div class="col-lg-6">
+
+        <div class="form_area__field">
+          <%= f.text_area :thoughts, id: "post_text", placeholder: "投稿内容を入力", rows: 10%>
+          <%= f.fields_for :post_images, @post.post_images.build do |m| %>
+            <%= m.label :image, "画像" %>
+            <%= m.attachment_field :image, multiple: true, name: "post_images[image][]" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="title">
+          <%= f.label :name, '銘柄' %>
+          <%= f.text_field :name %>
+        </div>
+        <div class="category">
+          <%= f.label :kaori, '香り' %>
+          <%= f.select :kaori, *[0..5] %>
+  
+          <%= f.label :karasa, '辛さ' %>
+          <%= f.select :karasa, *[0..5] %>
+  
+          <%= f.label :nomigotae, 'のみごたえ' %>
+          <%= f.select :nomigotae, *[0..5] %>
+  
+          <%= f.label :rarity, 'レア度' %>
+          <%= f.select :rarity, *[0..5] %>
+  
+          <%= f.label :beginner, '初心者向け' %>
+          <%= f.select :beginner, *[0..5] %>
+        </div>
+
         <canvas id="myChart"></canvas>
+
+        <!-- グラフ導入-->
         <script>
         var ctx = document.getElementById("myChart");
         var myChart = new Chart(ctx, {
           type: 'radar',
           data: {
-            labels: ["Kaori", "Karasa", "Nodogoshi", "Nomiyasusa"],
+            labels: ["香り", "辛さ", "飲みごたえ", "レア度", "初心者向け"], <%#グラフの各データ名（評価基準名）%>
             datasets: [{
-              label: 'Beer',
+              label: '投稿者さんの評価グラフ',
               backgroundColor: "rgba(0,0,80,0.4)",
               borderColor: "rgba(0,0,80,1)",
-              data: @data
+              data: [1, 5, 2, 3, 5]  <%# グラフ内データ,  data: [1, 2, 3, 5] javascriptの書き方 %>
             }]
           },
           options: {
               scale: {
                   ticks: {
                       scaleBeginAtZero: true,
-                      min: 0,
-                      max: 5,
-                      stepSize: 1
+                      min: 0,       <%# 最小値  %>
+                      max: 5,       <%# 最大値  %>
+                      stepSize: 1   <%# メモリのピッチ幅  %>
                   }
               }
           }
         });
         </script>
-      </div>
-      <div class="col-lg-6">
-        <%= f.fields_for :PostImages do |i| %>
-          <%#= i.attachment_field :image %>
-        <% end %>
+        <!--ここまでグラフのコード-->
       </div>
     </div>
-  <% end %>
-</div>
+    <div class="row">
+      <div class="form_area__action">
+          <%= f.submit "投稿", class: "form_area__action__btn" %>
+        </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+
+

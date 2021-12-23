@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_12_19_222947) do
 
   create_table "post_images", force: :cascade do |t|
     t.integer "post_id"
-    t.text "image_id"
+    t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_12_19_222947) do
     t.string "karasa"
     t.string "rarity"
     t.string "beginner"
+    t.text "image_id"
     t.text "thoughts"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

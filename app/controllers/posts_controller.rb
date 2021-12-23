@@ -4,6 +4,8 @@ class PostsController < ApplicationController
     @post = Post.new
     @post_id = current_menber
     @post_images = PostImage.new
+    @data = [1, 2, 3, 5, 4]
+    
   end
 
   def show
@@ -13,6 +15,19 @@ class PostsController < ApplicationController
   end
 
   def edit
+  end
+
+
+  def create
+   post = current_menber.posts.create(post_params)
+   params[:post_images][:image].each do |image|
+          #配列　複数作業＝＞複数投稿（each）
+      byebug
+     post.post_images.create(image: image)
+  #左カラム＝情報を入れるカラム（[:post_images][:image].each do |image|）　　右カラム＝post_image.(image  カラム)
+   end
+   redirect_to
+
   end
 
   private
