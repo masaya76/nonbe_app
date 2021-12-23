@@ -19,16 +19,16 @@
         <div class="category">
           <%= f.label :kaori, '香り' %>
           <%= f.select :kaori, *[0..5] %>
-  
+
           <%= f.label :karasa, '辛さ' %>
           <%= f.select :karasa, *[0..5] %>
-  
+
           <%= f.label :nomigotae, 'のみごたえ' %>
           <%= f.select :nomigotae, *[0..5] %>
-  
+
           <%= f.label :rarity, 'レア度' %>
           <%= f.select :rarity, *[0..5] %>
-  
+
           <%= f.label :beginner, '初心者向け' %>
           <%= f.select :beginner, *[0..5] %>
         </div>
@@ -37,8 +37,18 @@
 
         <!-- グラフ導入-->
         <script>
-        var ctx = document.getElementById("myChart");
-        var myChart = new Chart(ctx, {
+        sakegurahu();  <%# 下の行の定義してる  sakegurahu  を表示出させる指示  %>
+        function sakegurahu() {  <%# rails で例えると＝controller内のdefと同じ意味合い %>
+          var ctx = document.getElementById("myChart");
+           var kaori = document.getElementById("post_kaori").value;   <%# "post_kaori"の数字のデータを取得 %>
+           var karasa = document.getElementById("post_karasa").value;
+           var nomigotae = document.getElementById("post_nomigotae").value;
+           var rarity = document.getElementById("post_rarity").value;
+           var beginner = document.getElementById("post_beginner").value;
+          //nar kaori <=  document.getElementById(idでデータを取得)   ("post_kaori").value
+
+          var sake_data = [kaori, karasa, nomigotae, rarity, beginner];
+          var myChart = new Chart(ctx, {
           type: 'radar',
           data: {
             labels: ["香り", "辛さ", "飲みごたえ", "レア度", "初心者向け"], <%#グラフの各データ名（評価基準名）%>
@@ -46,7 +56,7 @@
               label: '投稿者さんの評価グラフ',
               backgroundColor: "rgba(0,0,80,0.4)",
               borderColor: "rgba(0,0,80,1)",
-              data: [1, 5, 2, 3, 5]  <%# グラフ内データ,  data: [1, 2, 3, 5] javascriptの書き方 %>
+              data: sake_data <%# グラフ内データ,  data: [1, 2, 3, 5] javascriptの書き方 %>
             }]
           },
           options: {
@@ -60,6 +70,13 @@
               }
           }
         });
+        };
+        $('#post_kaori, #post_karasa, #post_nomigotae, #post_rarity, #post_beginner').change(function() {          
+          <%#  id取得('#post_kaori')したらデータを更新、変更change(function() { %>
+        sakegurahu();  
+          <%#  定義されてるグラフを表示{(上の行の更新、変更後に表示させてグラフをupdateしてる)、(function sakegurahu() {   定義してるグラフを呼び出してる) %>
+        });
+
         </script>
         <!--ここまでグラフのコード-->
       </div>
