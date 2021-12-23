@@ -3,9 +3,10 @@ class Post < ApplicationRecord
   belongs_to :menber
 
   has_many :post_images, dependent: :destroy
+  
   has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
-#through
+#through  親モデルの親と子モデルを直接関連を定義させる
   
   
   accepts_nested_attributes_for :post_images
