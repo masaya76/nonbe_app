@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_19_222947) do
+ActiveRecord::Schema.define(version: 2021_12_23_120528) do
 
   create_table "cities", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(version: 2021_12_19_222947) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "post_tags", force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.integer "menber_id"
     t.string "name"
@@ -73,6 +80,12 @@ ActiveRecord::Schema.define(version: 2021_12_19_222947) do
     t.string "kana"
     t.string "hira"
     t.text "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "tag_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

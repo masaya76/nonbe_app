@@ -6,7 +6,7 @@ class Menber < ApplicationRecord
 
   attachment :profile_image
   
-  has_many :posts
+  has_many :posts, dependent: :destroy  #親モデルのmenber削除されたとき子モデルpostも一緒に消す
 
   validates :name, presence: true   #nanmeカラムの空欄禁止
 
