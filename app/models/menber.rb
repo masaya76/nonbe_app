@@ -4,8 +4,8 @@ class Menber < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  attachment :profile_image
-  
+  attachment :profile_image_id
+
   has_many :posts, dependent: :destroy  #親モデルのmenber削除されたとき子モデルpostも一緒に消す
 
   validates :name, presence: true   #nanmeカラムの空欄禁止

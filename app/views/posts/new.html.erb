@@ -1,16 +1,6 @@
-<%= form_for @post, local: true,  html: {class: "form_area"} do |f| %>
+<%= form_with model:@post, url: posts_path, method: :post, local:true do |f| %>
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
-
-        <div class="form_area__field">
-          <%= f.text_area :thoughts, id: "post_text", placeholder: "投稿内容を入力", rows: 10%>
-          <%= f.fields_for :post_images, @post.post_images.build do |m| %>
-            <%= m.label :image, "画像" %>
-            <%= m.attachment_field :image, multiple: true, name: "post_images[image][]" %>
-          <% end %>
-        </div>
-      </div>
       <div class="col-lg-6">
         <div class="title">
           <%= f.label :name, '銘柄' %>
@@ -46,7 +36,6 @@
            var rarity = document.getElementById("post_rarity").value;
            var beginner = document.getElementById("post_beginner").value;
           //nar kaori <=  document.getElementById(idでデータを取得)   ("post_kaori").value
-
           var sake_data = [kaori, karasa, nomigotae, rarity, beginner];
           var myChart = new Chart(ctx, {
           type: 'radar',
@@ -71,20 +60,34 @@
           }
         });
         };
-        $('#post_kaori, #post_karasa, #post_nomigotae, #post_rarity, #post_beginner').change(function() {          
+        $('#post_kaori, #post_karasa, #post_nomigotae, #post_rarity, #post_beginner').change(function() {
           <%#  id取得('#post_kaori')したらデータを更新、変更change(function() { %>
-        sakegurahu();  
+        sakegurahu();
           <%#  定義されてるグラフを表示{(上の行の更新、変更後に表示させてグラフをupdateしてる)、(function sakegurahu() {   定義してるグラフを呼び出してる) %>
         });
 
         </script>
         <!--ここまでグラフのコード-->
       </div>
+      <div class="col-lg-6">
+        <div class="tag">
+          <%= f.text_field :tag_name, placeholder: "タグ付けをする場合は入力してください" %>
+        </div>
+        <div class="image_field">
+          <%= f.attachment_field :post_images_images, multiple: true %>
+          <%# 複数投稿  attachment_fieldを使う場合  %>
+          <%# 例）今回の場合だと　　postモデルとアソシエーション関係の画像モデル_ カラム, multiple（多数）: true＜必須＞　%>
+          <%#                                   post_image                      _  image,  multiple       :true　%>
+        </div>
+        <div class=thoughts_area>
+          <%= f.text_area :thoughts, id: "post_text", placeholder: "投稿内容を入力", rows: 10%><%# placeholder ー 記述部分内に文字を反映させる、rows ー 記述部分の行数%>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="form_area__action">
-          <%= f.submit "投稿", class: "form_area__action__btn" %>
-        </div>
+        <%= f.submit "投稿", class: "form_area__action__btn" %>
+      </div>
     </div>
   </div>
 <% end %>

@@ -95,34 +95,5 @@
           }
     		}
     	);
-
-
-    //   $("#map-container").japanMap({
-    //       width:600,
-    //       onSelect : function(data){
-    //           alert(data.name);
-    //       }
-    //     });
-    // });
-
-        $(function(){
-            $("#jmap").japanMap({
-              	width: 1000,
-              	areas: areas,
-              	showsAreaName: true,
-              	borderLineWidth: 0.25, //線の幅
-    		      	drawsBoxLine: false, //canvasを線で囲む場合はtrue
-    		      	movesIslands: true, //南西諸島を左上に移動させるときはtrue、移動させないときはfalse
-    		      		backgroundColor: "#ffffff", //canvasの背景色
-    			font: "MS Mincho", //地図に表示する文字のフォント
-    			fontSize: 12, //地図に表示する文字のサイズ
-    			fontColor: "areaColor", //地図に表示する文字の色。"areaColor"でエリアの色に合わせる
-    			fontShadowColor: "black", //地図に表示する文字の影の色
-                	onSelect: function(data){  //onSelectでfunction()の中ものにアクションを起こす
-            window.location.href = window.location.origin + "/home/city?prefecture_name=" + data.name}
-            });
-        });
-
-
     });
     </script>

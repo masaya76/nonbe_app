@@ -3,10 +3,11 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @post_id = current_menber
-    @post_images = PostImage.new
+    @post.post_images.build
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def index
@@ -17,24 +18,24 @@ class PostsController < ApplicationController
 
 
   def create
-   post = current_menber.posts.create(post_params)
-   params[:post_images][:image].each do |image|
-          #配列 複数作業＝＞複数投稿（each）
-      byebug
-     post.post_images.create(image: image)
-  #左カラム＝情報を入れるカラム（[:post_images][:image].each do |image|）  右カラム＝post_image.(image  カラム)
-   end
-   redirect_to
-
+    @post = current_menber.posts.new(post_params)       #create=>new変更
+    @post.menber_id = current_menber.id
+    tag_name = params[:post][:tag_name].split(",")  #ここの記述はtagをsaveで渡す前にどんなデータを送るか（因数）記述する
+                                     #split(",") でタグをformに記述する時に(" 中の入れた文字、記号等 ")　連続して読み込める
+    if @post.save
+      @post.save_posts(tag_name)   #save_postsはpost.rbに記述　コントローラーに記述するとコントローラーが重くなる
+    end
+    redirect_to post_path(@post.id)
+   
   end
 
   private
+
   def post_params
-    params.require(:post).permit(:menber_id, :post_image_id, :name, :kaori, :nomigotae, :karasa, :rarity, :beginner, :thoughts)
+    params.require(:post).permit(:menber_id, :tag_id, :post_image_id, :name, :kaori, :nomigotae, :karasa, :rarity, :beginner, :thoughts, post_images_images:[])
+    # 画像複数するには、postモデルの画像を保管するpost_imageモデルの配列を記述する。よって, 画像保管モデル_カラム：[] となる
   end
 
-  def post_image_params
-    params.require(:post_image).permit(:image)
-  end
+
 
 end
