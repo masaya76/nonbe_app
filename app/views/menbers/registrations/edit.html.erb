@@ -1,4 +1,4 @@
-<h2>会員編集画面</h2>
+<h2>会員情報編集画面</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "menbers/shared/error_messages", resource: resource %>
@@ -7,10 +7,6 @@
       <div class="col-lg-8">
         <table>
           <thead>
-            <tr>
-              <th>アイコン</th>
-              <th><%= f.attachment_field :profile_image %></th>
-            </tr>
             <tr>
               <th>名前</th>
               <th><%= f.text_field :name, nameautofocus: true, autocomplete: "name" %></th>
