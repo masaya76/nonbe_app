@@ -8,19 +8,19 @@
         </div>
         <div class="category">
           <span>香り</span>
-          <%= @post.kaori %>
+          <span id="post_kaori"><%= @post.kaori %></span>
 
           <span>辛さ</span>
-          <%= @post.karasa %>
+          <span id="post_karasa"><%= @post.karasa %></span>
 
           <span>のみごたえ</span>
-          <%= @post.nomigotae %>
+          <span id="post_nomigotae"><%= @post.nomigotae %></span>
 
           <span>レア度</span>
-          <%= @post.rarity %>
+          <span id="post_rarity"><%= @post.rarity %></span>
 
           <span>初心者向け</span>
-          <%= @post.beginner %>
+          <span id="post_beginner"><%= @post.beginner %></span>
         </div>
 
         <canvas id="myChart"></canvas>
@@ -30,11 +30,11 @@
         sakegurahu();  <%# 下の行の定義してる  sakegurahu  を表示出させる指示  %>
         function sakegurahu() {  <%# rails で例えると＝controller内のdefと同じ意味合い %>
           var ctx = document.getElementById("myChart");
-           var kaori = document.getElementById("post_kaori");   <%# "post_kaori"の数字のデータを取得 %>
-           var karasa = document.getElementById("post_karasa");
-           var nomigotae = document.getElementById("post_nomigotae");
-           var rarity = document.getElementById("post_rarity");
-           var beginner = document.getElementById("post_beginner"); 
+           var kaori = document.getElementById("post_kaori").innerHTML;   //id付け以外の表示方法は%<%#= %> でrubyの表示方法で表す
+           var karasa = document.getElementById("post_karasa").innerHTML;
+           var nomigotae = document.getElementById("post_nomigotae").innerHTML;
+           var rarity = document.getElementById("post_rarity").innerHTML;  //.innerHTMはid指定した中身のカラムだけ抜き取る
+           var beginner = document.getElementById("post_beginner").innerHTML;;
           //var kaori <=  document.getElementById(idでデータを取得)   ("post_kaori").value
           var sake_data = [kaori, karasa, nomigotae, rarity, beginner];
           var myChart = new Chart(ctx, {

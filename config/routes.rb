@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'menbers/index'
+  get 'menbers/show'
+  get 'menbers/edit'
   resources :posts
   
   root to: 'homes#top'
@@ -13,6 +16,9 @@ Rails.application.routes.draw do
     passwords:     'menbers/passwords',
     registrations: 'menbers/registrations'
   }
-
+  
+  resources :menbers, only: [:index, :show, :edit, :update]
+  
+  
 
 end

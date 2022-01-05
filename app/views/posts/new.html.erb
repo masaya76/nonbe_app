@@ -31,7 +31,7 @@
         function sakegurahu() {  <%# rails で例えると＝controller内のdefと同じ意味合い %>
           var ctx = document.getElementById("myChart");
            var kaori = document.getElementById("post_kaori").value;   <%# "post_kaori"の数字のデータを取得 %>
-           var karasa = document.getElementById("post_karasa").value;
+           var karasa = document.getElementById("post_karasa").value;    //.valueはid指定した中身のカラムだけ抜き取る
            var nomigotae = document.getElementById("post_nomigotae").value;
            var rarity = document.getElementById("post_rarity").value;
            var beginner = document.getElementById("post_beginner").value;
