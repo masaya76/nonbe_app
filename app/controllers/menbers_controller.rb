@@ -3,7 +3,7 @@ class MenbersController < ApplicationController
     @posts = Post.all
   end
 
-  def show
+  def mypage
     @menber = current_menber
     @posts = Post.all
   end

@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'menbers/index'
-  get 'menbers/show'
-  get 'menbers/edit'
-  resources :posts
-  
+  resources :post, only: [:new, :show, :create, :edit, :update, :delete]
+
   root to: 'homes#top'
   get 'home/about',  to:"homes#about"
   get 'home/city', to:"homes#city"
@@ -16,9 +13,11 @@ Rails.application.routes.draw do
     passwords:     'menbers/passwords',
     registrations: 'menbers/registrations'
   }
-  
-  resources :menbers, only: [:index, :show, :edit, :update, :delete]
-  
-  
+
+  get 'manber/mypage/:id', to:"menbers#mypage", as: 'mypage'
+  resources :menbers, only: [:edit, :update, :delete]
+
+
+
 
 end

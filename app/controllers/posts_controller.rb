@@ -39,13 +39,6 @@ class PostsController < ApplicationController
     redirect_to post_path(@post.id)
   end
 
-  def index
-  end
-
-
-
-
-
 
   private
 
