@@ -1,89 +1,92 @@
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="title">
-          <span>銘柄</span>
-          <%= @post.name %>
-        </div>
-        <div class="category">
-          <span>香り</span>
-          <span id="post_kaori"><%= @post.kaori %></span>
-
-          <span>辛さ</span>
-          <span id="post_karasa"><%= @post.karasa %></span>
-
-          <span>のみごたえ</span>
-          <span id="post_nomigotae"><%= @post.nomigotae %></span>
-
-          <span>レア度</span>
-          <span id="post_rarity"><%= @post.rarity %></span>
-
-          <span>初心者向け</span>
-          <span id="post_beginner"><%= @post.beginner %></span>
-        </div>
-
-        <canvas id="myChart"></canvas>
-
-        <!-- グラフ導入-->
-        <script>
-        sakegurahu();  <%# 下の行の定義してる  sakegurahu  を表示出させる指示  %>
-        function sakegurahu() {  <%# rails で例えると＝controller内のdefと同じ意味合い %>
-          var ctx = document.getElementById("myChart");
-           var kaori = document.getElementById("post_kaori").innerHTML;   //id付け以外の表示方法は%<%#= %> でrubyの表示方法で表す
-           var karasa = document.getElementById("post_karasa").innerHTML;
-           var nomigotae = document.getElementById("post_nomigotae").innerHTML;
-           var rarity = document.getElementById("post_rarity").innerHTML;  //.innerHTMはid指定した中身のカラムだけ抜き取る
-           var beginner = document.getElementById("post_beginner").innerHTML;;
-          //var kaori <=  document.getElementById(idでデータを取得)   ("post_kaori").value
-          var sake_data = [kaori, karasa, nomigotae, rarity, beginner];
-          var myChart = new Chart(ctx, {
-          type: 'radar',
-          data: {
-            labels: ["香り", "辛さ", "飲みごたえ", "レア度", "初心者向け"], <%#グラフの各データ名（評価基準名）%>
-            datasets: [{
-              label: '投稿者さんの評価グラフ',
-              backgroundColor: "rgba(0,0,80,0.4)",
-              borderColor: "rgba(0,0,80,1)",
-              data: sake_data <%# グラフ内データ,  data: [1, 2, 3, 5] javascriptの書き方 %>
-            }]
-          },
-          options: {
-              scale: {
-                  ticks: {
-                      scaleBeginAtZero: true,
-                      min: 0,       <%# 最小値  %>
-                      max: 5,       <%# 最大値  %>
-                      stepSize: 1   <%# メモリのピッチ幅  %>
-                  }
-              }
-          }
-        });
-        };
-        $('#post_kaori, #post_karasa, #post_nomigotae, #post_rarity, #post_beginner').change(function() {
-          <%#  id取得('#post_kaori')したらデータを更新、変更change(function() { %>
-        sakegurahu();
-          <%#  定義されてるグラフを表示{(上の行の更新、変更後に表示させてグラフをupdateしてる)、(function sakegurahu() {   定義してるグラフを呼び出してる) %>
-        });
-
-        </script>
-        <!--ここまでグラフのコード-->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="title">
+        <span>銘柄</span>
+        <%= @post.name %>
       </div>
-      <div class="col-lg-6">
-        <div class="tag">
-          <%#= f.text_field :tag_name, placeholder: "タグ付けをする場合は入力してください" %>
-        </div>
-        <div class="image_field">
-          <%= attachment_image_tag  @post, :image_id, :fill, 60, 40, multiple: true %>
-          <%# 複数投稿  attachment_fieldを使う場合  %>
-          <%# 例）今回の場合だと　　postモデルとアソシエーション関係の画像モデル_ カラム, multiple（多数）: true＜必須＞　%>
-          <%#                                   post_image                      _  image,  multiple       :true　%>
-        </div>
-        <div style="border: outset">
-          <%= @post.thoughts %><%# placeholder ー 記述部分内に文字を反映させる、rows ー 記述部分の行数%>
-        </div>
+      <div class="category">
+        <span>香り</span>
+        <span id="post_kaori"><%= @post.kaori %></span>
+
+        <span>辛さ</span>
+        <span id="post_karasa"><%= @post.karasa %></span>
+
+        <span>のみごたえ</span>
+        <span id="post_nomigotae"><%= @post.nomigotae %></span>
+
+        <span>レア度</span>
+        <span id="post_rarity"><%= @post.rarity %></span>
+
+        <span>初心者向け</span>
+        <span id="post_beginner"><%= @post.beginner %></span>
+      </div>
+
+      <canvas id="myChart"></canvas>
+
+      <!-- グラフ導入-->
+      <script>
+      sakegurahu();  <%# 下の行の定義してる  sakegurahu  を表示出させる指示  %>
+      function sakegurahu() {  <%# rails で例えると＝controller内のdefと同じ意味合い %>
+        var ctx = document.getElementById("myChart");
+         var kaori = document.getElementById("post_kaori").innerHTML;   //id付け以外の表示方法は%<%#= %> でrubyの表示方法で表す
+         var karasa = document.getElementById("post_karasa").innerHTML;
+         var nomigotae = document.getElementById("post_nomigotae").innerHTML;
+         var rarity = document.getElementById("post_rarity").innerHTML;  //.innerHTMはid指定した中身のカラムだけ抜き取る
+         var beginner = document.getElementById("post_beginner").innerHTML;;
+        //var kaori <=  document.getElementById(idでデータを取得)   ("post_kaori").value
+        var sake_data = [kaori, karasa, nomigotae, rarity, beginner];
+        var myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ["香り", "辛さ", "飲みごたえ", "レア度", "初心者向け"], <%#グラフの各データ名（評価基準名）%>
+          datasets: [{
+            label: '投稿者さんの評価グラフ',
+            backgroundColor: "rgba(0,0,80,0.4)",
+            borderColor: "rgba(0,0,80,1)",
+            data: sake_data <%# グラフ内データ,  data: [1, 2, 3, 5] javascriptの書き方 %>
+          }]
+        },
+        options: {
+            scale: {
+                ticks: {
+                    scaleBeginAtZero: true,
+                    min: 0,       <%# 最小値  %>
+                    max: 5,       <%# 最大値  %>
+                    stepSize: 1   <%# メモリのピッチ幅  %>
+                }
+            }
+        }
+      });
+      };
+      $('#post_kaori, #post_karasa, #post_nomigotae, #post_rarity, #post_beginner').change(function() {
+        <%#  id取得('#post_kaori')したらデータを更新、変更change(function() { %>
+      sakegurahu();
+        <%#  定義されてるグラフを表示{(上の行の更新、変更後に表示させてグラフをupdateしてる)、(function sakegurahu() {   定義してるグラフを呼び出してる) %>
+      });
+
+      </script>
+      <!--ここまでグラフのコード-->
+    </div>
+    <div class="col-lg-6">
+      <div class="tag">
+        <%#= f.text_field :tag_name, placeholder: "タグ付けをする場合は入力してください" %>
+      </div>
+      <div class="image_field">
+        <%= attachment_image_tag  @post, :image_id, :fill, 60, 40, multiple: true %>
+        <%# 複数投稿  attachment_fieldを使う場合  %>
+        <%# 例）今回の場合だと　　postモデルとアソシエーション関係の画像モデル_ カラム, multiple（多数）: true＜必須＞　%>
+        <%#                                   post_image                      _  image,  multiple       :true　%>
+      </div>
+      <div style="border: outset">
+        <%= @post.thoughts %><%# placeholder ー 記述部分内に文字を反映させる、rows ー 記述部分の行数%>
       </div>
     </div>
-
   </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <%= link_to "編集", edit_post_path(@post) %><%= link_to "消去", post_path(@post), method: :delete %>
+    </div>
+  </div>
+</div>
 

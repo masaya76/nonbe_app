@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     registrations: 'menbers/registrations'
   }
   
-  resources :menbers, only: [:index, :show, :edit, :update]
+  resources :menbers, only: [:index, :show, :edit, :update, :delete]
   
   
 

@@ -6,17 +6,6 @@ class PostsController < ApplicationController
     @post.post_images.build
   end
 
-  def show
-    @post = Post.find(params[:id])
-  end
-
-  def index
-  end
-
-  def edit
-  end
-
-
   def create
     @post = current_menber.posts.new(post_params)       #create=>new変更
     @post.menber_id = current_menber.id
@@ -26,8 +15,37 @@ class PostsController < ApplicationController
       @post.save_posts(tag_name)   #save_postsはpost.rbに記述　コントローラーに記述するとコントローラーが重くなる
     end
     redirect_to post_path(@post.id)
-   
+
   end
+
+  def edit
+    @post = Post.find(params[:id])
+    @post.id = current_menber
+    @post.post_images.build
+  end
+
+  def update
+    @post = current_menber.post.update(post_params)
+
+  end
+
+  def show
+    @post = Post.find(params[:id])
+    @post.id = current_menber.id
+    tag_name = params[:post][:tag_name].split(",")
+    if
+      @post.save_posts(tag_name)
+    end
+    redirect_to post_path(@post.id)
+  end
+
+  def index
+  end
+
+
+
+
+
 
   private
 

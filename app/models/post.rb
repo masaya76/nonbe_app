@@ -31,8 +31,4 @@ class Post < ApplicationRecord
     end
   end
 
-  def show
-    @post_k = Post.select("kaori")
-  end
-
 end
