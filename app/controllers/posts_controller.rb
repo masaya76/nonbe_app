@@ -17,6 +17,10 @@ class PostsController < ApplicationController
     redirect_to post_path(@post.id)
 
   end
+  
+  def show
+    @post = Post.find(params[:id])
+  end
 
   def edit
     @post = Post.find(params[:id])
@@ -25,11 +29,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = current_menber.post.update(post_params)
-
-  end
-
-  def show
     @post = Post.find(params[:id])
     @post.id = current_menber.id
     tag_name = params[:post][:tag_name].split(",")
@@ -37,7 +36,9 @@ class PostsController < ApplicationController
       @post.save_posts(tag_name)
     end
     redirect_to post_path(@post.id)
+
   end
+
 
 
   private
