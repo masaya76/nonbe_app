@@ -17,9 +17,10 @@ class PostsController < ApplicationController
     redirect_to post_path(@post.id)
 
   end
-  
+
   def show
     @post = Post.find(params[:id])
+    @post_images = @post.post_images.all
   end
 
   def edit

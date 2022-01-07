@@ -1,9 +1,10 @@
 class Post < ApplicationRecord
 
+  attachment :image
+
   belongs_to :menber
 
   has_many :post_images, dependent: :destroy
-
   has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
 #through  親モデルの親と子モデルを直接関連を定義させる

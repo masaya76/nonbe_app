@@ -5,7 +5,7 @@ class MenbersController < ApplicationController
 
   def mypage
     @menber = current_menber
-    @post_images = PostImage.all.includes(:post)   #メソッド.includes(:~) me
+    @post_images = PostImage.all.includes(:post)   
   end
 
   def edit
