@@ -1,11 +1,8 @@
 class MenbersController < ApplicationController
-  def index
-    @posts = Post.all
-  end
 
   def mypage
     @menber = current_menber
-    @post_images = PostImage.all.includes(:post)   
+    @posts = @menber.posts
   end
 
   def edit

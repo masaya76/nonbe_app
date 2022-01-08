@@ -22,12 +22,15 @@
       </div>
     </div>
     <div class="row">
-      <% @post_images.each do |post_image| %>
-        <div class="col-12-flex flex-lg-wrap">
-          <%= link_to post_path(post_image), class: 'list-content' do %>
-            <p><%= attachment_image_tag post_image, :image, :fill, 100, 100 %></p>
-          <% end %>
-        </div>
+      <% @posts.each do |post| %>
+        <% if post.post_images.exists? %>
+          <% post_image = post.post_images.first %>   
+          <div class="col-12-flex flex-lg-wrap">
+            <%= link_to post_path(post_image), class: 'list-content' do %>
+              <p><%= attachment_image_tag post_image, :image, :fill, 100, 100 %></p>
+            <% end %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
