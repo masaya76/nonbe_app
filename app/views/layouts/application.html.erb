@@ -19,7 +19,7 @@
           <th><%= link_to 'TOP', root_path %></th>
           <th><%= link_to 'マイページ', mypage_path(current_menber) %></th>
           <th><%= link_to '投稿', new_post_path %></th>
-          <th>検索</th>
+          <th><%= link_to '検索', searches_top_path %></th>
           <th><%= link_to 'ログアウト', destroy_menber_session_path, method: :delete %></th>
         </tr>
       <% else %>

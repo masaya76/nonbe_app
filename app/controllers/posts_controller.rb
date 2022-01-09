@@ -49,6 +49,4 @@ class PostsController < ApplicationController
     # 画像複数するには、postモデルの画像を保管するpost_imageモデルの配列を記述する。よって, 画像保管モデル_カラム：[] となる
   end
 
-
-
 end
