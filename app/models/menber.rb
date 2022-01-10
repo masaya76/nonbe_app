@@ -10,4 +10,10 @@ class Menber < ApplicationRecord
 
   validates :name, presence: true   #nanmeカラムの空欄禁止
 
+  class Menber
+    def word
+      "menber name is"
+    end
+  end
+
 end

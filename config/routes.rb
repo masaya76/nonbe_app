@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'posts/search', to:"posts#search"
+  get 'posts/result', to:"posts#result"
   resources :posts, only: [:new, :show, :create, :edit, :update, :delete]
 
   root to: 'homes#top'
@@ -16,8 +18,6 @@ Rails.application.routes.draw do
 
   get 'manber/mypage/:id', to:"menbers#mypage", as: 'mypage'
   resources :menbers, only: [:edit, :update, :delete]
-  
-  get 'searches/top', to:"searches#top"
-  get 'searches/search', to:"searches#search"
- 
+
+
 end

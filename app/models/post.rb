@@ -31,5 +31,15 @@ class Post < ApplicationRecord
       end
     end
   end
+  
+  class Search
+    def self.serach(display)
+      results = []
+      results = [Menber.serach(display)]
+      results = [Post.serach(display)]
+      results = [PostTag.serach(display)]
+      results
+    end
+  end
 
 end
