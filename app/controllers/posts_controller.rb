@@ -21,6 +21,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @post_images = @post.post_images.all
+    @comments = @post.comments
+    @comment = @post.comments.new
   end
 
   def edit
@@ -38,11 +40,17 @@ class PostsController < ApplicationController
     end
     redirect_to post_path(@post.id)
   end
-  
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy(post_params)
+    redirect_to root_path
+  end
+
   #検索欄
   def search
   end
- 
+
  #検索結果
   def result
     @results = Search.where(params[:display])

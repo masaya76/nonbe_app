@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
 
+
+
   get 'posts/search', to:"posts#search"
   get 'posts/result', to:"posts#result"
-  resources :posts, only: [:new, :show, :create, :edit, :update, :delete]
-
+  resources :posts, only: [:new, :show, :create, :edit, :update, :destroy] do
+    resources :comments, only: [:new, :create]
+  end
   root to: 'homes#top'
   get 'home/about', to:"homes#about"
   get 'home/city', to:"homes#city"
   get 'home/sakagura', to:"homes#sakagura"
+  get 'home/search', to:"homes#search"
 
 
   devise_for :menbers, controllers: {

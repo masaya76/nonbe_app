@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   has_many :post_images, dependent: :destroy
   has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
+  has_many :comments, dependent: :destroy
 #through  親モデルの親と子モデルを直接関連を定義させる
 
   accepts_attachments_for :post_images, attachment: :image  #画像複数投稿時の記述  accepts_attachments_for :画像保管モデル, attachment: :画像保管モデルのカラム
@@ -31,7 +32,7 @@ class Post < ApplicationRecord
       end
     end
   end
-  
+
   class Search
     def self.serach(display)
       results = []

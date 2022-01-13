@@ -22,7 +22,7 @@
           <th><%= link_to '検索', posts_search_path %></th>
           <th><%= link_to 'ログアウト', destroy_menber_session_path, method: :delete %></th>
           <th>
-            <%= form_with url:posts_result_path, method: :get, local: :true do |f| %>
+            <%= form_with url:home_search_path, method: :get, local: :true do |f| %>
               <%= f.text_field :word %>
               <%= f.submit "検索" %>
             <% end %>

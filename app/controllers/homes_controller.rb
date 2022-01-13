@@ -5,6 +5,17 @@ class HomesController < ApplicationController
   def about
   end
 
+  def search
+    #@search = params[[:Menber_search][:Post_search][:Tag_search]]
+
+  　params[:word]
+    @menber = Menber.where(name: params[:word])
+    # select * from mebmer where name = params[:word]
+    @post = Post.where(name: params[:word])
+    @tag = Tag.where(tag_name: params[:word])
+
+  end
+
   def city
     @prefecture = Prefecture.find_by(name: params[:prefecture_name])
     # Prefecture.find(params[:prefecture_code])  #.municipalitiesのmodelをデータseed.rbにデータを挿入していないためコメントアウト

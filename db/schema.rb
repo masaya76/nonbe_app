@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_23_120528) do
+ActiveRecord::Schema.define(version: 2022_01_10_041523) do
 
   create_table "cities", force: :cascade do |t|
     t.integer "prefecture_id"
     t.string "name"
     t.string "kana"
     t.string "hira"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "menber_id"
+    t.integer "post_id"
+    t.text "comment_comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
