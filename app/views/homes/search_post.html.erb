@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <% if @menber.present? %>
+        <%= link_to(home_search_menber_path(:name=> params[:word]), class: 'list-content') do %>
+          <h5>会員検索ヒット数</h5>
+          <%= @menber.count %>件
+        <% end %>
+      <% else %>
+        <h5>会員検索ヒット数</h5>
+        <h5>検索一致がありません</h5>
+      <% end %>
+    </div>
+    <div class="col-lg-4">
+      <% if @post.present? %>
+        <%= link_to(home_search_post_path(:neme=> params[:word]), class: 'list-content') do %>
+          <h5>投稿検索ヒット数</h5>
+          <%= @post.count %>件
+        <% end %>
+      <% else %>
+        <h5>会員検索ヒット数</h5>
+        <h5>検索一致がありません</h5>
+      <% end %>
+    </div>
+    <div class="col-lg-4">
+      <% if @tag.present? %>
+        <%= link_to(home_search_tag_path(:tag_name=> params[:word]), class: 'list-content') do %>
+          <h5>タグ検索ヒット数</h5>
+          <%= @tag.count %>件
+        <% end %>
+      <% else %>
+        <h5>会員検索ヒット数</h5>
+        <h5>検索一致がありません</h5>
+      <% end %>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="row">
+    <div class="col-12-flex flex-lg-wrap">
+      <h4 class="title">検索結果</h4>
+      <h4 class="result"><%=  %></h4>
+    </div>
+  </div>
+</div>
