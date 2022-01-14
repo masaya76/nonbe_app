@@ -6,6 +6,7 @@ class HomesController < ApplicationController
   end
 
   def search
+<<<<<<< HEAD
 
     
     # <% Menber.where(neme: @ketwords)  =>  Menberモデルのnameカラムを@keywordsに代入してる %>
@@ -25,6 +26,15 @@ class HomesController < ApplicationController
     if params[:word].present?
       @items = Item.where(genre_id: params[:genre_id])
     end
+=======
+    #@search = params[[:Menber_search][:Post_search][:Tag_search]]
+    @keywords = params[:word]
+    # select * from mebmer where name = params[:word]
+    @menber = Menber.where(name: @keywords)
+    # byebug
+    @tag = Tag.where(tag_name: @keywords)
+    @post = Post.where(name: @keywords)
+>>>>>>> refs/remotes/origin/main
   end
 
   def search_tag
