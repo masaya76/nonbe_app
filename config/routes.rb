@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :posts, only: [:new, :show, :create, :edit, :update, :destroy] do
-    resources :comments, only: [:new, :create]
+    resources :comments, only: [:new, :create, :destroy]
   end
 
   root to: 'homes#top'

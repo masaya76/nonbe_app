@@ -23,6 +23,7 @@ class PostsController < ApplicationController
     @post_images = @post.post_images.all
     @comments = @post.comments
     @comment = @post.comments.new
+    @menber = current_menber
   end
 
   def edit

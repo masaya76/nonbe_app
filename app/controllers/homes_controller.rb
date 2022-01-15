@@ -6,9 +6,6 @@ class HomesController < ApplicationController
   end
 
   def search
-<<<<<<< HEAD
-
-    
     # <% Menber.where(neme: @ketwords)  =>  Menberモデルのnameカラムを@keywordsに代入してる %>
     @menber = Menber.where(name: params[:word])
     @tag = Tag.where(tag_name: params[:word])
@@ -24,17 +21,11 @@ class HomesController < ApplicationController
 
   def search_post
     if params[:word].present?
-      @items = Item.where(genre_id: params[:genre_id])
+      @menber = Menber.where(name: params[:word])
+      @tag = Tag.where(tag_name: params[:word])
+      @post = Post.where(name: params[:word])
+      @posts = Post.where(name: params[:word])
     end
-=======
-    #@search = params[[:Menber_search][:Post_search][:Tag_search]]
-    @keywords = params[:word]
-    # select * from mebmer where name = params[:word]
-    @menber = Menber.where(name: @keywords)
-    # byebug
-    @tag = Tag.where(tag_name: @keywords)
-    @post = Post.where(name: @keywords)
->>>>>>> refs/remotes/origin/main
   end
 
   def search_tag

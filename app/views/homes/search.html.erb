@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-4">
       <% if @menber.present? %>
-        <%= link_to(home_search_menber_path(neme: params[:word]), class: 'list-content') do %>
+        <%= link_to(home_search_menber_path(word: params[:word]), class: 'list-content') do %>
           <h5>会員検索ヒット数</h5>
           <%= @menber.count %>件
         <% end %>
@@ -13,7 +13,7 @@
     </div>
     <div class="col-lg-4">
       <% if @post.present? %>
-        <%= link_to(home_search_post_path(name: params[:word]), class: 'list-content') do %>
+        <%= link_to(home_search_post_path(word: params[:word]), class: 'list-content') do %>
           <h5>投稿検索ヒット数</h5>
           <%= @post.count %>件
         <% end %>
@@ -24,7 +24,7 @@
     </div>
     <div class="col-lg-4">
       <% if @tag.present? %>
-        <%= link_to(home_search_tag_path(tag_name: params[:word]), class: 'list-content') do %>
+        <%= link_to(home_search_tag_path(word: params[:word]), class: 'list-content') do %>
           <h5>タグ検索ヒット数</h5>
           <%= @tag.count %>件
         <% end %>
