@@ -1,51 +1,15 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <% if @menber.present? %>
-        <%= link_to(home_search_menber_path(word: params[:word]), class: 'list-content') do %>
-          <h5>会員検索ヒット数</h5>
-          <%= @menber.count %>件
-        <% end %>
-      <% else %>
-        <h5>会員検索ヒット数</h5>
-        <h5>検索一致がありません</h5>
-      <% end %>
-    </div>
-    <div class="col-lg-4">
-      <% if @post.present? %>
-        <%= link_to(home_search_post_path(word: params[:word]), class: 'list-content') do %>
-          <h5>投稿検索ヒット数</h5>
-          <%= @post.count %>件
-        <% end %>
-      <% else %>
-        <h5>会員検索ヒット数</h5>
-        <h5>検索一致がありません</h5>
-      <% end %>
-    </div>
-    <div class="col-lg-4">
-      <% if @tag.present? %>
-        <%= link_to(home_search_tag_path(word: params[:word]), class: 'list-content') do %>
-          <h5>タグ検索ヒット数</h5>
-          <%= @tag.count %>件
-        <% end %>
-      <% else %>
-        <h5>会員検索ヒット数</h5>
-        <h5>検索一致がありません</h5>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'homes/search', menber:@menbers, post:@posts, tag:@tag %>  <%#  部分テンプレート　　render 'homes/search'～　　homes/_search  _は勝手に消してくれる%>
   <div class="row">
     <div class="col-12-flex flex-lg-wrap">
       <h4 class="title">検索結果</h4>
     </div>
   </div>
   <div class="row flex-nowrap">
-    <% @posts.each do |post| %>
+    <% @tag.posts.each do |post| %>
       <div class="col-3">
         <%= link_to post_path(post.id) do %>
-          <%= attachment_image_tag post, :image, :fill, fallback:'no_image.jpeg', format:'jpeg', style: "height:100%; width:100%;" %>
-                                                   <%#　fallback: 画像空欄時の代わりの画像,      style: ここで画像のサイズ指定しないと本来の画像のサイズになる%>
-          <h4><%=post.name%></h4>
+          <%= attachment_image_tag post.post_images.first, :image, :fill, 150, 150, fallback:'no_image.jpeg', style: "height:100%; width:100%;" %>
         <% end %>
       </div>
     <% end %>

@@ -1,7 +1,7 @@
 class MenbersController < ApplicationController
 
   def mypage
-    @menber = current_menber
+    @menber = Menber.find(params[:id])
     @posts = @menber.posts
   end
 
@@ -16,7 +16,7 @@ class MenbersController < ApplicationController
   def update
     @menber = current_menber
     @menber.update(menber_params)
-    redirect_to menbers_path(@menber.id)
+    redirect_to mypage_path(@menber.id)
   end
 
   private

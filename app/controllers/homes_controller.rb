@@ -8,30 +8,33 @@ class HomesController < ApplicationController
   def search
     # <% Menber.where(neme: @ketwords)  =>  Menberモデルのnameカラムを@keywordsに代入してる %>
     @menber = Menber.where(name: params[:word])
-    @tag = Tag.where(tag_name: params[:word])
     @post = Post.where(name: params[:word])
+    @tag = Tag.find_by(tag_name: params[:word])
     @posts = Post.all
   end
 
   def search_menber
-    @menber = Menber.where(name: params[:word])
-    @tag = Tag.where(tag_name: params[:word])
-    @post = Post.where(name: params[:word])
+    if params[:word].present?
+      @menbers = Menber.where(name: params[:word])
+      @posts = Post.where(name: params[:word])
+      @tag = Tag.find_by(tag_name: params[:word])
+    end
   end
 
   def search_post
     if params[:word].present?
-      @menber = Menber.where(name: params[:word])
-      @tag = Tag.where(tag_name: params[:word])
-      @post = Post.where(name: params[:word])
+      @menbers = Menber.where(name: params[:word])
       @posts = Post.where(name: params[:word])
+      @tag = Tag.find_by(tag_name: params[:word])
     end
   end
 
   def search_tag
-    @menber = Menber.where(name: params[:word])
-    @tag = Tag.where(tag_name: params[:word])
-    @post = Post.where(name: params[:word])
+    if params[:word].present?
+      @menbers = Menber.where(name: params[:word])
+      @posts = Post.where(name: params[:word])
+      @tag = Tag.find_by(tag_name: params[:word])
+    end
   end
 
 

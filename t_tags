@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/ec2-user/environment/nonbe/app/views/homes/search_tag.html.erb:13 ActionView::CompiledTemplates#_app_views_homes_search_tag_html_erb__4105256321513512926_70042033985660:
+
+     [1;34m8[0m:   <div class="row flex-nowrap">
+     [1;34m9[0m:     <% @tags.each do |tag| %>
+    [1;34m10[0m:       <%= tag.post_tags %>
+    [1;34m11[0m:       <% binding.pry %>
+    [1;34m12[0m:       <div class="col-3">
+ => [1;34m13[0m: 
+    [1;34m14[0m:         <%#= link_to post_path(post.id) do %>
+    [1;34m15[0m:       <%# binding.pry
+    [1;34m16[0m:         <%# post_image = post.post_images.first %>
+    [1;34m17[0m:         <%# binding.pry %>
+    [1;34m18[0m:           <%#= attachment_image_tag post_image, :image, :fill, 150, 150, fallback:'no_image.jpeg', size:'150x150' %>
+

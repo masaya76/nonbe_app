@@ -106,9 +106,10 @@
           <%= comment.comment_comment %>
         </div>
         <span>
-          <%#= if @menber.comment %>
-              <%#= link_to '削除' post_comment_path(@comment), method: :delete　%>
-          <%# end %>
+          <% if comment.menber == @menber %>
+            <%= link_to '削除', post_comment_path(comment.post, comment), method: :delete %>
+                                  <%# routesは (post_id ,  comment_id )  この順番並べるようになっている  %>
+          <% end %>
         </span>
       <% end %>
     </div>

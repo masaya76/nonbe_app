@@ -22,16 +22,20 @@
       </div>
     </div>
     <div class="row">
-      <% @posts.each do |post| %>
-        <% if post.post_images.exists? %>
-        <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>
-          <% post_image = post.post_images.first %>
-          <div class="col-12-flex flex-lg-wrap">  <%# この部分を　col-4~ にして画像をcolにあてはめたい　%>
-            <%= link_to post_path(post_image), class: 'list-content' do %>
-              <p><%= attachment_image_tag post_image, :image, :fill, 200, 200 %></p>
-            <% end %>
-          </div>
+      <% if @posts.present? %>
+        <% @posts.each do |post| %>
+          <% if post.post_images.exists? %>
+          <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>
+            <% post_image = post.post_images.first %>
+            <div class="col-12-flex flex-lg-wrap">  <%# この部分を　col-4~ にして画像をcolにあてはめたい　%>
+              <%= link_to post_path(post_image), class: 'list-content' do %>
+                <p><%= attachment_image_tag post_image, :image, :fill, 200, 200 %></p>
+              <% end %>
+            </div>
+          <% end %>
         <% end %>
+      <% else%>
+        <h4>投稿履歴なし</h4>
       <% end %>
     </div>
   </div>

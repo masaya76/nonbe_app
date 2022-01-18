@@ -1,47 +1,13 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <% if @menber.present? %>
-        <%= link_to(home_search_menber_path(word: params[:word]), class: 'list-content') do %>
-          <h5>会員検索ヒット数</h5>
-          <%= @menber.count %>件
-        <% end %>
-      <% else %>
-        <h5>会員検索ヒット数</h5>
-        <h5>検索一致がありません</h5>
-      <% end %>
-    </div>
-    <div class="col-lg-4">
-      <% if @post.present? %>
-        <%= link_to(home_search_post_path(word: params[:word]), class: 'list-content') do %>
-          <h5>投稿検索ヒット数</h5>
-          <%= @post.count %>件
-        <% end %>
-      <% else %>
-        <h5>会員検索ヒット数</h5>
-        <h5>検索一致がありません</h5>
-      <% end %>
-    </div>
-    <div class="col-lg-4">
-      <% if @tag.present? %>
-        <%= link_to(home_search_tag_path(word: params[:word]), class: 'list-content') do %>
-          <h5>タグ検索ヒット数</h5>
-          <%= @tag.count %>件
-        <% end %>
-      <% else %>
-        <h5>会員検索ヒット数</h5>
-        <h5>検索一致がありません</h5>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'homes/search', menber:@menber, post:@post, tag:@tag %>  <%#  部分テンプレート  render 'homes/search'～  homes/_search  _は勝手に消してくれる%>
   <h3 class="title">最新の投稿</h3>
   <div class="row">
-
+  
     <% @posts.each do |post| %>
       <% if post.post_images.exists? %>
       <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>
         <% post_image = post.post_images.first %>   <%# .first ~％の一番最初のものを持ってくる%>
-        　<div class="col-12-flex flex-lg-wrap">  <%# col-x-flex flex-lg-wrap  => 折返しをすることができる%>
+         <div class="col-12-flex flex-lg-wrap">  <%# col-x-flex flex-lg-wrap  => 折返しをすることができる%>
           <%= link_to post_path(post_image), class: 'list-content' do %>
             <p><%= attachment_image_tag post_image, :image, :fill, 200, 200 %></p>
           <% end %>
