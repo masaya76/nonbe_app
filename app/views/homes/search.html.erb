@@ -2,7 +2,7 @@
   <%= render 'homes/search', menber:@menber, post:@post, tag:@tag %>  <%#  部分テンプレート  render 'homes/search'～  homes/_search  _は勝手に消してくれる%>
   <h3 class="title">最新の投稿</h3>
   <div class="row">
-  
+
     <% @posts.each do |post| %>
       <% if post.post_images.exists? %>
       <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>

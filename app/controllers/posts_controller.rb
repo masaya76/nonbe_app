@@ -11,7 +11,6 @@ class PostsController < ApplicationController
     @post.menber_id = current_menber.id
     tag_name = params[:post][:tag_name].split(",")  #ここの記述はtagをsaveで渡す前にどんなデータを送るか（因数）記述する
                                      #split(",") でタグをformに記述する時に(" 中の入れた文字、記号等 ") 連続して読み込める
-    binding.pry
     if @post.save
       @post.save_posts(tag_name)   #save_postsはpost.rbに記述 コントローラーに記述するとコントローラーが重くなる
     end

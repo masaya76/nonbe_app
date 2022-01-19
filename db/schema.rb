@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_041523) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "menber_id"
-    t.string "name"
+    t.string "title"
     t.string "kaori"
     t.string "nomigotae"
     t.string "karasa"

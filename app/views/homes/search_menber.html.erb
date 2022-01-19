@@ -1,41 +1,39 @@
 <div class="container">
-  <%= render 'homes/search', menber:@menbers, post:@posts, tags:@tag %>  <%#  部分テンプレート　　render 'homes/search'～　　homes/_search  _は勝手に消してくれる%>
+  <%= render 'homes/search', menber:@menbers, post:@posts, tags:@tag %>  <%#  部分テンプレート  render 'homes/search'～  homes/_search  _は勝手に消してくれる%>
   <div class="row">
-    <div class="col-12">
+    <div class="col-lg-12">
       <h4>検索結果</h4>
-    <table>
-      <thead>
-        <th>アイコン</th>
-        <th>ニックンネーム</th>
-        <th>コメント</th>
-      </thead>
-    </table>
+      <table>
+        <thead>  <%#class="table-hover table-inverse"  中身がどうなっているか？ %>
+          <tr>
+            <th>アイコン</th>
+            <th>ニックンネーム</th>
+            <th>コメント</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @menbers.each do |menber|%>
+            <tr>
+              <td>
+                <%= link_to mypage_path(menber.id) do %>
+                  <%= attachment_image_tag menber, :image, :fill, 200, 200, fallback:'no_image.jpeg', size: "150x150" %>
+                <% end %>
+              </td>
+              <%# fallback: 画像空欄時の代わりの画像,      style: ここで画像のサイズ指定しないと本来の画像のサイズになる%>
+              <td>
+                <%= link_to mypage_path(menber.id) do %>
+                  <%= menber.name %>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to mypage_path(menber.id) do %>
+                  <%= menber.introduction %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="col-12-flex flex-lg-wrap">
-      <h4 class="title">検索結果</h4>
-    </div>
-  </div>
-  <div class="row">
-    <% @menbers.each do |menber| %>
-      <%= link_to mypage_path(menber.id) do %>
-        <div class="col-4-auto">
-          <%= attachment_image_tag menber, :image, :fill, 300, 150, fallback:'no_image.jpeg', style: "height:100%; width:100%;" %>
-        </div>                                           <%#　fallback: 画像空欄時の代わりの画像,      style: ここで画像のサイズ指定しないと本来の画像のサイズになる%>
-        <div class="col-8-auot">
-          <p><%= menber.name %></p>
-          <p>\<%= menber.introduction %></p>
-        </div>
-      <% end %>
-
-    <% end %>
   </div>
 </div>
