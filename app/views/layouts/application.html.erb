@@ -19,8 +19,9 @@
           <th><%= link_to 'TOP', root_path %></th>
           <th><%= link_to 'マイページ', mypage_path(current_menber) %></th>
           <th><%= link_to '投稿', new_post_path %></th>
-          <th><%= link_to '検索', home_search_path %></th>
+          <th><%= link_to '検索', home_about_path %></th>
           <th><%= link_to 'ログアウト', destroy_menber_session_path, method: :delete %></th>
+          <th><%= link_to '利用規約・プライバシーポリシー', home_about_path %></th>
           <th>
             <%= form_with url:home_search_path, method: :get, local: :true do |f| %>
               <%= f.text_field :word, placeholder: "検索ワード", :size => "30*30" %>
@@ -33,8 +34,7 @@
           <th><%= link_to 'TOP', root_path %></th>
           <th><%= link_to '新規登録', new_menber_registration_path %></th>
           <th><%= link_to 'ログイン', new_menber_session_path %></th>
-          <th>投稿</th>
-          <th>検索</th>
+          <th><%= link_to '利用規約・ライバシーポリシー', home_about_path %></th>
         </tr>
       <% end %>
     </div>

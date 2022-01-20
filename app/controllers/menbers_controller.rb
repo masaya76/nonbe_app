@@ -1,5 +1,5 @@
 class MenbersController < ApplicationController
-
+  
   def mypage
     @menber = Menber.find(params[:id])
     @posts = @menber.posts
@@ -22,6 +22,6 @@ class MenbersController < ApplicationController
   private
 
   def menber_params
-    params.require(:menber).permit(:name, :image, :introduction,)
+    params.require(:menber).permit(:name, :image, :introduction, :agreement)
   end
 end

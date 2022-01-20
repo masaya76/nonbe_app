@@ -6,6 +6,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
+        <div>
+          <p>
+            登録前にお読みいただいて、<%= link_to "利用規約、プライバシーポリシー", home_about_path %>に同意します</br>
+            <%= f.check_box :agreement, :as => :boolean, checked:false %> クリックしてチェックマークをいれてください <%# check済み=boolean(true), check未完=false %>
+          </p>
+        </div>
         <table>
           <thead>
             <tr>
@@ -44,12 +50,11 @@
               <th>パスワード(確認用)</th>
               <th><%= f.text_field :password_confirmation, autocomplete: "new-password" %></th>
             </tr>
-            <tr>
-              <th></th>
-              <th><%= f.submit "新規登録" %></th>    <%# 利用規約を追加するため追加時に遷移させる%>
-            </tr>
           </thead>
         </table>
+        <span>
+          <%= f.submit "新規登録", class: "btn btn-large btn-success" %>  <%# btn btn-large => ボタンのスタイル, btn-primary => ボタンの色　%>
+        </span>
       </div>
     </div>
   </div>

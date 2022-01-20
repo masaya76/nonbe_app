@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :postal_code, :address, :telephone_number])
+  def configure_permitted_parameters  #deviseのサインアップ時に追加したカラム
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :postal_code, :address, :telephone_number, :agreement])
   end
 
 end

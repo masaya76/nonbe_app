@@ -237,6 +237,13 @@
       </ol>
     </div>
   </div>
+  <div>
+    <% if menber_signed_in? %>
+      <h4><%= link_to 'TOP', root_path, class: "btn btn-large btn-success" %></h4>
+    <% else %>
+      <h4><%= link_to "登録画面に戻ります", new_menber_registration_path, class: "btn btn-large btn-success" %></h4>
+    <% end %>
+  </div>
 </div>
 
 <%#= f.check_box :~   を使ってチェックマークを使用する%>

@@ -44,8 +44,8 @@ class HomesController < ApplicationController
   end
 
   def sakagura
-    @prefecture = Prefecture.find_by(name: params[:prefecture_name])
-    @sakagura = Sakagura.where(city_id: params[:city_id])
+    @city = City.find_by(id: params[:city_id])
+    #@city の id と関連づいた 酒蔵model アソシエーションの関係で引っ張ってもってくる
   end
 
 end

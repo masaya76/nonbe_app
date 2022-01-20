@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   }
 
   get 'manber/mypage/:id', to:"menbers#mypage", as: 'mypage'
-  resources :menbers, only: [:edit, :update, :delete]
+  resources :menbers, only: [:create, :edit, :update, :delete]
 
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_041523) do
+ActiveRecord::Schema.define(version: 2022_01_20_070934) do
 
   create_table "cities", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_041523) do
     t.string "postal_code"
     t.string "address"
     t.string "telephone_number"
+    t.boolean "agreement"
     t.index ["email"], name: "index_menbers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_menbers_on_reset_password_token", unique: true
   end
