@@ -9,13 +9,17 @@ class PostsController < ApplicationController
   def create
     @post = current_menber.posts.new(post_params)       #create=>new変更
     @post.menber_id = current_menber.id
-    tag_name = params[:post][:tag_name].split(",")  #ここの記述はtagをsaveで渡す前にどんなデータを送るか（因数）記述する
-                                     #split(",") でタグをformに記述する時に(" 中の入れた文字、記号等 ") 連続して読み込める
-    if @post.save
-      @post.save_posts(tag_name)   #save_postsはpost.rbに記述 コントローラーに記述するとコントローラーが重くなる
+    tag_name = params[:post][:tag_name].split(",")
+    #ここの記述はtagをsaveで渡す前にどんなデータを送るか（因数）記述する
+    if restrict_image_count!(params[:post][:post_images_images])
+      redirect_to root_path
+    else#split(",") でタグをformに記述する時に(" 中の入れた文字、記号等 ") 連続して読み込める
+                        #post_modelでメソッド化
+      if @post.save
+        @post.save_posts(tag_name)
+        redirect_to post_path(@post.id)#save_postsはpost.rbに記述 コントローラーに記述するとコントローラーが重くなる
+      end
     end
-    redirect_to post_path(@post.id)
-
   end
 
   def show
@@ -61,9 +65,15 @@ class PostsController < ApplicationController
 
   private
 
-  def post_params
-    params.require(:post).permit(:menber_id, :tag_id, :post_image_id, :name, :kaori, :nomigotae, :karasa, :rarity, :beginner, :thoughts, post_images_images:[])
-    # 画像複数するには、postモデルの画像を保管するpost_imageモデルの配列を記述する。よって, 画像保管モデル_カラム：[] となる
-  end
+    def restrict_image_count!(params)  #! => 強制
+
+      params.count - 1  > 1
+    end
+
+    def post_params
+      params.require(:post).permit(:menber_id, :tag_id, :post_image_id, :title, :kaori, :nomigotae, :karasa, :rarity, :beginner, :thoughts, post_images_images:[])
+      # 画像複数するには、postモデルの画像を保管するpost_imageモデルの配列を記述する。よって, 画像保管モデル_カラム：[] となる
+    end
+
 
 end

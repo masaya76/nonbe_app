@@ -10,6 +10,10 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 #through  親モデルの親と子モデルを直接関連を定義させる
 
+#バリデーション
+  validates :title, presence: true, length: {maximum:20}
+  validates :thoughts, length: {maximum:100}
+
   accepts_attachments_for :post_images, attachment: :image  #画像複数投稿時の記述  accepts_attachments_for :画像保管モデル, attachment: :画像保管モデルのカラム
 
   def save_posts(sent_tags)  #今回のタグの付け方は既存するタグデータを一回削除＝＞新規作成
@@ -32,15 +36,4 @@ class Post < ApplicationRecord
       end
     end
   end
-
-  class Search
-    def self.serach(display)
-      results = []
-      results = [Menber.serach(display)]
-      results = [Post.serach(display)]
-      results = [PostTag.serach(display)]
-      results
-    end
-  end
-
 end

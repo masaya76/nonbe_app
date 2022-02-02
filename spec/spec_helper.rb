@@ -13,7 +13,12 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'capybara/rspec'    #A画面上、ボタン関係のテスト
 RSpec.configure do |config|
+  config.before(:each, type: :system) do
+    # driven_by :selenium_chrome_headless  #Aとセット使う(テスト用のダミー画面の準備)
+    driven_by :rack_test
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

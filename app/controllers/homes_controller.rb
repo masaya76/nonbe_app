@@ -40,6 +40,11 @@ class HomesController < ApplicationController
 
   def city
     @prefecture = Prefecture.find_by(name: params[:prefecture_name])
+    if @prefecture.cities.blank?
+      redirect_to root_path   #flash  バリデーション設定
+      
+    end
+
     # Prefecture.find(params[:prefecture_code])  #.municipalitiesのmodelをデータseed.rbにデータを挿入していないためコメントアウト
   end
 

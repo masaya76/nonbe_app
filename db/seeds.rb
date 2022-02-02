@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 #都道府県
 Prefecture.create(:name => '北海道', :kana => 'ホッカイドウ', :hira => 'ほっかいどう')
 Prefecture.create(:name => '青森県', :kana => 'アオモリケン', :hira => 'あおもりけん')

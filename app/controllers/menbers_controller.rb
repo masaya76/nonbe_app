@@ -22,6 +22,6 @@ class MenbersController < ApplicationController
   private
 
   def menber_params
-    params.require(:menber).permit(:name, :image, :introduction, :agreement)
+    params.require(:menber).permit(:name, :image, :intorduction, :agreement)
   end
 end
