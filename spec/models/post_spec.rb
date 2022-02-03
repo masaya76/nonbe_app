@@ -5,20 +5,20 @@ RSpec.describe 'Postモデルのテスト', type: :model do
     subject {post.valid? }
     #post.valid?  => userモデルがエラーが発生しなかったら -> true, 発生 -> false
 
-    let!(:post) {FactoryBot.build(:post) }
+    let(:post) {FactoryBot.build(:post) }  #アソシエーションに問題アリと判断する
     #アソシエーションの記述はposts.rbに記述
 
-    context ' nameカラム' do
+    context 'titleカラム' do
       it '空欄でないこと' do
-        post.name = ''
+        post.title = ''
         is_expected.to eq false
       end
       it '20文字以下であること: 20文字〇' do
-        post.name = Faker::Lorem.characters(number: 20)
+        post.title = Faker::Lorem.characters(number: 20)
         is_expected.to eq true
       end
       it '20文字以下であること: 21文字×' do
-        post.name = Faker::Lorem.characters(number: 21)
+        post.title = Faker::Lorem.characters(number: 21)
         is_expected.to eq false
       end
     end

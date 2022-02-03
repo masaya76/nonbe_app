@@ -36,12 +36,13 @@ ActiveRecord::Schema.define(version: 2022_01_27_114231) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name"
+    t.string "image_id"
+    t.text "introduction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "postal_code"
     t.string "address"
     t.string "telephone_number"
-    t.text "profile_image_id"
     t.boolean "agreement"
     t.string "intorduction"
     t.index ["email"], name: "index_menbers_on_email", unique: true
@@ -64,7 +65,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_114231) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "menber_id"
-    t.string "name"
+    t.string "title"
     t.string "kaori"
     t.string "nomigotae"
     t.string "karasa"

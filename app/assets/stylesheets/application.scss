@@ -14,8 +14,32 @@
  *= require_self
  */
  @import "bootstrap";
-//
+ @import "bootstrap";
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
 
 .search{
   margin-bottom: 6vh;
+}
+
+.guidance{
+  text-align: center;
+  font-size: 30px;
+  color: #008000;
+  padding: 40px;
+}
+
+.comment{
+  width: 700px;
+  height: auto;
+  backgroundColor: #FF9966;
+  font-size: 20px;
+}
+
+.image-space{
+  padding: 10px;
 }

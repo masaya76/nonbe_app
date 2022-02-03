@@ -87,3 +87,5 @@ gem 'pry-rails'
 gem 'carrierwave', '~> 2.0'  #ファイルのアップロード機能簡単に追加することができるgem  保存先はImagprofileImageUploader
 
 gem 'chart-js-rails'
+
+gem 'devise-i18n'  #deviseのエラー内容を日本語に変換

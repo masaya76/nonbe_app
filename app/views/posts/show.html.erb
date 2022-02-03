@@ -85,7 +85,8 @@
   <div class="row">
     <div class="col-lg-12">
       <% if current_menber %>
-        <%= link_to "編集", edit_post_path(@post) %><%= link_to "消去", post_path(@post), method: :delete %>
+        <%= link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-info" %>
+        <%= link_to "消去", post_path(@post), method: :delete, class: "btn btn-sm btn-warning" %>
       <% end %>
     </div>
   </div>
@@ -94,7 +95,7 @@
       <%= form_with model:@comment, url:post_comments_path(@post), method: :post, local:true do |f| %>
       <%# routesの中でネストを組むと親側にidを付けないとエラーが発生する　%>
         <%= f.text_field :comment_comment, placeholder: "コメント記入", :size => "70*30" %>
-        <%= f.submit '投稿' %>
+        <%= f.submit '投稿', class: "btn btn-sm btn-success"%>
       <% end %>
     </div>
   </div>
@@ -102,15 +103,19 @@
     <div class="col-lg-12">
       <h4>コメント一覧</h4>
       <% @comments.each do |comment| %>
-        <div class="comment_farame">
-          <%= comment.comment_comment %>
-        </div>
-        <span>
-          <% if comment.menber == @menber %>
-            <%= link_to '削除', post_comment_path(comment.post, comment), method: :delete %>
+        <table>
+          <thaed>
+            <tr style="border: outset">
+              <th class=comment><%= comment.comment_comment %></th>
+              <th>
+                <% if comment.menber == @menber %>
+                  <%= link_to '削除', post_comment_path(comment.post, comment), method: :delete, class: "btn btn-sm btn-warning" %>
                                   <%# routesは (post_id ,  comment_id )  この順番並べるようになっている  %>
-          <% end %>
-        </span>
+                <% end %>
+              </th>
+            </tr>
+          </thaed>
+        </table>
       <% end %>
     </div>
   </div>

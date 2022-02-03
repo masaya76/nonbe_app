@@ -2,18 +2,19 @@
   <div class="container">
     <div class="row">
       <div class="col_lg_7">
-        <table>
+        <table class="table"> 
+        <%# table class="table"とするとtr毎にボーダーラインが引かれる %>
           <thead>
             <tr>
-              <th>アイコン</th>
-              <th><%= attachment_image_tag @menber, :image, :fill, 100, 100 %></th>
+              <th style="font-size: 20px;">アイコン</th>
+              <th><%= attachment_image_tag @menber, :image, :fill, 100, 100, fallback: 'no_image.jpg', size: "100x100"  %></th>
             </tr>
             <tr>
-              <th>ニックネーム</th>
+              <th style="font-size: 20px;">ニックネーム</th>
               <th><%= @menber.name %></th>
             </tr>
             <tr>
-              <th>紹介文</th>
+              <th style="font-size: 20px;">紹介文</th>
               <th><%= @menber.intorduction %></th>
             </tr>
           </thead>
@@ -27,9 +28,9 @@
           <% if post.post_images.exists? %>
           <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>
             <% post_image = post.post_images.first %>
-            <div class="col-12-flex flex-lg-wrap">  <%# この部分を　col-4~ にして画像をcolにあてはめたい　%>
+            <div class="col-3 flex-nowrap">  <%# この部分を　col-4~ にして画像をcolにあてはめたい　%>
               <%= link_to post_path(post_image), class: 'list-content' do %>
-                <p><%= attachment_image_tag post_image, :image, :fill, 200, 200, fallback:'no_image.jpeg', size: "150x150" %></p>
+                <p class="image-space"><%= attachment_image_tag post_image, :image, :fill, 200, 200, fallback:'no_image.jpeg', size: "200x200" %></p>
               <% end %>
             </div>
           <% end %>

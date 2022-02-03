@@ -7,9 +7,9 @@
       <% if post.post_images.exists? %>
       <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>
         <% post_image = post.post_images.first %>   <%# .first ~％の一番最初のものを持ってくる%>
-         <div class="col-12-flex flex-lg-wrap">  <%# col-x-flex flex-lg-wrap  => 折返しをすることができる%>
+         <div class="col-3 flex-nowrap"> <%# flex-nowrap =>  折返し%>
           <%= link_to post_path(post_image), class: 'list-content' do %>
-            <p><%= attachment_image_tag post_image, :image, :fill, 200, 200 %></p>
+            <p class="image-space"><%= attachment_image_tag post_image, :image, :fill, 200, 200 %></p>
           <% end %>
         </div>
       <% end %>

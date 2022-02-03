@@ -9,10 +9,12 @@ class PostsController < ApplicationController
   def create
     @post = current_menber.posts.new(post_params)       #create=>new変更
     @post.menber_id = current_menber.id
-    tag_name = params[:post][:tag_name].split(",")
+    tag_name = params[:post][:tag_name].split(",")    
+    #tagの最大数を設定するために14行目みたいにする必要がある
+    #そうすると、modelのメソッドも修正する必用がある
     #ここの記述はtagをsaveで渡す前にどんなデータを送るか（因数）記述する
     if restrict_image_count!(params[:post][:post_images_images])
-      redirect_to root_path
+      redirect_to new_post_path
     else#split(",") でタグをformに記述する時に(" 中の入れた文字、記号等 ") 連続して読み込める
                         #post_modelでメソッド化
       if @post.save
@@ -64,10 +66,12 @@ class PostsController < ApplicationController
 
 
   private
-
+  
     def restrict_image_count!(params)  #! => 強制
-
       params.count - 1  > 1
+      #psot_paramsでmodelを使い複数投稿したときに　
+      #post_images_images:[] この様に表示する、しかし
+      #[]の中を数えるときは0から数える
     end
 
     def post_params
