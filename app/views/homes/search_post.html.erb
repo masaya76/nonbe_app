@@ -13,7 +13,7 @@
           <%= link_to post_path(post.id) do %>
             <%= attachment_image_tag post_image, :image, :fill, 150, 150, fallback:'no_image.jpeg', style: "height:100%; width:100%;" %>
                                                      <%# fallback: 画像空欄時の代わりの画像,      style: ここで画像のサイズ指定しないと本来の画像のサイズになる%>
-            <h4><%=post.name%></h4>
+            <h4><%= post.title %></h4>
           <% end %>
         </div>
       <% end %>
