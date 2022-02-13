@@ -92,7 +92,7 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <%= form_with model:@comment, url:post_comments_path(@post), method: :post, local:true do |f| %>
+      <%= form_with model:@comments, url:post_comments_path(@post), method: :post, local:true do |f| %>
       <%# routesの中でネストを組むと親側にidを付けないとエラーが発生する　%>
         <%= f.text_field :comment_comment, placeholder: "コメント記入", :size => "70*30" %>
         <%= f.submit '投稿', class: "btn btn-sm btn-success"%>
@@ -103,12 +103,12 @@
     <div class="col-lg-12">
       <h4>コメント一覧</h4>
       <% @comments.each do |comment| %>
-        <table>
+        <table class="table table-hover table-inverse">
           <thaed>
-            <tr style="border: outset">
+            <tr>
               <th class=comment><%= comment.comment_comment %></th>
               <th>
-                <% if comment.menber == @menber %>
+                <% if @current_menber.id == comment.menber.id %>
                   <%= link_to '削除', post_comment_path(comment.post, comment), method: :delete, class: "btn btn-sm btn-warning" %>
                                   <%# routesは (post_id ,  comment_id )  この順番並べるようになっている  %>
                 <% end %>

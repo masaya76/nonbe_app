@@ -8,8 +8,10 @@
       <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>
         <% post_image = post.post_images.first %>   <%# .first ~％の一番最初のものを持ってくる%>
          <div class="col-3 flex-nowrap"> <%# flex-nowrap =>  折返し%>
-          <%= link_to post_path(post_image), class: 'list-content' do %>
-            <p class="image-space"><%= attachment_image_tag post_image, :image, :fill, 200, 200 %></p>
+          <%= link_to post_path(post), class: 'list-content' do %>
+          <%# post_path(post)=> post/showに飛ぶ場合はアソシエーションでこれで飛べる %>
+          <%# 画像を表示したい場合post_path(post_image)=> ルーティングを駆られた場合は　post_image_pathと%>
+            <p class="image-space"><%= attachment_image_tag post_image, :image, :fill, 200, 200, fallback:'no_image.jpeg', size: "200x200"  %></p>
           <% end %>
         </div>
       <% end %>

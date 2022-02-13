@@ -6,7 +6,7 @@ FactoryBot.define do#データを宣言(boostrapで言うcontainer)
     # postal_code { Faker.postcode.characters(number:10)}
     # address {Faker::Address.characters(number: 12)}
     # telephone_number {Faker.phoneNunber.number(number:11) }
-    # item.image.attach(io: File.open('public/images/test_image.png'),filetitle: 'test_image.png')
+    #item.image.attach(io: File.open('public/images/test_image.png'),filetitle: 'test_image.png')
     password { 'password' }
     password_confirmation { 'password' }
     agreement { 1 }

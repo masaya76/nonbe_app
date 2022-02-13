@@ -1,7 +1,5 @@
 class Post < ApplicationRecord
 
-  attachment :image
-
   belongs_to :menber
 
   has_many :post_images, dependent: :destroy
@@ -13,6 +11,7 @@ class Post < ApplicationRecord
 #バリデーション
   validates :title, presence: true, length: {maximum:20}
   validates :thoughts, length: {maximum:100}
+  #validates :post_images , presence: true
 
   accepts_attachments_for :post_images, attachment: :image  #画像複数投稿時の記述  accepts_attachments_for :画像保管モデル, attachment: :画像保管モデルのカラム
 
@@ -36,4 +35,28 @@ class Post < ApplicationRecord
       end
     end
   end
+
+  validate :restrict_image_count
+  
+
+  def restrict_image_count  #! => 強制
+    if (post_images.length < 1 || post_images.length > 5 )
+#length = 長さ（配列の個数＝長さ）
+#よって、length = count = size  どれでも使っても使える
+      errors.add(:post_images, "is invalid")
+#errors.add=> エラーメッセージを配列に加える
+#(:post_images, "is invalid")
+#:post_images, => カラムとする
+#"is invalid"  => エラーメッセージ
+    end
+    #params.count - 1 == 0 || params.count - 1  > 5
+    #  ||  orの意味
+    #params.count - 1  > 5
+    #psot_paramsでmodelを使い複数投稿したときに
+    #post_images_images:[] この様に表示する、しかし
+    #[]の中を数えるときは0から数える
+    #二次元配列は[ ]の中は1から数えることにする
+  end
+
+
 end

@@ -9,7 +9,7 @@
     <% @tag.posts.each do |tag_post| %>
       <div class="col-3">
         <%= link_to post_path(tag_post.id) do %>  <%# link_to　が効かない%>
-          <%= attachment_image_tag tag_post.post_images.first, :image, :fill, 150, 150, fallback:'no_image.jpeg', style: "height:100%; width:100%;" %>
+          <%= attachment_image_tag tag_post.post_images.first, :image, :fill, 150, 150, fallback:'no_image.jpeg', size: "200x200" %>
         <% end %>
       </div>
     <% end %>

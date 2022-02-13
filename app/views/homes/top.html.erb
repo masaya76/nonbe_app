@@ -24,29 +24,29 @@
 <script>
   $(function(){
     var areas = [
-  		{code : 1, name: "北海道", color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [1]},
-      {code : 2, name: "青森", color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [2]},
-      {code : 3, name: "岩手", color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [3]},
-      {code : 4, name: "宮城", color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [4]},
-      {code : 5, name: "秋田", color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [5]},
-      {code : 6, name: "山形", color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [6]},
-      {code : 7, name: "福島",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [7]},
-      {code : 8, name: "茨城",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [8]},
-      {code : 9, name: "栃木",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [9]},
-      {code : 10, name: "群馬",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [10]},
-      {code : 11, name: "埼玉",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [11]},
-      {code : 12, name: "千葉",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [12]},
-      {code : 13, name: "東京",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [13]},
-      {code : 14, name: "神奈川",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [14]},
-      {code : 15, name: "新潟",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [15]},
-      {code : 16, name: "富山",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [16]},
-      {code : 17, name: "石川",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [17]},
-      {code : 18, name: "福井",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [18]},
-      {code : 19, name: "山梨",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [19]},
-      {code : 20, name: "長野",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [20]},
-      {code : 21, name: "岐阜",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [21]},
-      {code : 22, name: "静岡",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [22]},
-      {code : 23, name: "愛知",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [23]},
+  		{code : 1, name: "北海道", color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [1]},
+      {code : 2, name: "青森", color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [2]},
+      {code : 3, name: "岩手", color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [3]},
+      {code : 4, name: "宮城", color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [4]},
+      {code : 5, name: "秋田", color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [5]},
+      {code : 6, name: "山形", color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [6]},
+      {code : 7, name: "福島",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [7]},
+      {code : 8, name: "茨城",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [8]},
+      {code : 9, name: "栃木",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [9]},
+      {code : 10, name: "群馬",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [10]},
+      {code : 11, name: "埼玉",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [11]},
+      {code : 12, name: "千葉",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [12]},
+      {code : 13, name: "東京",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [13]},
+      {code : 14, name: "神奈川",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [14]},
+      {code : 15, name: "新潟",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [15]},
+      {code : 16, name: "富山",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [16]},
+      {code : 17, name: "石川",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [17]},
+      {code : 18, name: "福井",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [18]},
+      {code : 19, name: "山梨",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [19]},
+      {code : 20, name: "長野",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [20]},
+      {code : 21, name: "岐阜",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [21]},
+      {code : 22, name: "静岡",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [22]},
+      {code : 23, name: "愛知",   color: "#00CC33", hoverColor: "#7CEA9C", prefectures: [23]},
       {code : 24, name: "三重",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [24]},
       {code : 25, name: "滋賀",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [25]},
       {code : 26, name: "京都",   color: "#a0a0a0", hoverColor: "#7CEA9C", prefectures: [26]},
@@ -77,7 +77,7 @@
   		{
   			areas: areas, //上で設定したエリアの情報
   			//selection : 'prefecture', //選ぶことができる範囲(県→prefecture、エリア→area)
-  			borderLineWidth: 0.25, //線の幅
+  			borderLineWidth: 0.5, //線の幅
   			drawsBoxLine: false, //canvasを線で囲む場合はtrue
   			movesIslands: true, //南西諸島を左上に移動させるときはtrue、移動させないときはfalse
   		  showsAreaName: true, //エリア名を表示しない場合はfalse

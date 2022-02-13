@@ -1,7 +1,7 @@
-<h2>新規登録</h2>
+<h2 class="title">新規登録</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "menbers/shared/error_messages", resource: resource %>
+  <div class="error_messages"><%= render "menbers/shared/error_messages", resource: resource %></div>
 
   <div class="container">
     <div class="row">
@@ -59,6 +59,7 @@
     </div>
   </div>
 <% end %>
-<h6 class = "title">既に登録済みの方</h6>
-<p><%= link_to 'こちら', menber_session_path %>からログインしてください</p>
-
+<div class="before_sign">
+  <p>既に登録済みの方</p>
+  <p><%= link_to 'こちら', menber_session_path %>からログインしてください</p>
+</div>

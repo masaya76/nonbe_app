@@ -71,7 +71,6 @@ ActiveRecord::Schema.define(version: 2022_01_27_114231) do
     t.string "karasa"
     t.string "rarity"
     t.string "beginner"
-    t.text "image_id"
     t.text "thoughts"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

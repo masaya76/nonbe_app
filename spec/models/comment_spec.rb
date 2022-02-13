@@ -9,11 +9,11 @@ RSpec.describe 'commentモデルのテスト', type: :model do
 
     context 'comment_commentカラム' do
       it '100文字以下であること: 100文字〇' do
-        comment.comment_comment = Faker::Lorem.characters(100)
+        comment.comment_comment = Faker::Lorem.characters(number: 100)
         is_expected.to eq true
       end
       it '100文字以下であること: 101文字×' do
-        comment.comment_comment = Faker::Lorem.characters(101)
+        comment.comment_comment = Faker::Lorem.characters(number: 101)
         is_expected.to eq false
       end
     end

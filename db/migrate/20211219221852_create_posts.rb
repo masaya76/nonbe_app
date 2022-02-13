@@ -8,7 +8,6 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :karasa
       t.string :rarity
       t.string :beginner
-      t.text :image_id
       t.text :thoughts
 
       t.timestamps

@@ -1,11 +1,12 @@
 <div class="container">
   <h2 style="color:forestgreen"><%= @city.name %></h2>
+  <h4 style="color:coral">クリックすると酒蔵さんのホームページに移動します</h4>
   <div class="row">
     <% @city.sakaguras.each do |sakagura| %>
       <div class="sakgura,city, col-3 flex-wrap">
       <%#= @.prefecture.name %>
         <%= link_to sakagura.url, class: "btn btn-large btn-info" do %>  <%#@sakaguraのなかにurlのカラムがはいっていて link_toでgoogleにせんいできるようにしたい%>
-          <%= sakagura.name %>
+          <h4><%= sakagura.name %></h4>
         <% end %>
       </div>
     <% end %>

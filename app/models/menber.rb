@@ -15,6 +15,9 @@ class Menber < ApplicationRecord
   #:acceptance	チェックボックスがオンになっているか
   validates :name, presence: true, length: {maximum:20}  #文字数最大  length => 長さ, {maximum: x} => 最大 = x
   validates :intorduction, length: {maximum:100}
+  validates :telephone_number, presence: true
+  validates :postal_code, presence: true
+  validates :address, presence: true
 
   #validates_acceptance_of=>チェックボックスにチェックが入っているかバリエーション
   #allow_nil:  => nilをスキップ, onの場合だと次に進む
