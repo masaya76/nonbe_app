@@ -68,7 +68,7 @@ class PostsController < ApplicationController
 
     def restrict_image_count!(params)  #! => 強制
       #
-      params.count - 1 == 0 || params.count - 1  > 5
+      params.count - 1 == 1 || params.count - 1  <= 5
       #  ||  orの意味
       #params.count - 1  > 5
       #psot_paramsでmodelを使い複数投稿したときに
