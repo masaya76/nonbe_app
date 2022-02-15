@@ -1,10 +1,10 @@
 <%= form_with model:@post, url:posts_path, method: :post, local:true do |f| %>
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-12">
         <% if @post %>
           <% if @post.errors.any? %>
-            <h2><%= @post.errors.count %>errors prohibited this book from being saved:</h2>
+            <h2><%= @post.errors.count %>件のエラーで投稿できませんでした</h2>
             <ul>
               <% @post.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
@@ -12,8 +12,13 @@
             </ul>
           <% end %>
         <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+
         <div class="title">
-          <%= f.label :title, '名前' %>
+          <%= f.label :title, 'タイトル' %>
           <%= f.text_field :title %>
         </div>
         <div class="category">
@@ -84,7 +89,7 @@
           <%= f.text_field :tag_name, placeholder: "タグ付けをする場合は入力してください" %>
         </div>
         <div class="image_field">
-          
+
           <%= f.attachment_field :post_images_images, multiple: true %>
           <%# 複数投稿  attachment_fieldを使う場合  %>
           <%# 例）今回の場合だと　　postモデルとアソシエーション関係の画像モデル_ カラム, multiple（多数）: true＜必須＞　%>

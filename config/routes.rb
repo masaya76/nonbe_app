@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'posts' => redirect('/posts/new')
   resources :posts, only: [:new, :show, :create, :edit, :update, :destroy] do
     resources :comments, only: [:new, :create, :destroy]
   end
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
   get 'home/search_post', to:"homes#search_post"
   get 'home/search_tag', to:"homes#search_tag"
 
-
+  get 'menbers' => redirect('/menbers/sign_up')
   devise_for :menbers, controllers: {
     sessions:      'menbers/sessions',
     passwords:     'menbers/passwords',

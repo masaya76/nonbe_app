@@ -89,3 +89,5 @@ gem 'carrierwave', '~> 2.0'  #ファイルのアップロード機能簡単に�
 gem 'chart-js-rails'
 
 gem 'devise-i18n'  #deviseのエラー内容を日本語に変換
+
+gem 'rails-i18n'

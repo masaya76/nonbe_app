@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        title: タイトル
+    model:
+      post: 投稿
+  errors:
+    massages:
+
+

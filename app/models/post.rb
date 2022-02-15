@@ -9,7 +9,7 @@ class Post < ApplicationRecord
 #through  親モデルの親と子モデルを直接関連を定義させる
 
 #バリデーション
-  validates :title, presence: true, length: {maximum:20}
+  validates :title, presence: true, length: {maximum:20} #numericality: { other_than: 1 ,message: '記入してください'}
   validates :thoughts, length: {maximum:100}
   #validates :post_images , presence: true
 
@@ -43,11 +43,15 @@ class Post < ApplicationRecord
     if (post_images.length < 1 || post_images.length > 5 )
 #length = 長さ（配列の個数＝長さ）
 #よって、length = count = size  どれでも使っても使える
-      errors.add(:post_images, "is invalid")
+      if (post_images.length < 1)
+        errors.add(:画像, "を投稿してください")
+      else
+        errors.add(:画像, "の投稿を5枚以下にしてください")
+      end
 #errors.add=> エラーメッセージを配列に加える
 #(:post_images, "is invalid")
 #:post_images, => カラムとする
-#"is invalid"  => エラーメッセージ
+#""  => エラーメッセージ
     end
     #params.count - 1 == 0 || params.count - 1  > 5
     #  ||  orの意味

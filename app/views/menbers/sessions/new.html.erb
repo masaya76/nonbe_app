@@ -13,19 +13,19 @@
               <th>パスワード</th>
               <th> <%= f.password_field :password, autocomplete: "current-password" %></th>
             </tr>
-            <tr>
-              <th><%= link_to 'パスワードを忘れた方はこちらをクリックしてください', new_menber_password_path %></th>
-            </tr>
           </thead>
         </table>
         <div class="actions">
-          <%= f.submit "ログイン" %>
+          <%= f.submit "ログイン",  class: "btn btn-large btn-success" %>
+        </div>
+        <div class="forgot_password">
+          <%= link_to 'パスワードを忘れた方はこちらをクリックしてください', new_menber_password_path, class: "btn btn-large btn-info" %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
 <div class="before_sign">
-  <h6>会員登録がお済みでない方</h6>
+  <h5>会員登録がお済みでない方</h5>
   <span><%= link_to 'こちら', new_menber_registration_path %>から新規登録を行ってください</span>
 |</div>
