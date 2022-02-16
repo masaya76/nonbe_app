@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'posts' => redirect('/posts/new')
+  get 'comments' => redirect('/post/show')
   resources :posts, only: [:new, :show, :create, :edit, :update, :destroy] do
     resources :comments, only: [:new, :create, :destroy]
   end

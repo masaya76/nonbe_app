@@ -7,6 +7,13 @@ RSpec.describe 'menberモデルのテスト', type: :model do  #menberモデル�
 
     let(:menber) { FactoryBot.build(:menber) }  #testするために空の箱(create(:menber))を用意する
 
+    context 'agreementカラム' do
+      it '空欄でないこと' do
+        menber.agreement = '0'
+        is_expected eq false
+      end
+    end
+
     context ' nameカラム' do
       it '空欄でないこと' do
         menber.name = ''
@@ -16,7 +23,7 @@ RSpec.describe 'menberモデルのテスト', type: :model do  #menberモデル�
         menber.name = Faker::Lorem.characters(number: 20)
         is_expected.to eq true
       end
-      it '20文字以下であること: 20文字×' do
+      it '20文字以下であること: 21文字×' do
         menber.name = Faker::Lorem.characters(number: 21)
         is_expected.to eq false
       end

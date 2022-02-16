@@ -93,7 +93,7 @@
   <div class="row">
     <div class="col-lg-12">
       <%= form_with model:@comments, url:post_comments_path(@post), method: :post, local:true do |f| %>
-      <%# routesの中でネストを組むと親側にidを付けないとエラーが発生する　%>
+      <%# routesの中でネストを組むと親側にidを付けないとエラーが発生する %>
         <%= f.text_field :comment_comment, placeholder: "コメント記入", :size => "70*30" %>
         <%= f.submit '投稿', class: "btn btn-sm btn-success"%>
       <% end %>

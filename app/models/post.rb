@@ -37,29 +37,16 @@ class Post < ApplicationRecord
   end
 
   validate :restrict_image_count
-  
 
-  def restrict_image_count  #! => 強制
+
+  def restrict_image_count
     if (post_images.length < 1 || post_images.length > 5 )
-#length = 長さ（配列の個数＝長さ）
-#よって、length = count = size  どれでも使っても使える
       if (post_images.length < 1)
         errors.add(:画像, "を投稿してください")
       else
         errors.add(:画像, "の投稿を5枚以下にしてください")
       end
-#errors.add=> エラーメッセージを配列に加える
-#(:post_images, "is invalid")
-#:post_images, => カラムとする
-#""  => エラーメッセージ
     end
-    #params.count - 1 == 0 || params.count - 1  > 5
-    #  ||  orの意味
-    #params.count - 1  > 5
-    #psot_paramsでmodelを使い複数投稿したときに
-    #post_images_images:[] この様に表示する、しかし
-    #[]の中を数えるときは0から数える
-    #二次元配列は[ ]の中は1から数えることにする
   end
 
 

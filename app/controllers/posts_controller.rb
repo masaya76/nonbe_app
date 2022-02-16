@@ -41,10 +41,22 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     tag_name = params[:post][:tag_name].split(",")
-    if
-      @post.save_posts(tag_name)
+
+    if @post.update
+      if restrict_image_count!(params[:post][:post_images_images])
+        @post.save_posts(tag_name)
+        redirect_to post_path(@post.id)#save_postsはpost.rbに記述 コントローラーに記述するとコントローラーが重くなる
+      else
+        render :new
+      end
+    else
+      render :new
     end
-    redirect_to post_path(@post.id)
+
+#    if
+#      @post.save_posts(tag_name)
+#    end
+#    redirect_to post_path(@post.id)
   end
 
   def destroy
@@ -66,15 +78,8 @@ class PostsController < ApplicationController
 
   private
 
-    def restrict_image_count!(params)  #! => 強制
-      #
+    def restrict_image_count!(params)
       params.count - 1 == 1 || params.count - 1  <= 5
-      #  ||  orの意味
-      #params.count - 1  > 5
-      #psot_paramsでmodelを使い複数投稿したときに
-      #post_images_images:[] この様に表示する、しかし
-      #[]の中を数えるときは0から数える
-      #二次元配列は[ ]の中は1から数えることにする
     end
 
     def post_params

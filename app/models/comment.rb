@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :post
 
 #バリエーション
-  validates :comment_comment, length: {maximum:100}
+  validates :comment_comment, presence: true, length: {maximum:100}
 
 end
 
