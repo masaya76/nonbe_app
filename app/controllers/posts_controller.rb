@@ -14,13 +14,17 @@ class PostsController < ApplicationController
     #ここの記述はtagをsaveで渡す前にどんなデータを送るか（因数）記述する
     #split(",") でタグをformに記述する時に(" 中の入れた文字、記号等 ") 連続して読み込める
                         #post_modelでメソッド化
+
+    # if Post.restrict_image_count2!(params[:post][:post_images_images])
+    # end
+    # binding.irb
     if @post.save
-      if restrict_image_count!(params[:post][:post_images_images])
+      # if Post.restrict_image_count2!(params[:post][:post_images_images])
         @post.save_posts(tag_name)
         redirect_to post_path(@post.id)#save_postsはpost.rbに記述 コントローラーに記述するとコントローラーが重くなる
-      else
-        render :new
-      end
+      # else
+        # render :new
+      # end
     else
       render :new
     end
@@ -78,9 +82,9 @@ class PostsController < ApplicationController
 
   private
 
-    def restrict_image_count!(params)
-      params.count - 1 == 1 || params.count - 1  <= 5
-    end
+    # def restrict_image_count!(params)
+    #   params.count - 1 == 1 || params.count - 1  <= 5
+    # end
 
     def post_params
       params.require(:post).permit(:menber_id, :tag_id, :post_image_id, :title, :kaori, :nomigotae, :karasa, :rarity, :beginner, :thoughts, post_images_images:[])

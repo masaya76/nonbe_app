@@ -8,10 +8,11 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params) #会員に関連付けるため
     @comment.menber_id = current_menber.id
     @comment.post_id = params[:post_id]
+    # binding.pry
     if @comment.save
       redirect_to post_path(params[:post_id])
     else
-       render template: "posts/show"
+      render template: "posts/show"
     end
   end
 

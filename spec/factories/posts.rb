@@ -5,9 +5,13 @@ FactoryBot.define do  #データを宣言(boostrapで言うcontainer)
     title { Faker::Lorem.characters(number: 12) }
     thoughts { Faker::Lorem.characters(number: 12) }
 
-    # after(:build) do |post|  #after(:build) => (:)
-    #   post.image.attach(io: File.open('app/assets/images/nomber1.jpeg'), filetitle: 'nomber1.jpeg', content_type: 'image/jpeg')
-    #   #io => 外部との連絡をとるオブジェクト, input,outputの略
-    # end
+    after(:build) do |post|  #after(:build) => (:)
+    post.post_images<< FactoryBot.build(:post_images, post: post)
+      #io => 外部との連絡をとるオブジェクト, input,outputの略
+    end
+
+    factory :post_images do
+      image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+    end
   end
 end

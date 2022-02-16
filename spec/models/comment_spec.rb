@@ -4,7 +4,9 @@ RSpec.describe 'commentモデルのテスト', type: :model do
   describe 'バリデーションcommentテスト' do
     subject { comment.valid? }
     #title.valid?  => userモデルがエラーが発生しなかったら -> true, 発生 -> false
-    let(:post) { create(:post) }
+    # binding.irb
+    let(:menber) { create(:menber) }
+    let(:post) { build(:post) }
     let!(:comment) { create(:comment) }
 
     context 'comment_commentカラム' do

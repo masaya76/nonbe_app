@@ -36,15 +36,16 @@ class Post < ApplicationRecord
     end
   end
 
-  validate :restrict_image_count
+  validate :restrict_image_count2!
 
-
-  def restrict_image_count
-    if (post_images.length < 1 || post_images.length > 5 )
-      if (post_images.length < 1)
-        errors.add(:画像, "を投稿してください")
+  def restrict_image_count2!
+    # binding.irb
+    img_count = self.post_images_images.count
+    if img_count == 0 || img_count > 5
+      if (img_count == 0)
+        errors.add(:画像, "を投稿してください #{img_count}")
       else
-        errors.add(:画像, "の投稿を5枚以下にしてください")
+        errors.add(:画像, "の投稿を5枚以下にしてください #{img_count}")
       end
     end
   end
