@@ -91,3 +91,8 @@ gem 'chart-js-rails'
 gem 'devise-i18n'  #deviseのエラー内容を日本語に変換
 
 gem 'rails-i18n'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
