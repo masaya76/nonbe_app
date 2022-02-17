@@ -66,7 +66,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to root_path
+    redirect_to mypage_path
   end
 
   #検索欄

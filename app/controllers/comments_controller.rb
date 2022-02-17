@@ -12,7 +12,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(params[:post_id])
     else
-      render template: "posts/show"
+      flash[:comment_nill]  = "コメントを入力後に投稿してください"
+      redirect_to post_path(params[:post_id])
     end
   end
 

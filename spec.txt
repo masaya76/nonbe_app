@@ -1,4 +1,4 @@
-2022-02-16 14:25:25 WARN Selenium [DEPRECATION] [:driver_path] Selenium::WebDriver::Chrome#driver_path= is deprecated. Use Selenium::WebDriver::Chrome::Service#driver_path= instead.
+2022-02-17 12:03:46 WARN Selenium [DEPRECATION] [:driver_path] Selenium::WebDriver::Chrome#driver_path= is deprecated. Use Selenium::WebDriver::Chrome::Service#driver_path= instead.
 
 commentモデルのテスト
   バリデーションcommentテスト
@@ -32,19 +32,11 @@ Postモデルのテスト
 Failures:
 
   1) commentモデルのテスト バリデーションcommentテスト comment_commentカラム 空欄でないこと
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x00000000095a2ea0>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -89,19 +81,11 @@ Failures:
      # ./spec/models/comment_spec.rb:10:in `block (3 levels) in <top (required)>'
 
   2) commentモデルのテスト バリデーションcommentテスト comment_commentカラム 100文字以下であること: 100文字〇
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x0000000009a7ecd0>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -146,19 +130,11 @@ Failures:
      # ./spec/models/comment_spec.rb:10:in `block (3 levels) in <top (required)>'
 
   3) commentモデルのテスト バリデーションcommentテスト comment_commentカラム 100文字以下であること: 101文字×
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x0000000009b7fc60>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -210,19 +186,11 @@ Failures:
      # ./spec/models/menber_spec.rb:13:in `block (4 levels) in <main>'
 
   5) Postモデルのテスト バリデーションのテスト titleカラム 空欄でないこと
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x0000000009e69750>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -252,19 +220,11 @@ Failures:
      # ./spec/models/post_spec.rb:13:in `block (4 levels) in <main>'
 
   6) Postモデルのテスト バリデーションのテスト titleカラム 20文字以下であること: 20文字〇
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x0000000009f0df80>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -294,19 +254,11 @@ Failures:
      # ./spec/models/post_spec.rb:17:in `block (4 levels) in <main>'
 
   7) Postモデルのテスト バリデーションのテスト titleカラム 20文字以下であること: 21文字×
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x0000000009fa6be0>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -336,19 +288,11 @@ Failures:
      # ./spec/models/post_spec.rb:21:in `block (4 levels) in <main>'
 
   8) Postモデルのテスト バリデーションのテスト thoughtsカラム 100文字以下であること: 100〇
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x000000000a046910>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -378,19 +322,11 @@ Failures:
      # ./spec/models/post_spec.rb:28:in `block (4 levels) in <main>'
 
   9) Postモデルのテスト バリデーションのテスト thoughtsカラム 100文字以下であること: 101×
-     Failure/Error: image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+     Failure/Error: post.post_images << FactoryBot.build(:post_images, image: Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/no_image.png"), 'image/png'))
 
-     RuntimeError:
-       /home/ec2-user/environment/nonbe/spec/fixtures/sample.png file does not exist
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:71:in `initialize_from_file_path'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test/uploaded_file.rb:34:in `initialize'
-     # ./spec/factories/posts.rb:14:in `new'
-     # ./spec/factories/posts.rb:14:in `block (4 levels) in <main>'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute/dynamic.rb:16:in `block in to_proc'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `instance_exec'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/evaluator.rb:76:in `block in define_attribute'
-     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:58:in `get'
+     NoMethodError:
+       undefined method `image=' for #<Post:0x000000000a0d8fb8>
+     # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `public_send'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:16:in `block (2 levels) in object'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `each'
      # /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.2.0/lib/factory_bot/attribute_assigner.rb:15:in `block in object'
@@ -419,7 +355,7 @@ Failures:
      # ./spec/models/post_spec.rb:8:in `block (3 levels) in <main>'
      # ./spec/models/post_spec.rb:32:in `block (4 levels) in <main>'
 
-Finished in 4.32 seconds (files took 1.75 seconds to load)
+Finished in 4.77 seconds (files took 7.12 seconds to load)
 14 examples, 9 failures
 
 Failed examples:

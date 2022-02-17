@@ -33,9 +33,5 @@ RSpec.describe 'Postモデルのテスト', type: :model do
         is_expected.to eq false
       end
     end
-
-    #context '' do
-    #  if '' do
-    #    expecte (post.post_images.size).to eq 2
   end
 end

@@ -5,13 +5,8 @@ FactoryBot.define do  #データを宣言(boostrapで言うcontainer)
     title { Faker::Lorem.characters(number: 12) }
     thoughts { Faker::Lorem.characters(number: 12) }
 
-    after(:build) do |post|  #after(:build) => (:)
-    post.post_images<< FactoryBot.build(:post_images, post: post)
-      #io => 外部との連絡をとるオブジェクト, input,outputの略
-    end
-
-    factory :post_images do
-      image { Rack::Test::UploadedFile.new(File.join(Rails.root, "spec/fixtures/sample.png"), 'image/png') }
+    after(:build) do |post|  
+      post.post_images << FactoryBot.build(:post_image, image: File.join('app/assets/images/nomber1.jpeg'),post_id: post.id)
     end
   end
 end

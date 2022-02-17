@@ -10,7 +10,7 @@ RSpec.describe 'menberモデルのテスト', type: :model do  #menberモデル�
     context 'agreementカラム' do
       it '空欄でないこと' do
         menber.agreement = '0'
-        is_expected eq false
+        is_expected.to eq false
       end
     end
 
