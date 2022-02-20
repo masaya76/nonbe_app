@@ -12,6 +12,26 @@
 
 ActiveRecord::Schema.define(version: 2022_01_27_114231) do
 
+  create_table "Menbers", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "image_id"
+    t.text "introduction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "postal_code"
+    t.string "address"
+    t.string "telephone_number"
+    t.string "intorduction"
+    t.boolean "agreement"
+    t.index ["email"], name: "index_menbers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_menbers_on_reset_password_token", unique: true
+  end
+
   create_table "cities", force: :cascade do |t|
     t.integer "prefecture_id"
     t.string "name"
@@ -27,26 +47,6 @@ ActiveRecord::Schema.define(version: 2022_01_27_114231) do
     t.text "comment_comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "menbers", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "name"
-    t.string "image_id"
-    t.text "introduction"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "postal_code"
-    t.string "address"
-    t.string "telephone_number"
-    t.boolean "agreement"
-    t.string "intorduction"
-    t.index ["email"], name: "index_menbers_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_menbers_on_reset_password_token", unique: true
   end
 
   create_table "post_images", force: :cascade do |t|
