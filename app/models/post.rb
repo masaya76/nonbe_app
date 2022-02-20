@@ -43,9 +43,9 @@ class Post < ApplicationRecord
     img_count = self.post_images_images.count
     if img_count == 0 || img_count > 5
       if (img_count == 0)
-        errors.add(:画像, "を投稿してください #{img_count}")
+        errors.add(:画像, "を投稿してください")
       else
-        errors.add(:画像, "の投稿を5枚以下にしてください #{img_count}")
+        errors.add(:画像, "の投稿を5枚以下にしてください")
       end
     end
   end
