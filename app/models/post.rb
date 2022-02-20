@@ -16,7 +16,7 @@ class Post < ApplicationRecord
   accepts_attachments_for :post_images, attachment: :image  #画像複数投稿時の記述  accepts_attachments_for :画像保管モデル, attachment: :画像保管モデルのカラム
 
   def save_posts(sent_tags)  #今回のタグの付け方は既存するタグデータを一回削除＝＞新規作成
-    current_post_tags = self.post_tags.pluck(:tag_name) unless self.post_tags.nil?
+    current_post_tags = Tag.where(tag_name: sent_tags)
     old_tags = current_post_tags - sent_tags   #   既存するタグ     = 例） 1, 2, 3,(db内にあるタグ) - 1,(送られてきたタグ)
     new_tags = sent_tags - current_post_tags   #dbに存在しないタグ  = 例） 4(送られてきたタグ) - 1, 2, 3 (db内にあるタグ)
 
