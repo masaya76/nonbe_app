@@ -14,10 +14,6 @@ class PostsController < ApplicationController
     #ここの記述はtagをsaveで渡す前にどんなデータを送るか（因数）記述する
     #split(",") でタグをformに記述する時に(" 中の入れた文字、記号等 ") 連続して読み込める
                         #post_modelでメソッド化
-
-    # if Post.restrict_image_count2!(params[:post][:post_images_images])
-    # end
-    # binding.irb
     if @post.save
       # if Post.restrict_image_count2!(params[:post][:post_images_images])
         @post.save_posts(tag_name)
@@ -38,29 +34,23 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
-    @post.post_images.build
+    @post = Post.find(params[:id])                #find(params)ページに遷移
+    if @post.menber_id == current_menber.id       #@postの関連のmenber_id == 自分.id
+      @post.post_images.build                     #写真のupdate前まで保存しない
+    else
+       redirect_to post_path(@post.id)            
+    end
   end
 
   def update
     @post = Post.find(params[:id])
     tag_name = params[:post][:tag_name].split(",")
-
-    if @post.update
-      if restrict_image_count!(params[:post][:post_images_images])
-        @post.save_posts(tag_name)
-        redirect_to post_path(@post.id)#save_postsはpost.rbに記述 コントローラーに記述するとコントローラーが重くなる
-      else
-        render :new
-      end
+    if @post.update(post_params)
+      @post.save_posts(tag_name)
+      redirect_to post_path(@post.id)#save_postsはpost.rbに記述 コントローラーに記述するとコントローラーが重くなる
     else
       render :new
     end
-
-#    if
-#      @post.save_posts(tag_name)
-#    end
-#    redirect_to post_path(@post.id)
   end
 
   def destroy

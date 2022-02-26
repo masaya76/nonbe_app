@@ -100,7 +100,7 @@
   </div>
   <div class="row">
     <div class="col-lg-12">
-      <% if current_menber %>
+      <% if current_menber.id == @post.menber_id %>     <%# @postの関連のmenber_id == 自分.id 
         <%= link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-info" %>
         <%= link_to "消去", post_path(@post), method: :delete, class: "btn btn-sm btn-warning" %>
       <% end %>
