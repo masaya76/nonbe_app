@@ -9,7 +9,7 @@ class MenbersController < ApplicationController
     if Menber.find(params[:id]).id == current_menber.id
        @menber = Menber.find(params[:id])
     else
-      redirect_to menber_path(current_menber)
+      redirect_to mmapage_path(current_menber)
     end
   end
 
