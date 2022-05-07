@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col_lg_7">
-        <table class="table"> 
+        <table class="table">
         <%# table class="table"とするとtr毎にボーダーラインが引かれる %>
           <thead>
             <tr>
@@ -29,7 +29,7 @@
           <%# exists? 存在するかどうかを真偽値で返すメソッド(存在すればtrueを存在しなければfalse)%>
             <% post_image = post.post_images.first %>
             <div class="col-3 flex-nowrap">  <%# この部分を　col-4~ にして画像をcolにあてはめたい　%>
-              <%= link_to post_path(post_image), class: 'list-content' do %>
+              <%= link_to post_path(post), class: 'list-content' do %>
                 <p class="image-space"><%= attachment_image_tag post_image, :image, :fill, 200, 200, fallback:'no_image.jpeg', size: "200x200" %></p>
               <% end %>
             </div>
