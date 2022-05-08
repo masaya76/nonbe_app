@@ -45,35 +45,48 @@
         sakegurahu();  <%# 下の行の定義してる  sakegurahu  を表示出させる指示  %>
         function sakegurahu() {  <%# rails で例えると＝controller内のdefと同じ意味合い %>
           var ctx = document.getElementById("myChart");
-           var kaori = document.getElementById("post_kaori").value;   <%# "post_kaori"の数字のデータを取得 %>
-           var karasa = document.getElementById("post_karasa").value;    //.valueはid指定した中身のカラムだけ抜き取る
-           var nomigotae = document.getElementById("post_nomigotae").value;
-           var rarity = document.getElementById("post_rarity").value;
-           var beginner = document.getElementById("post_beginner").value;
+          var kaori = document.getElementById("post_kaori").value;          <%# "post_kaori"の数字のデータを取得 %>
+          var karasa = document.getElementById("post_karasa").value;        //.valueはid指定した中身のカラムだけ抜き取る
+          var nomigotae = document.getElementById("post_nomigotae").value;　//getElementById = 任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメソッド
+          var rarity = document.getElementById("post_rarity").value;        //document = JavaScriptのdocumentオブジェクトはHTMLドキュメントを表現するオブジェクト
+          var beginner = document.getElementById("post_beginner").value;
           //nar kaori <=  document.getElementById(idでデータを取得)   ("post_kaori").value
           var sake_data = [kaori, karasa, nomigotae, rarity, beginner];
-          var myChart = new Chart(ctx, {
-          type: 'radar',
-          data: {
-            labels: ["香り", "辛さ", "飲みごたえ", "レア度", "初心者向け"], <%#グラフの各データ名（評価基準名）%>
-            datasets: [{
-              label: '投稿者さんの評価グラフ',
-              backgroundColor: "rgba(0,0,80,0.4)",
-              borderColor: "rgba(0,0,80,1)",
-              data: sake_data <%# グラフ内データ,  data: [1, 2, 3, 5] javascriptの書き方 %>
-            }]
-          },
-          options: {
-              scale: {
-                  ticks: {
-                      scaleBeginAtZero: true,
-                      min: 0,       <%# 最小値  %>
-                      max: 5,       <%# 最大値  %>
-                      stepSize: 1   <%# メモリのピッチ幅  %>
-                  }
-              }
-          }
-        });
+          var myChart = new Chart(ctx, {  //グラフのオブジェクト作成
+            type: 'radar',  
+            //グラフの種類
+            data: {
+            //dataにて、labels、datasetsの２つの項目を設定
+            //labels = データ軸のラベル
+              labels: ["香り", "辛さ", "飲みごたえ", "レア度", "初心者向け"], <%#グラフの各データ名（評価基準名）%>
+              //グラフに入力したい項目のラベル
+              datasets: [{
+              //label、data、borderColor、backgroundColorの4つの項目を設定
+                label: '投稿者さんの評価グラフ',
+                //label = データの凡例
+                backgroundColor: "rgba(0,0,80,0.4)",
+                //線の下の塗りつぶしの色
+                borderColor: "rgba(0,0,80,1)",
+                //線の色
+                data: sake_data
+                //データの値
+                // グラフ内データ,  data: [1, 2, 3, 5] javascriptの書き方 
+              }]
+            },
+            options: {
+            //title、scalesの2つの項目を設定
+                scale: {
+                //グラフ軸の詳細（最大値・最小値・刻み幅など）
+                    ticks: {
+                    //y軸の目盛線について設定
+                        scaleBeginAtZero: true,
+                        min: 0,       <%# 最小値  %>
+                        max: 5,       <%# 最大値  %>
+                        stepSize: 1   <%# メモリのピッチ幅  %>
+                    }
+                }
+            }
+          });
         };
         $('#post_kaori, #post_karasa, #post_nomigotae, #post_rarity, #post_beginner').change(function() {
           <%#  id取得('#post_kaori')したらデータを更新、変更change(function() { %>

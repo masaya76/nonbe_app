@@ -24,7 +24,6 @@ class Post < ApplicationRecord
       if Tag.exists?(tag_name:new)  #tag確認＝＞dbに作成済みのtag_nameが存在する
         @tag = Tag.find_by(tag_name:new) #存在している＝＞tag_nameからtagモデルを呼ぶ(find_by)
         new_post_tag = PostTag.create(post_id:self.id,tag_id: @tag.id)  #post_id:self  自分自身の情報泳げるように（自在に移動できるように）＝＞インスタンス変数にする必要がない
-        binding.pry
       else
         @tag = Tag.create(tag_name:new)  #tagが存在しない＝＞存在しないtag_name作成
         new_post_tag = PostTag.create(post_id:self.id,tag_id: @tag.id)
@@ -37,8 +36,7 @@ class Post < ApplicationRecord
   validate :restrict_image_count2!
 
   def restrict_image_count2!
-    # binding.irb
-    img_count = self.post_images_images.count
+    img_count = self.post_images_images.count #self.~ でインスタンスメソッドの～が呼ばれる
     if img_count == 0 || img_count > 5
       if (img_count == 0)
         errors.add(:画像, "を投稿してください")
